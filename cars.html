@@ -29,6 +29,29 @@
         type="application/ld+json">{"@context":"https://schema.org","@type":"CarRental","name":"NSZ Goa Ride","url":"https://nszgoaride.com","telephone":"+91 8262812997","address":{"@type":"PostalAddress","streetAddress":"Sanscar Society, Madgaon","addressLocality":"Madgaon","addressRegion":"Goa","postalCode":"403601","addressCountry":"IN"}}</script>
     <script
         type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"NSZ Goa Ride","url":"https://nszgoaride.com","logo":"https://nszgoaride.com/image/logo.png"}</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17953205126"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EMCJPP09C1');
+        gtag('config', 'AW-17953205126');
+    </script>
+
+    <!-- Event snippet for Contact (1) conversion -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') { window.location = url; }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17953205126/ot22CIbfksAcEIbX4PBC',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
 </head>
 
 <body>
@@ -103,12 +126,12 @@
                             </div>
                             <div class="card-actions">
                                 <button class="btn-card btn-card--dark"
-                                    onclick="bookViaWhatsApp('Maruti Ignis','Manual','₹1,200')"
+                                    onclick="gtag_report_conversion(); bookViaWhatsApp('Maruti Ignis','Manual','₹1,200')"
                                     aria-label="Book Maruti Ignis Manual">
                                     <i class="fab fa-whatsapp"></i> Manual
                                 </button>
                                 <button class="btn-card btn-card--orange"
-                                    onclick="bookViaWhatsApp('Maruti Ignis','Automatic','₹1,500')"
+                                    onclick="gtag_report_conversion(); bookViaWhatsApp('Maruti Ignis','Automatic','₹1,500')"
                                     aria-label="Book Maruti Ignis Automatic">
                                     <i class="fab fa-whatsapp"></i> Auto
                                 </button>
@@ -140,10 +163,10 @@
                             </div>
                             <div class="card-actions">
                                 <button class="btn-card btn-card--dark"
-                                    onclick="bookViaWhatsApp('Maruti Swift','Manual','₹1,200')"><i
+                                    onclick="gtag_report_conversion(); bookViaWhatsApp('Maruti Swift','Manual','₹1,200')"><i
                                         class="fab fa-whatsapp"></i> Manual</button>
                                 <button class="btn-card btn-card--orange"
-                                    onclick="bookViaWhatsApp('Maruti Swift','Automatic','₹1,500')"><i
+                                    onclick="gtag_report_conversion(); bookViaWhatsApp('Maruti Swift','Automatic','₹1,500')"><i
                                         class="fab fa-whatsapp"></i> Auto</button>
                             </div>
                         </div>
