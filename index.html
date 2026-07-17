@@ -33,9 +33,9 @@
     <meta name="theme-color" content="#ff6b1a">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="image/favicon.ico">
-    <link rel="apple-touch-icon" href="image/favicon.ico">
+    <link rel="icon" href="image/logo.png" type="image/png">
+    <link rel="shortcut icon" href="image/logo.png">
+    <link rel="apple-touch-icon" href="image/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://www.googletagmanager.com">
@@ -45,25 +45,19 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script type="application/ld+json">
-    {"@context":"https://schema.org/","@type":"CarRental","name":"NSZ Goa Ride","description":"Premium self-drive car and bike rentals in Goa with airport pickup and 24/7 support","url":"https://nszgoaride.com","logo":"https://nszgoaride.com/image/logo.png","telephone":"+91 8262812997","email":"info@nszgoaride.com","address":{"@type":"PostalAddress","streetAddress":"Sanscar Society, Madgaon","addressLocality":"Madgaon","addressRegion":"Goa","postalCode":"403601","addressCountry":"IN"},"priceRange":"₹500-₹20000"}
-    </script>
-    <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"Organization","name":"NSZ Goa Ride","url":"https://nszgoaride.com","logo":"https://nszgoaride.com/image/logo.png","sameAs":["https://www.instagram.com/goaride","https://www.facebook.com/goaride"],"contactPoint":{"@type":"ContactPoint","telephone":"+91 8262812997","contactType":"customer service","areaServed":"IN"},"address":{"@type":"PostalAddress","streetAddress":"Sanscar Society, Madgaon","addressLocality":"Madgaon","addressRegion":"Goa","postalCode":"403601","addressCountry":"IN"}}
     </script>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebSite","url":"https://nszgoaride.com","name":"NSZ Goa Ride","potentialAction":{"@type":"SearchAction","target":"https://nszgoaride.com/?s={search_term_string}","query-input":"required name=search_term_string"}}
-    </script>
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nszgoaride.com"}]}
-    </script>
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"LocalBusiness","name":"NSZ Goa Ride","url":"https://nszgoaride.com/","telephone":"+91 8262812997","address":{"@type":"PostalAddress","streetAddress":"Sanscar Society, Madgaon","addressLocality":"Madgaon","addressRegion":"Goa","postalCode":"403601","addressCountry":"IN"},"priceRange":"₹1,200 - ₹20,000","description":"Self drive car, bike, and airport taxi rentals in Goa."}
+    {"@context":"https://schema.org","@type":"LocalBusiness","name":"NSZ Goa Ride","url":"https://nszgoaride.com/","telephone":"+91 8262812997","address":{"@type":"PostalAddress","streetAddress":"Sanscar Society, Madgaon","addressLocality":"Madgaon","addressRegion":"Goa","postalCode":"403601","addressCountry":"IN"},"priceRange":"₹1,200 - ₹20,000","description":"Self-drive car, bike, and airport taxi rentals in Goa.","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"500"}}
     </script>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"WebSite","url":"https://nszgoaride.com/","name":"NSZ Goa Ride","potentialAction":{"@type":"SearchAction","target":"https://nszgoaride.com/?s={search_term_string}","query-input":"required name=search_term_string"}}
     </script>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nszgoaride.com/"}]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Product","name":"Car Rental in Goa","brand":{"@type":"Brand","name":"NSZ Goa Ride"},"description":"Self-drive car rentals in Goa from ₹1,200/day with airport pickup and 24/7 support","offers":{"@type":"Offer","priceCurrency":"INR","price":"1200","availability":"https://schema.org/InStock"}}
     </script>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the cheapest car rental option near Dabolim Airport?","acceptedAnswer":{"@type":"Answer","text":"Our Maruti Ignis and Swift models are the most affordable options starting at ₹1,200 per day."}},{"@type":"Question","name":"How do I book a car rental in Goa with NSZ Goa Ride?","acceptedAnswer":{"@type":"Answer","text":"Book through our website or directly via WhatsApp at +91 8262812997."}}]}
@@ -154,6 +148,11 @@
         </div>
     </nav>
 
+    <a class="sticky-booking-cta" href="#booking" aria-label="Book a car rental in Goa">
+        <span><i class="fab fa-whatsapp"></i> Book Now</span>
+        <strong>From ₹1,200/day</strong>
+    </a>
+
     <!-- ===================== HERO ===================== -->
     <section id="home" class="hero" role="banner">
         <div class="hero-bg-image" aria-hidden="true"></div>
@@ -232,12 +231,33 @@
                     to luxury SUVs — all well-maintained and fully insured.</p>
             </div>
 
+            <div class="fleet-controls" data-scroll-reveal>
+                <label class="fleet-control-group" for="vehicle-filter">
+                    <span>Filter</span>
+                    <select id="vehicle-filter" aria-label="Filter vehicles">
+                        <option value="all">All vehicles</option>
+                        <option value="budget">Budget</option>
+                        <option value="family">Family</option>
+                        <option value="luxury">Luxury</option>
+                        <option value="adventure">Adventure</option>
+                    </select>
+                </label>
+                <label class="fleet-control-group" for="vehicle-sort">
+                    <span>Sort by</span>
+                    <select id="vehicle-sort" aria-label="Sort vehicles">
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="name">Name</option>
+                    </select>
+                </label>
+            </div>
+
             <div class="vehicles-grid">
 
                 <!-- Ignis -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-category="budget" data-price="1200">
                     <div class="vehicle-photo"
-                        style="background-image:url('https://image2url.com/r2/default/images/1771085514586-f48442cc-255d-424b-8a86-bd933470a02e.jpeg');"
+                        style="background-image:url('image/vehicle-ignis.jpg');"
                         role="img" aria-label="Maruti Ignis rental Goa">
                         <div class="vehicle-badge">Popular</div>
                         <div class="vehicle-photo-num" aria-hidden="true">01</div>
@@ -276,9 +296,9 @@
                 </div>
 
                 <!-- Swift -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-category="budget" data-price="1200">
                     <div class="vehicle-photo"
-                        style="background-image:url('https://www.varunmaruti.com/uploads/products/colors/new-swift-pearlr-arctic-white-with-midnight-black-roof.png');"
+                        style="background-image:url('image/vehicle-swift.jpg');"
                         role="img" aria-label="Maruti Swift rental Goa">
                         <div class="vehicle-badge">Popular</div>
                         <div class="vehicle-photo-num" aria-hidden="true">02</div>
@@ -309,7 +329,7 @@
                 </div>
 
                 <!-- Swift Dzire -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-category="budget" data-price="1200">
                     <div class="vehicle-photo"
                         style="background-image:url('https://image2url.com/r2/default/images/1771082738713-e7c92e6b-5af8-4a10-95ea-2987d819b9c1.jpg');"
                         role="img" aria-label="Maruti Swift Dzire rental Goa">
@@ -342,7 +362,7 @@
                 </div>
 
                 <!-- Baleno -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-category="budget" data-price="1200">
                     <div class="vehicle-photo"
                         style="background-image:url('https://image2url.com/r2/default/images/1771081605318-cf7ecfe1-543f-4a35-8672-53cdda6ce892.jpeg');"
                         role="img" aria-label="Maruti Baleno rental Goa">
@@ -375,7 +395,7 @@
                 </div>
 
                 <!-- i20 -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-category="budget" data-price="1300">
                     <div class="vehicle-photo"
                         style="background-image:url('https://image2url.com/r2/default/images/1771084107396-de073f29-76b3-4b8d-9009-be3059a77fba.jpeg');"
                         role="img" aria-label="Hyundai i20 rental Goa">
@@ -408,7 +428,7 @@
                 </div>
 
                 <!-- Brezza -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-category="family" data-price="2000">
                     <div class="vehicle-photo"
                         style="background-image:url('https://image2url.com/r2/default/images/1771080613820-4e08e3eb-6cf3-456d-af67-d620cf20afa2.jpeg');"
                         role="img" aria-label="Maruti Brezza rental Goa">
@@ -441,7 +461,7 @@
                 </div>
 
                 <!-- Creta -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-category="family" data-price="2500">
                     <div class="vehicle-photo"
                         style="background-image:url('https://image2url.com/r2/default/images/1771082168034-3cea15fd-961e-441b-827a-e772f7a0db43.png');"
                         role="img" aria-label="Hyundai Creta rental Goa">
@@ -474,7 +494,7 @@
                 </div>
 
                 <!-- Ertiga -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-category="family" data-price="2200">
                     <div class="vehicle-photo"
                         style="background-image:url('https://image2url.com/r2/default/images/1771083423558-6d9933ca-f849-46ea-8f35-24715d02f016.jpeg');"
                         role="img" aria-label="Maruti Ertiga rental Goa">
@@ -507,7 +527,7 @@
                 </div>
 
                 <!-- Kia Carens -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-category="family" data-price="2500">
                     <div class="vehicle-photo"
                         style="background-image:url('https://image2url.com/r2/default/images/1771086756653-26b04aeb-abcb-4bab-bf85-f14a576e0015.jpeg');"
                         role="img" aria-label="Kia Carens rental Goa">
@@ -540,7 +560,7 @@
                 </div>
 
                 <!-- Innova Crysta -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-category="family" data-price="3000">
                     <div class="vehicle-photo"
                         style="background-image:url('https://image2url.com/r2/default/images/1771082409934-b12afb7d-7dfd-42d5-a583-c6b96ae3b097.jpeg');"
                         role="img" aria-label="Toyota Innova Crysta rental Goa">
@@ -573,7 +593,7 @@
                 </div>
 
                 <!-- Innova Hycross -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-category="family" data-price="3500">
                     <div class="vehicle-photo"
                         style="background-image:url('https://image2url.com/r2/default/images/1771086867555-f1b998ba-9d26-4c0e-b1c8-d55ddb7e33b8.jpeg');"
                         role="img" aria-label="Toyota Innova Hycross rental Goa">
@@ -601,7 +621,7 @@
                 </div>
 
                 <!-- Fortuner -->
-                <div class="vehicle-card vehicle-card--highlight">
+                <div class="vehicle-card vehicle-card--highlight" data-category="luxury" data-price="6000">
                     <div class="vehicle-photo"
                         style="background-image:url('https://image2url.com/r2/default/images/1771085163103-0cfc8bf6-b170-4f60-9be3-068e68b08592.jpeg');"
                         role="img" aria-label="Toyota Fortuner luxury SUV Goa">
@@ -629,7 +649,7 @@
                 </div>
 
                 <!-- Thar Hardtop -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-category="adventure" data-price="3000">
                     <div class="vehicle-photo"
                         style="background-image:url('https://image2url.com/r2/default/images/1772821385483-59a5b442-f74a-4bb6-a852-b4d8529c59d7.png');"
                         role="img" aria-label="Mahindra Thar Hardtop adventure rental Goa">
@@ -671,7 +691,7 @@
                 </div>
 
                 <!-- Thar Soft Top -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-category="adventure" data-price="3300">
                     <div class="vehicle-photo"
                         style="background-image:url('https://image2url.com/r2/default/images/1772820718627-5c58fd42-e8a6-40ef-901d-fa9d9525d031.png');"
                         role="img" aria-label="Mahindra Thar Soft Top convertible rental Goa">
@@ -713,7 +733,7 @@
                 </div>
 
                 <!-- Thar Roxx -->
-                <div class="vehicle-card">
+                <div class="vehicle-card" data-category="adventure" data-price="6500">
                     <div class="vehicle-photo"
                         style="background-image:url('https://image2url.com/r2/default/images/1771085007230-e3056cd4-758f-43a1-857c-024057a6fdd5.jpeg');"
                         role="img" aria-label="Mahindra Thar Roxx new generation car rental Goa">
@@ -746,7 +766,7 @@
                 </div>
 
                 <!-- Mercedes -->
-                <div class="vehicle-card vehicle-card--highlight">
+                <div class="vehicle-card vehicle-card--highlight" data-category="luxury" data-price="18000">
                     <div class="vehicle-photo"
                         style="background-image:url('https://image2url.com/r2/default/images/1771086392720-50bf550e-b4e3-4657-841c-8440eb5f8994.jpeg');"
                         role="img" aria-label="Mercedes-Benz C300 luxury rental Goa">
@@ -774,7 +794,7 @@
                 </div>
 
                 <!-- Audi A3 -->
-                <div class="vehicle-card vehicle-card--highlight">
+                <div class="vehicle-card vehicle-card--highlight" data-category="luxury" data-price="20000">
                     <div class="vehicle-photo"
                         style="background-image:url('https://image2url.com/r2/default/images/1771083007149-3d15f250-cca7-40dd-ba7e-8b3b78a2dbd2.jpeg');"
                         role="img" aria-label="Audi A3 luxury rental Goa">
@@ -802,7 +822,7 @@
                 </div>
 
                 <!-- Mini Cooper -->
-                <div class="vehicle-card vehicle-card--highlight">
+                <div class="vehicle-card vehicle-card--highlight" data-category="luxury" data-price="16000">
                     <div class="vehicle-photo"
                         style="background-image:url('https://image2url.com/r2/default/images/1771083165899-7695a97a-57e7-4cf7-98c7-9f88cc0a2dbe.jpeg');"
                         role="img" aria-label="Mini Cooper luxury rental Goa">
@@ -930,6 +950,20 @@
                     <h2 class="booking-title">Book Your<br><em>Ride Now</em></h2>
                     <p>Fill out the form and get instant confirmation via WhatsApp. No hidden charges — transparent
                         pricing guaranteed.</p>
+                    <div class="trip-calculator" data-scroll-reveal>
+                        <h3>Trip Cost Calculator</h3>
+                        <label for="calculator-vehicle">Choose your vehicle</label>
+                        <select id="calculator-vehicle" aria-label="Choose vehicle for trip estimate">
+                            <option value="1200">Maruti Ignis — ₹1,200/day</option>
+                            <option value="1500">Maruti Swift — ₹1,500/day</option>
+                            <option value="2000">Maruti Brezza — ₹2,000/day</option>
+                            <option value="3200">Hyundai Creta — ₹3,200/day</option>
+                            <option value="6000">Toyota Fortuner — ₹6,000/day</option>
+                        </select>
+                        <label for="calculator-days">Rental days</label>
+                        <input id="calculator-days" type="number" min="1" max="30" value="3">
+                        <div id="calculator-output" class="calculator-output" aria-live="polite">Estimated total: ₹3,600</div>
+                    </div>
                     <ul class="booking-perks">
                         <li><i class="fas fa-check-circle"></i> Free airport pickup</li>
                         <li><i class="fas fa-check-circle"></i> Instant WhatsApp confirmation</li>
@@ -1113,6 +1147,29 @@
         </div>
     </section>
 
+    <section class="section trust-bar-section">
+        <div class="container">
+            <div class="trust-bar" data-scroll-reveal>
+                <div><strong>4.9/5</strong><span>Google Reviews</span></div>
+                <div><strong>24/7</strong><span>WhatsApp Support</span></div>
+                <div><strong>100%</strong><span>Transparent Pricing</span></div>
+                <div><strong>Free</strong><span>Airport Pickup</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section review-strip-section" aria-label="Google Reviews">
+        <div class="container">
+            <div class="review-strip" data-scroll-reveal>
+                <div>
+                    <strong>Rated 4.9 on Google</strong>
+                    <p>Travelers trust NSZ Goa Ride for reliable airport transfers, self-drive cars, and bike rentals.</p>
+                </div>
+                <a href="https://maps.google.com" class="btn-hero-primary" target="_blank" rel="noopener">Read Google Reviews</a>
+            </div>
+        </div>
+    </section>
+
     <!-- ===================== TESTIMONIALS ===================== -->
     <section id="testimonials" class="section testimonials-section">
         <div class="container">
@@ -1155,33 +1212,27 @@
             <div class="faq-grid">
                 <div class="faq-item">
                     <h3 class="faq-q">What is the cheapest car rental near Dabolim Airport?</h3>
-                    <p class="faq-a">Our Maruti Ignis and Swift start at ₹1,200/day manual and ₹1,500/day automatic. We
-                        offer complimentary airport pickup with all bookings.</p>
+                    <p class="faq-a">Our Maruti Ignis and Swift start at ₹1,200/day manual and ₹1,500/day automatic. We offer complimentary airport pickup with all bookings.</p>
                 </div>
                 <div class="faq-item">
                     <h3 class="faq-q">How do I book a car rental with NSZ Goa Ride?</h3>
-                    <p class="faq-a">Book through our website or WhatsApp at +91 8262812997. Select your vehicle, date,
-                        and location — confirmed instantly via WhatsApp.</p>
+                    <p class="faq-a">Book through our website, call us on +91 8262812997, or message us on WhatsApp. We confirm availability and pickup details instantly.</p>
                 </div>
                 <div class="faq-item">
                     <h3 class="faq-q">What documents do I need to rent a car in Goa?</h3>
-                    <p class="faq-a">Valid driving license, ID proof (Aadhar/Passport), and a refundable security
-                        deposit (₹3,000–₹10,000 depending on vehicle).</p>
+                    <p class="faq-a">You need a valid driving license, government ID, and a refundable security deposit depending on vehicle type.</p>
                 </div>
                 <div class="faq-item">
                     <h3 class="faq-q">Do you offer airport pickup at Dabolim?</h3>
-                    <p class="faq-a">Yes! Free airport pickup and drop-off for all rentals. Share your flight details
-                        during booking and we'll meet you at the terminal.</p>
+                    <p class="faq-a">Yes — all rentals include free pickup and drop-off from Dabolim Airport, hotels, and railway stations across Goa.</p>
                 </div>
                 <div class="faq-item">
                     <h3 class="faq-q">Are your rental cars fully insured?</h3>
-                    <p class="faq-a">All vehicles come with comprehensive insurance included in the rental rate. You're
-                        fully protected throughout your rental period.</p>
+                    <p class="faq-a">All vehicles are comprehensively insured and checked before every trip, so you can travel with confidence.</p>
                 </div>
                 <div class="faq-item">
                     <h3 class="faq-q">What is included in the rental price?</h3>
-                    <p class="faq-a">Insurance, GPS, 24/7 roadside assistance, and airport/hotel pickup. No hidden
-                        charges — what you see is what you pay.</p>
+                    <p class="faq-a">Insurance, basic support, airport or hotel pickup, and transparent pricing are included. No hidden charges.</p>
                 </div>
             </div>
         </div>

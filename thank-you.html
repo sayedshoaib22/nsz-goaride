@@ -17,7 +17,7 @@
     <meta name="twitter:title" content="Booking Confirmed | NSZ Goa Ride Car Rentals Goa">
     <meta name="twitter:description" content="Thank you for your booking request with NSZ Goa Ride. We will confirm your car rental, bike rental, or airport transfer details shortly.">
     <meta name="twitter:image" content="https://nszgoaride.com/image/logo.png">
-    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="image/logo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <!-- Global site tag (gtag.js) - Google Analytics and Google Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EMCJPP09C1"></script>
@@ -49,6 +49,7 @@
         style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:3rem 1rem;">
         <div style="max-width:760px;width:100%;text-align:center;">
             <h1 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:1rem;">Thank you for your booking request!</h1>
+            <p id="booking-ref" style="font-size:1rem;font-weight:700;color:#ff6b1a;margin-bottom:1rem;">Booking reference: --</p>
             <p style="font-size:1.05rem;line-height:1.8;margin-bottom:2rem;color:#333;">We have received your details
                 and will contact you shortly via WhatsApp to confirm your rental. If you would like, you can also call
                 us directly for faster assistance.</p>
@@ -68,6 +69,14 @@
             </div>
         </div>
     </main>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const ref = params.get('ref');
+        const refEl = document.getElementById('booking-ref');
+        if (refEl) {
+            refEl.textContent = ref ? `Booking reference: ${ref}` : 'Booking reference: pending confirmation';
+        }
+    </script>
 </body>
 
 </html>

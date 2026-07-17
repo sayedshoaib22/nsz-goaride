@@ -174,6 +174,21 @@ function initializePhoneClickTracking() {
 }
 
 // ===== Booking Form =====
+async function submitLead(payload) {
+    try {
+        const response = await fetch('/api/leads', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+        if (!response.ok) throw new Error('Network response was not ok');
+        return await response.json();
+    } catch (error) {
+        console.warn('Lead capture failed, continuing with WhatsApp fallback.', error);
+        return { ok: false };
+    }
+}
+
 function submitBooking() {
     const vehicle = document.getElementById('vehicle')?.value || '';
     const name = document.getElementById('name')?.value || '';
@@ -228,16 +243,32 @@ ${requests ? `*Special Requests:* ${requests}` : ''}
 
 Please confirm availability and total cost. Thank you!`;
 
+    const bookingReference = `NSZ-${Date.now().toString().slice(-6)}`;
+    const leadPayload = {
+        name,
+        phone,
+        email,
+        vehicle,
+        pickup,
+        dropoff,
+        location,
+        requests,
+        source: 'booking-form',
+        bookingReference
+    };
+
     if (messagesDiv) {
-        messagesDiv.innerHTML = `<div style="background:#c6f6d5;color:#22543d;padding:1rem;border-radius:10px;border-left:4px solid #38a169;"><i class="fas fa-check-circle"></i> Redirecting to WhatsApp...</div>`;
+        messagesDiv.innerHTML = `<div style="background:#c6f6d5;color:#22543d;padding:1rem;border-radius:10px;border-left:4px solid #38a169;"><i class="fas fa-check-circle"></i> Saving your request and redirecting to WhatsApp...</div>`;
     }
 
-    setTimeout(() => {
-        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
-        document.getElementById('booking-form')?.reset();
-        if (messagesDiv) messagesDiv.innerHTML = '';
-        window.location.href = 'thank-you.html';
-    }, 500);
+    submitLead(leadPayload).finally(() => {
+        setTimeout(() => {
+            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+            document.getElementById('booking-form')?.reset();
+            if (messagesDiv) messagesDiv.innerHTML = '';
+            window.location.href = `thank-you.html?ref=${encodeURIComponent(bookingReference)}`;
+        }, 500);
+    });
 }
 
 // ===== Dark Mode =====
@@ -357,6 +388,46 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Vehicle list filter & sort
+    const vehicleFilter = document.getElementById('vehicle-filter');
+    const vehicleSort = document.getElementById('vehicle-sort');
+    const vehicleCards = Array.from(document.querySelectorAll('.vehicle-card'));
+    const applyVehicleControls = () => {
+        if (!vehicleFilter || !vehicleSort || vehicleCards.length === 0) return;
+        const filterValue = vehicleFilter.value;
+        const sortValue = vehicleSort.value;
+        const visibleCards = vehicleCards.filter(card => {
+            const category = card.getAttribute('data-category') || 'budget';
+            return filterValue === 'all' || category === filterValue;
+        });
+        const sortedCards = [...visibleCards].sort((a, b) => {
+            const priceA = parseInt(a.getAttribute('data-price') || '0', 10);
+            const priceB = parseInt(b.getAttribute('data-price') || '0', 10);
+            if (sortValue === 'price-desc') return priceB - priceA;
+            if (sortValue === 'name') return a.querySelector('.vehicle-name')?.textContent.localeCompare(b.querySelector('.vehicle-name')?.textContent || '') || 0;
+            return priceA - priceB;
+        });
+        vehicleCards.forEach(card => card.style.display = 'none');
+        sortedCards.forEach(card => card.style.display = 'block');
+    };
+    vehicleFilter?.addEventListener('change', applyVehicleControls);
+    vehicleSort?.addEventListener('change', applyVehicleControls);
+    applyVehicleControls();
+
+    // Trip calculator
+    const calculatorVehicle = document.getElementById('calculator-vehicle');
+    const calculatorDays = document.getElementById('calculator-days');
+    const calculatorOutput = document.getElementById('calculator-output');
+    const updateCalculator = () => {
+        if (!calculatorVehicle || !calculatorDays || !calculatorOutput) return;
+        const rate = parseInt(calculatorVehicle.value, 10) || 1200;
+        const days = Math.max(1, parseInt(calculatorDays.value, 10) || 1);
+        calculatorOutput.textContent = `Estimated total: ₹${(rate * days).toLocaleString('en-IN')}`;
+    };
+    calculatorVehicle?.addEventListener('change', updateCalculator);
+    calculatorDays?.addEventListener('input', updateCalculator);
+    updateCalculator();
 
     // Scroll reveal
     const revealObs = new IntersectionObserver((entries) => {

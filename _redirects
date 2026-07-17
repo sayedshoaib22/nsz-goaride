@@ -1,0 +1,13 @@
+# Force everything to a single canonical host: https://nszgoaride.com
+# Netlify processes these top-to-bottom; "!" forces the rule even if a
+# file/route would otherwise match, and each rule is a direct 301 to the
+# final URL (no chaining through an intermediate host).
+
+http://nszgoaride.com/*        https://nszgoaride.com/:splat   301!
+http://www.nszgoaride.com/*    https://nszgoaride.com/:splat   301!
+https://www.nszgoaride.com/*   https://nszgoaride.com/:splat   301!
+
+# Optional cleanup for the GSC "alternate page with proper canonical tag"
+# notice on /privacy-policy — collapses the extensionless duplicate into
+# the canonical .html version instead of relying on the <link canonical> alone.
+/privacy-policy   /privacy-policy.html   301

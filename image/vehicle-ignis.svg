@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#f5f0e4"/>
+  <rect x="80" y="140" width="1040" height="420" rx="40" fill="#1c1208"/>
+  <rect x="140" y="188" width="340" height="180" rx="28" fill="#ff6b1a" opacity="0.95"/>
+  <rect x="540" y="188" width="330" height="180" rx="28" fill="#e4dcc8"/>
+  <rect x="180" y="398" width="760" height="110" rx="30" fill="#2d1e0e"/>
+  <circle cx="280" cy="520" r="92" fill="#ffffff" opacity="0.9"/>
+  <circle cx="900" cy="520" r="92" fill="#ffffff" opacity="0.9"/>
+  <circle cx="280" cy="520" r="54" fill="#1c1208"/>
+  <circle cx="900" cy="520" r="54" fill="#1c1208"/>
+  <path d="M220 190h120" stroke="#ffffff" stroke-width="10" stroke-linecap="round"/>
+  <path d="M580 190h240" stroke="#1c1208" stroke-width="10" stroke-linecap="round"/>
+  <text x="600" y="330" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#1c1208">Maruti Ignis</text>
+</svg>
