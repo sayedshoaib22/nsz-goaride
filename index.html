@@ -103,6 +103,62 @@
             return false;
         }
     </script>
+    <!-- New Vehicle Structured Data — WagonR, S-Presso, Celerio -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Maruti WagonR Self-Drive Rental Goa",
+        "description": "Rent Maruti WagonR in Goa with manual and automatic options. Fuel-efficient 4–5 seater from ₹1,200/day with air conditioning.",
+        "brand": { "@type": "Brand", "name": "Maruti Suzuki" },
+        "image": "https://nszgoaride.com/image/vehicle-19.webp",
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "INR",
+          "lowPrice": "1200",
+          "highPrice": "1500",
+          "offerCount": "2",
+          "availability": "https://schema.org/InStock",
+          "seller": { "@type": "LocalBusiness", "name": "NSZ Goa Ride" }
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Maruti S-Presso Compact Car Rental Goa",
+        "description": "Rent Maruti S-Presso in Goa. Compact, fuel-efficient 4-seater from ₹1,100/day with AC. Ideal for budget travellers.",
+        "brand": { "@type": "Brand", "name": "Maruti Suzuki" },
+        "image": "https://nszgoaride.com/image/vehicle-20.webp",
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "INR",
+          "lowPrice": "1100",
+          "highPrice": "1400",
+          "offerCount": "2",
+          "availability": "https://schema.org/InStock",
+          "seller": { "@type": "LocalBusiness", "name": "NSZ Goa Ride" }
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Maruti Celerio Self-Drive Rental Goa",
+        "description": "Rent Maruti Celerio in Goa. Light hatchback with smooth drive from ₹1,100/day. Available in manual and automatic.",
+        "brand": { "@type": "Brand", "name": "Maruti Suzuki" },
+        "image": "https://nszgoaride.com/image/vehicle-21.webp",
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "INR",
+          "lowPrice": "1100",
+          "highPrice": "1400",
+          "offerCount": "2",
+          "availability": "https://schema.org/InStock",
+          "seller": { "@type": "LocalBusiness", "name": "NSZ Goa Ride" }
+        }
+      }
+    ]
+    </script>
 </head>
 
 <body>
@@ -845,6 +901,137 @@
                             <button class="btn-card btn-card--orange card-full"
                                 onclick="gtag_report_conversion(); bookViaWhatsApp('Mini Cooper','Automatic','₹16,000')"><i
                                     class="fab fa-whatsapp"></i> Book Luxury</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ═══════════════════════════════════════════
+                     NEW VEHICLES — Added 2026-07-25
+                     ═══════════════════════════════════════════ -->
+
+                <!-- Vehicle 19 — Maruti WagonR -->
+                <div class="vehicle-card" data-category="budget" data-price="1200">
+                    <div class="vehicle-photo"
+                        style="background-image:url('image/vehicle-19.webp');"
+                        role="img"
+                        aria-label="Maruti WagonR self-drive rental Goa">
+                        <div class="vehicle-badge">New</div>
+                        <div class="vehicle-photo-num" aria-hidden="true">19</div>
+                    </div>
+                    <div class="vehicle-body">
+                        <h3 class="vehicle-name">Maruti WagonR</h3>
+                        <ul class="vehicle-specs">
+                            <li><i class="fas fa-rupee-sign"></i>₹3,000 Deposit</li>
+                            <li><i class="fas fa-snowflake"></i>Air Conditioning</li>
+                            <li><i class="fas fa-users"></i>4–5 Seater</li>
+                            <li><i class="fas fa-gas-pump"></i>Fuel Efficient</li>
+                        </ul>
+                        <div class="price-table">
+                            <div class="price-row">
+                                <span class="price-type">Manual</span>
+                                <span class="price-amt">₹1,200<small>/day</small></span>
+                            </div>
+                            <div class="price-row">
+                                <span class="price-type">Automatic</span>
+                                <span class="price-amt">₹1,500<small>/day</small></span>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn-card btn-card--dark"
+                                onclick="gtag_report_conversion(); bookViaWhatsApp('Maruti WagonR','Manual','₹1,200')"
+                                aria-label="Book Maruti WagonR Manual Goa">
+                                <i class="fab fa-whatsapp"></i> Manual
+                            </button>
+                            <button class="btn-card btn-card--orange"
+                                onclick="gtag_report_conversion(); bookViaWhatsApp('Maruti WagonR','Automatic','₹1,500')"
+                                aria-label="Book Maruti WagonR Automatic Goa">
+                                <i class="fab fa-whatsapp"></i> Auto
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle 20 — Maruti S-Presso -->
+                <div class="vehicle-card" data-category="budget" data-price="1100">
+                    <div class="vehicle-photo"
+                        style="background-image:url('image/vehicle-20.webp');"
+                        role="img"
+                        aria-label="Maruti S-Presso compact car rental Goa">
+                        <div class="vehicle-badge">New</div>
+                        <div class="vehicle-photo-num" aria-hidden="true">20</div>
+                    </div>
+                    <div class="vehicle-body">
+                        <h3 class="vehicle-name">Maruti S-Presso</h3>
+                        <ul class="vehicle-specs">
+                            <li><i class="fas fa-rupee-sign"></i>₹2,500 Deposit</li>
+                            <li><i class="fas fa-snowflake"></i>Air Conditioning</li>
+                            <li><i class="fas fa-users"></i>4 Seater</li>
+                            <li><i class="fas fa-gas-pump"></i>Fuel Efficient</li>
+                        </ul>
+                        <div class="price-table">
+                            <div class="price-row">
+                                <span class="price-type">Manual</span>
+                                <span class="price-amt">₹1,100<small>/day</small></span>
+                            </div>
+                            <div class="price-row">
+                                <span class="price-type">Automatic</span>
+                                <span class="price-amt">₹1,400<small>/day</small></span>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn-card btn-card--dark"
+                                onclick="gtag_report_conversion(); bookViaWhatsApp('Maruti S-Presso','Manual','₹1,100')"
+                                aria-label="Book Maruti S-Presso Manual Goa">
+                                <i class="fab fa-whatsapp"></i> Manual
+                            </button>
+                            <button class="btn-card btn-card--orange"
+                                onclick="gtag_report_conversion(); bookViaWhatsApp('Maruti S-Presso','Automatic','₹1,400')"
+                                aria-label="Book Maruti S-Presso Automatic Goa">
+                                <i class="fab fa-whatsapp"></i> Auto
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle 21 — Maruti Celerio -->
+                <div class="vehicle-card" data-category="budget" data-price="1100">
+                    <div class="vehicle-photo"
+                        style="background-image:url('image/vehicle-21.webp');"
+                        role="img"
+                        aria-label="Maruti Celerio self-drive rental Goa">
+                        <div class="vehicle-badge">New</div>
+                        <div class="vehicle-photo-num" aria-hidden="true">21</div>
+                    </div>
+                    <div class="vehicle-body">
+                        <h3 class="vehicle-name">Maruti Celerio</h3>
+                        <ul class="vehicle-specs">
+                            <li><i class="fas fa-rupee-sign"></i>₹2,500 Deposit</li>
+                            <li><i class="fas fa-snowflake"></i>Air Conditioning</li>
+                            <li><i class="fas fa-users"></i>4 Seater</li>
+                            <li><i class="fas fa-gas-pump"></i>Fuel Efficient</li>
+                        </ul>
+                        <div class="price-table">
+                            <div class="price-row">
+                                <span class="price-type">Manual</span>
+                                <span class="price-amt">₹1,100<small>/day</small></span>
+                            </div>
+                            <div class="price-row">
+                                <span class="price-type">Automatic</span>
+                                <span class="price-amt">₹1,400<small>/day</small></span>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn-card btn-card--dark"
+                                onclick="gtag_report_conversion(); bookViaWhatsApp('Maruti Celerio','Manual','₹1,100')"
+                                aria-label="Book Maruti Celerio Manual Goa">
+                                <i class="fab fa-whatsapp"></i> Manual
+                            </button>
+                            <button class="btn-card btn-card--orange"
+                                onclick="gtag_report_conversion(); bookViaWhatsApp('Maruti Celerio','Automatic','₹1,400')"
+                                aria-label="Book Maruti Celerio Automatic Goa">
+                                <i class="fab fa-whatsapp"></i> Auto
+                            </button>
                         </div>
                     </div>
                 </div>
