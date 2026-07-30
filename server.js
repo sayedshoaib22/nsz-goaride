@@ -19,7 +19,7 @@ function serveStatic(req, res) {
   let reqPath = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
   if (reqPath === '/') reqPath = '/index.html';
   const fullPath = path.join(rootDir, reqPath.replace(/^\/+/, ''));
-  const safePath = path.normalize(fullPath);
+  let safePath = path.normalize(fullPath);
 
   if (!safePath.startsWith(rootDir)) {
     sendJson(res, 403, { ok: false, error: 'Forbidden' });
@@ -27,6 +27,10 @@ function serveStatic(req, res) {
   }
 
   fs.stat(safePath, (err, stats) => {
+    if (!err && stats.isDirectory()) {
+      safePath = path.join(safePath, 'index.html');
+      stats = { isFile: () => true };
+    }
     if (err || !stats.isFile()) {
       if (reqPath === '/api/leads') return;
       res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
