@@ -57,14 +57,40 @@ function serveStatic(req, res) {
 
 function handleLead(req, res) {
   let body = '';
-  req.on('data', chunk => { body += chunk; });
+  req.on('data', chunk => {
+    body += chunk;
+    if (body.length > 32 * 1024) req.destroy();
+  });
   req.on('end', () => {
     try {
       const payload = body ? JSON.parse(body) : {};
+      const requiredFields = ['name', 'phone', 'email', 'vehicle', 'pickup', 'dropoff', 'location'];
+      const missingField = requiredFields.find(field => typeof payload[field] !== 'string' || !payload[field].trim());
+      const phone = typeof payload.phone === 'string' ? payload.phone.replace(/[\s-]/g, '') : '';
+      const pickup = new Date(`${payload.pickup}T00:00:00`);
+      const dropoff = new Date(`${payload.dropoff}T00:00:00`);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      if (missingField) return sendJson(res, 400, { ok: false, error: `Missing field: ${missingField}` });
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) return sendJson(res, 400, { ok: false, error: 'Invalid email.' });
+      if (!/^(?:\+91)?[6-9]\d{9}$/.test(phone)) return sendJson(res, 400, { ok: false, error: 'Invalid phone number.' });
+      if (Number.isNaN(pickup.getTime()) || pickup < today) return sendJson(res, 400, { ok: false, error: 'Invalid pickup date.' });
+      if (Number.isNaN(dropoff.getTime()) || dropoff <= pickup) return sendJson(res, 400, { ok: false, error: 'Invalid drop-off date.' });
+
       const lead = {
         id: `LEAD-${Date.now()}`,
         createdAt: new Date().toISOString(),
-        ...payload
+        name: payload.name.trim().slice(0, 100),
+        phone: payload.phone.trim().slice(0, 30),
+        email: payload.email.trim().slice(0, 160),
+        vehicle: payload.vehicle.trim().slice(0, 160),
+        pickup: payload.pickup,
+        dropoff: payload.dropoff,
+        location: payload.location.trim().slice(0, 160),
+        requests: typeof payload.requests === 'string' ? payload.requests.trim().slice(0, 1000) : '',
+        source: typeof payload.source === 'string' ? payload.source.slice(0, 50) : 'website',
+        bookingReference: typeof payload.bookingReference === 'string' ? payload.bookingReference.slice(0, 40) : ''
       };
       const rows = JSON.parse(fs.readFileSync(leadsFile, 'utf8'));
       rows.push(lead);
