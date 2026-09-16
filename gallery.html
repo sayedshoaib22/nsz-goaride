@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fleet Gallery | Self Drive Cars &amp; Bikes in Goa - NSZ Goa Ride</title>
+    <meta name="description" content="Explore real photos of our clean self-drive car and bike rental fleet in Madgaon, Goa. View our Swift, Baleno, Thar, Ertiga, and Activa fleet ready for rental.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://nszgoaride.com/gallery">
+    <meta property="og:title" content="Fleet Gallery | Self Drive Cars &amp; Bikes in Goa - NSZ Goa Ride">
+    <meta property="og:description" content="Explore real photos of our clean self-drive car and bike rental fleet in Madgaon, Goa.">
+    <meta property="og:image" content="https://nszgoaride.com/image/logo.png">
+    <meta property="og:url" content="https://nszgoaride.com/gallery">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#ff6b1a">
+    <link rel="icon" href="image/logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "NSZ Goa Ride Fleet Gallery",
+      "description": "Real fleet photos of self-drive cars, bikes, and scooties available for rent in Madgaon and South Goa.",
+      "url": "https://nszgoaride.com/gallery"
+    }
+    </script>
+</head>
+<body class="gallery-page">
+    <header class="gallery-header">
+        <nav class="gallery-nav" aria-label="Main navigation">
+            <a class="gallery-brand" href="./">NSZ <span>GOA RIDE</span></a>
+            <div class="gallery-nav__links">
+                <a href="cars.html">Cars</a>
+                <a href="bikes.html">Bikes</a>
+                <a href="contact.html">Contact</a>
+                <a class="gallery-nav__cta" href="https://wa.me/918262812997" target="_blank" rel="noopener">Book on WhatsApp</a>
+            </div>
+        </nav>
+        <div class="gallery-hero">
+            <div class="gallery-kicker">Real fleet photography · Madgaon, Goa</div>
+            <h1>See what is ready<br><em>for your Goa drive.</em></h1>
+            <p>Browse our self-drive cars, SUVs, scooters, and customer handovers before you book.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-shell" aria-labelledby="gallery-heading">
+            <div class="gallery-toolbar">
+                <div>
+                    <div class="gallery-kicker">NSZ Goa Ride fleet</div>
+                    <h2 id="gallery-heading">Fleet gallery</h2>
+                </div>
+                <div class="gallery-filter" role="group" aria-label="Filter gallery by category">
+                    <button class="gallery-filter__button is-active" type="button" data-filter="all">All Fleet</button>
+                    <button class="gallery-filter__button" type="button" data-filter="cars">Cars &amp; SUVs</button>
+                    <button class="gallery-filter__button" type="button" data-filter="bikes">Bikes &amp; Scooters</button>
+                    <button class="gallery-filter__button" type="button" data-filter="deliveries">Deliveries &amp; Customers</button>
+                </div>
+            </div>
+            <p class="gallery-status" id="gallery-status" aria-live="polite"></p>
+            <div class="gallery-grid" id="gallery-grid"></div>
+            <div class="gallery-empty" id="gallery-empty" hidden>
+                <strong>No photos in this category yet.</strong>
+                <span>Add bike, scooter, or customer delivery photos to the gallery folder when they are ready.</span>
+            </div>
+            <button class="gallery-load-more" id="gallery-load-more" type="button">Load More Photos</button>
+        </section>
+    </main>
+
+    <div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
+        <div class="gallery-lightbox__backdrop" data-lightbox-close></div>
+        <div class="gallery-lightbox__panel">
+            <button class="gallery-lightbox__close" type="button" aria-label="Close photo" data-lightbox-close>&times;</button>
+            <button class="gallery-lightbox__arrow gallery-lightbox__arrow--previous" type="button" aria-label="Previous photo" id="lightbox-previous">&#8592;</button>
+            <figure class="gallery-lightbox__figure">
+                <img id="lightbox-image" src="" alt="" loading="lazy" decoding="async">
+                <figcaption><span id="lightbox-title"></span><small id="lightbox-tag"></small></figcaption>
+            </figure>
+            <button class="gallery-lightbox__arrow gallery-lightbox__arrow--next" type="button" aria-label="Next photo" id="lightbox-next">&#8594;</button>
+            <a class="gallery-lightbox__cta" id="lightbox-book" href="https://wa.me/918262812997" target="_blank" rel="noopener">Book This Vehicle <span>&#8599;</span></a>
+        </div>
+    </div>
+
+    <footer class="gallery-footer">
+        <p>&copy; 2025 NSZ Goa Ride Car Rentals · <a href="contact.html">Contact us</a> · <a href="./">Back to home</a></p>
+    </footer>
+    <script src="gallery.js"></script>
+</body>
+</html>
