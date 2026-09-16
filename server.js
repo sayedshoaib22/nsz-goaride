@@ -17,6 +17,13 @@ function sendJson(res, statusCode, payload) {
 
 function serveStatic(req, res) {
   let reqPath = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+  const routeAliases = {
+    '/cars': '/cars.html',
+    '/bikes': '/bikes.html',
+    '/contact': '/contact.html',
+    '/gallery': '/gallery.html'
+  };
+  reqPath = routeAliases[reqPath] || reqPath;
   if (reqPath === '/') reqPath = '/index.html';
   const fullPath = path.join(rootDir, reqPath.replace(/^\/+/, ''));
   let safePath = path.normalize(fullPath);
