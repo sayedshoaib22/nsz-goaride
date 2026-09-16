@@ -189,42 +189,23 @@ async function submitLead(payload) {
     }
 }
 
-function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-function isValidIndianPhone(phone) {
-    return /^(?:\+91\s?)?[6-9]\d{9}$/.test(phone.replace(/[\s-]/g, ''));
-}
-
-function formatDateForMessage(value) {
-    const date = new Date(`${value}T00:00:00`);
-    return `${String(date.getDate()).padStart(2, '0')}-${String(date.getMonth() + 1).padStart(2, '0')}-${date.getFullYear()}`;
-}
-
 function submitBooking() {
-    const vehicle = document.getElementById('vehicle')?.value.trim() || '';
-    const name = document.getElementById('name')?.value.trim() || '';
-    const phone = document.getElementById('phone')?.value.trim() || '';
-    const email = document.getElementById('email')?.value.trim() || '';
+    const vehicle = document.getElementById('vehicle')?.value || '';
+    const name = document.getElementById('name')?.value || '';
+    const phone = document.getElementById('phone')?.value || '';
+    const email = document.getElementById('email')?.value || '';
     const pickup = document.getElementById('pickup')?.value || '';
     const dropoff = document.getElementById('dropoff')?.value || '';
-    const location = document.getElementById('location')?.value.trim() || '';
-    const requests = document.getElementById('requests')?.value.trim() || '';
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    const pickupDate = pickup ? new Date(`${pickup}T00:00:00`) : null;
-    const dropoffDate = dropoff ? new Date(`${dropoff}T00:00:00`) : null;
+    const location = document.getElementById('location')?.value || '';
+    const requests = document.getElementById('requests')?.value || '';
 
     const errors = [];
     if (!name || name.length < 2) errors.push('Name must be at least 2 characters');
-    if (!isValidIndianPhone(phone)) errors.push('Enter a valid Indian mobile number');
-    if (!isValidEmail(email)) errors.push('Enter a valid email address');
+    if (!phone) errors.push('Phone number is required');
+    if (!email || !email.includes('@')) errors.push('Valid email is required');
     if (!vehicle) errors.push('Please select a vehicle');
-    if (!pickupDate || Number.isNaN(pickupDate.getTime())) errors.push('Pickup date is required');
-    else if (pickupDate < today) errors.push('Pickup date cannot be in the past');
-    if (!dropoffDate || Number.isNaN(dropoffDate.getTime())) errors.push('Drop-off date is required');
-    else if (pickupDate && dropoffDate <= pickupDate) errors.push('Drop-off date must be after pickup date');
+    if (!pickup) errors.push('Pickup date is required');
+    if (!dropoff) errors.push('Drop-off date is required');
     if (!location) errors.push('Pickup location is required');
 
     const messagesDiv = document.getElementById('booking-messages');
@@ -240,7 +221,8 @@ function submitBooking() {
         return;
     }
 
-    const days = Math.ceil((dropoffDate - pickupDate) / 86400000);
+    const days = Math.ceil((new Date(dropoff) - new Date(pickup)) / 86400000);
+    const fmt = d => { const dt = new Date(d); return `${String(dt.getDate()).padStart(2, '0')}-${String(dt.getMonth() + 1).padStart(2, '0')}-${dt.getFullYear()}`; };
 
     const message = `🚗 *BOOKING REQUEST - NSZ Goa Ride*
 
@@ -251,8 +233,8 @@ function submitBooking() {
 
 *Rental Details:*
 • Vehicle: ${vehicle}
-• Pickup Date: ${formatDateForMessage(pickup)}
-• Drop-off Date: ${formatDateForMessage(dropoff)}
+• Pickup Date: ${fmt(pickup)}
+• Drop-off Date: ${fmt(dropoff)}
 • Duration: ${days} day${days > 1 ? 's' : ''}
 • Pickup Location: ${location}
 • Refundable Deposit: ₹3,000

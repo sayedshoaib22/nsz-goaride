@@ -1,644 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - NSZ Goa Ride</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #FF6B35;
-            --secondary: #004E89;
-            --accent: #F7B801;
-            --neutral-dark: #1a1a1a;
-            --neutral-light: #f5f5f5;
-            --text-primary: #1a1a1a;
-            --text-secondary: #666;
-            --border: #e0e0e0;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-            background-color: var(--neutral-light);
-            color: var(--text-primary);
-            line-height: 1.6;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, var(--secondary) 0%, #003f6d 100%);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Navigation */
-        nav {
-            background: white;
-            padding: 1rem 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        nav button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            color: var(--text-secondary);
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        nav button:hover,
-        nav button.active {
-            color: var(--primary);
-            background-color: rgba(255, 107, 53, 0.05);
-        }
-
-        /* Main container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Gallery Grid */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .gallery-item {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-        }
-
-        .gallery-item-image {
-            position: relative;
-            width: 100%;
-            padding-bottom: 66.67%;
-            overflow: hidden;
-            background: linear-gradient(135deg, #e0e0e0 0%, #f0f0f0 100%);
-        }
-
-        .gallery-item-image img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover .gallery-item-image img {
-            transform: scale(1.05);
-        }
-
-        .gallery-item-badge {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: var(--primary);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        .gallery-item-content {
-            padding: 1.5rem;
-        }
-
-        .gallery-item-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-        }
-
-        .gallery-item-category {
-            color: var(--primary);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 0.75rem;
-            font-weight: 600;
-        }
-
-        .gallery-item-description {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        /* Filter section */
-        .filters {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 0.75rem 1.5rem;
-            border: 2px solid var(--border);
-            background: white;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            color: var(--text-primary);
-            font-weight: 500;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            border-color: var(--primary);
-            background: var(--primary);
-            color: white;
-        }
-
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.7);
-            z-index: 1000;
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal.active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal-content {
-            background: white;
-            border-radius: 8px;
-            max-width: 800px;
-            width: 90%;
-            max-height: 90vh;
-            overflow: auto;
-            position: relative;
-            animation: slideUp 0.3s ease;
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--text-secondary);
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-
-        .modal-close:hover {
-            background: var(--neutral-light);
-            color: var(--primary);
-        }
-
-        .modal-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-        }
-
-        .modal-info {
-            padding: 2rem;
-        }
-
-        .modal-title {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .modal-category {
-            color: var(--primary);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .modal-description {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-
-        .modal-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .detail-item {
-            text-align: center;
-        }
-
-        .detail-label {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .detail-value {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--secondary);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-
-        footer p {
-            opacity: 0.9;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-
-            .gallery {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            nav ul {
-                gap: 1rem;
-            }
-
-            .filters {
-                gap: 0.5rem;
-            }
-
-            .filter-btn {
-                font-size: 0.85rem;
-                padding: 0.5rem 1rem;
-            }
-
-            .modal-image {
-                height: 250px;
-            }
-        }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fleet Gallery | Self Drive Cars &amp; Bikes in Goa - NSZ Goa Ride</title>
+    <meta name="description" content="Explore real photos of our clean self-drive car and bike rental fleet in Madgaon, Goa. View our Swift, Baleno, Thar, Ertiga, and Activa fleet ready for rental.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://nszgoaride.com/gallery">
+    <meta property="og:title" content="Fleet Gallery | Self Drive Cars &amp; Bikes in Goa - NSZ Goa Ride">
+    <meta property="og:description" content="Explore real photos of our clean self-drive car and bike rental fleet in Madgaon, Goa.">
+    <meta property="og:image" content="https://nszgoaride.com/image/logo.png">
+    <meta property="og:url" content="https://nszgoaride.com/gallery">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#ff6b1a">
+    <link rel="icon" href="image/logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "NSZ Goa Ride Fleet Gallery",
+      "description": "Real fleet photos of self-drive cars, bikes, and scooties available for rent in Madgaon and South Goa.",
+      "url": "https://nszgoaride.com/gallery"
+    }
+    </script>
 </head>
-<body>
-    <header>
-        <h1>Ride Gallery</h1>
-        <p>Explore our fleet and unforgettable Goa experiences</p>
+<body class="gallery-page">
+    <header class="gallery-header">
+        <nav class="gallery-nav" aria-label="Main navigation">
+            <a class="gallery-brand" href="./">NSZ <span>GOA RIDE</span></a>
+            <div class="gallery-nav__links">
+                <a href="cars.html">Cars</a>
+                <a href="bikes.html">Bikes</a>
+                <a href="contact.html">Contact</a>
+                <a class="gallery-nav__cta" href="https://wa.me/918262812997" target="_blank" rel="noopener">Book on WhatsApp</a>
+            </div>
+        </nav>
+        <div class="gallery-hero">
+            <div class="gallery-kicker">Real fleet photography · Madgaon, Goa</div>
+            <h1>See what is ready<br><em>for your Goa drive.</em></h1>
+            <p>Browse our self-drive cars, SUVs, scooters, and customer handovers before you book.</p>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><button class="nav-btn active" data-section="all">Overview</button></li>
-            <li><button class="nav-btn" data-section="vehicles">Vehicles</button></li>
-            <li><button class="nav-btn" data-section="locations">Locations</button></li>
-            <li><button class="nav-btn" data-section="experiences">Experiences</button></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        <div class="filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="vehicle">Vehicles</button>
-            <button class="filter-btn" data-filter="location">Locations</button>
-            <button class="filter-btn" data-filter="experience">Experiences</button>
-        </div>
-
-        <div class="gallery" id="gallery">
-            <!-- Gallery items will be populated here -->
-        </div>
-    </div>
-
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Close">&times;</button>
-            <img class="modal-image" id="modalImage" src="" alt="">
-            <div class="modal-info">
-                <div class="modal-category" id="modalCategory"></div>
-                <h2 class="modal-title" id="modalTitle"></h2>
-                <p class="modal-description" id="modalDescription"></p>
-                <div class="modal-details" id="modalDetails"></div>
+    <main>
+        <section class="gallery-shell" aria-labelledby="gallery-heading">
+            <div class="gallery-toolbar">
+                <div>
+                    <div class="gallery-kicker">NSZ Goa Ride fleet</div>
+                    <h2 id="gallery-heading">Fleet gallery</h2>
+                </div>
+                <div class="gallery-filter" role="group" aria-label="Filter gallery by category">
+                    <button class="gallery-filter__button is-active" type="button" data-filter="all">All Fleet</button>
+                    <button class="gallery-filter__button" type="button" data-filter="cars">Cars &amp; SUVs</button>
+                    <button class="gallery-filter__button" type="button" data-filter="bikes">Bikes &amp; Scooters</button>
+                    <button class="gallery-filter__button" type="button" data-filter="deliveries">Deliveries &amp; Customers</button>
+                </div>
             </div>
+            <p class="gallery-status" id="gallery-status" aria-live="polite"></p>
+            <div class="gallery-grid" id="gallery-grid"></div>
+            <div class="gallery-empty" id="gallery-empty" hidden>
+                <strong>No photos in this category yet.</strong>
+                <span>Add bike, scooter, or customer delivery photos to the gallery folder when they are ready.</span>
+            </div>
+            <button class="gallery-load-more" id="gallery-load-more" type="button">Load More Photos</button>
+        </section>
+    </main>
+
+    <div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
+        <div class="gallery-lightbox__backdrop" data-lightbox-close></div>
+        <div class="gallery-lightbox__panel">
+            <button class="gallery-lightbox__close" type="button" aria-label="Close photo" data-lightbox-close>&times;</button>
+            <button class="gallery-lightbox__arrow gallery-lightbox__arrow--previous" type="button" aria-label="Previous photo" id="lightbox-previous">&#8592;</button>
+            <figure class="gallery-lightbox__figure">
+                <img id="lightbox-image" src="" alt="" loading="lazy" decoding="async">
+                <figcaption><span id="lightbox-title"></span><small id="lightbox-tag"></small></figcaption>
+            </figure>
+            <button class="gallery-lightbox__arrow gallery-lightbox__arrow--next" type="button" aria-label="Next photo" id="lightbox-next">&#8594;</button>
+            <a class="gallery-lightbox__cta" id="lightbox-book" href="https://wa.me/918262812997" target="_blank" rel="noopener">Book This Vehicle <span>&#8599;</span></a>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2024 NSZ Goa Ride. All rights reserved.</p>
-        <p>Experience the best of Goa, your way.</p>
+    <footer class="gallery-footer">
+        <p>&copy; 2025 NSZ Goa Ride Car Rentals · <a href="contact.html">Contact us</a> · <a href="./">Back to home</a></p>
     </footer>
-
-    <script>
-        const galleryData = [
-            {
-                id: 1,
-                title: "Premium Sedan",
-                category: "vehicle",
-                badge: "Luxury",
-                image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=600&h=400&fit=crop",
-                description: "Experience comfort and sophistication with our premium sedan fleet. Perfect for business meetings, special occasions, or leisurely explorations of Goa's beautiful landscapes.",
-                details: {
-                    capacity: "4 Passengers",
-                    comfort: "Premium",
-                    features: "AC, WiFi, Premium Audio"
-                }
-            },
-            {
-                id: 2,
-                title: "Beach Sunset at Baga",
-                category: "location",
-                badge: "Popular",
-                image: "https://images.unsplash.com/photo-1503891077046-7640c3e2b5b8?w=600&h=400&fit=crop",
-                description: "Catch the most spectacular sunsets at Baga Beach. Let us take you there in style while you relax and enjoy the golden hour over the Arabian Sea.",
-                details: {
-                    bestTime: "5:30 PM - 7:00 PM",
-                    distance: "25 km from center",
-                    vibe: "Vibrant & Scenic"
-                }
-            },
-            {
-                id: 3,
-                title: "Adventure Trail Ride",
-                category: "experience",
-                badge: "Thrilling",
-                image: "https://images.unsplash.com/photo-1552821881-721bb62b942f?w=600&h=400&fit=crop",
-                description: "Embark on thrilling off-road adventures through Goa's hidden trails. Our experienced drivers know every winding path and secret spot in the region.",
-                details: {
-                    duration: "3-4 Hours",
-                    difficulty: "Moderate to High",
-                    includes: "Guide & Refreshments"
-                }
-            },
-            {
-                id: 4,
-                title: "SUV Explorer",
-                category: "vehicle",
-                badge: "Rugged",
-                image: "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=600&h=400&fit=crop",
-                description: "Conquer any terrain with our versatile SUV fleet. Ideal for family outings, group adventures, and exploring Goa's off-the-beaten-path destinations.",
-                details: {
-                    capacity: "6-7 Passengers",
-                    terrain: "All-terrain capable",
-                    storage: "Extra cargo space"
-                }
-            },
-            {
-                id: 5,
-                title: "Old Town Heritage Walk",
-                category: "location",
-                badge: "Cultural",
-                image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop",
-                description: "Explore the historic charm of Old Goa with Portuguese colonial architecture. We'll guide you through centuries of history and vibrant street culture.",
-                details: {
-                    era: "16th-18th Century",
-                    highlights: "7 UNESCO Sites",
-                    experience: "Cultural Immersion"
-                }
-            },
-            {
-                id: 6,
-                title: "Spice Plantation Tour",
-                category: "experience",
-                badge: "Educational",
-                image: "https://images.unsplash.com/photo-1577720643272-265e434eb0cd?w=600&h=400&fit=crop",
-                description: "Discover the aromatic world of Goa's famous spice plantations. Learn about centuries-old cultivation techniques and enjoy fresh organic products.",
-                details: {
-                    season: "Year-round",
-                    workshop: "3 Hours included",
-                    tasting: "Authentic spice tasting"
-                }
-            },
-            {
-                id: 7,
-                title: "Hatchback - City Rider",
-                category: "vehicle",
-                badge: "Compact",
-                image: "https://images.unsplash.com/photo-1552821881-721bb62b942f?w=600&h=400&fit=crop",
-                description: "Navigate Goa's bustling streets with ease. Our fuel-efficient hatchbacks are perfect for solo travelers and couples exploring the city.",
-                details: {
-                    capacity: "4 Passengers",
-                    efficiency: "Great mileage",
-                    parking: "Easy to park"
-                }
-            },
-            {
-                id: 8,
-                title: "Waterfront Marina Cruise",
-                category: "location",
-                badge: "Scenic",
-                image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=400&fit=crop",
-                description: "Experience Goa from the water. We arrange transport to premium marina spots where you can enjoy water sports and waterfront dining.",
-                details: {
-                    location: "Panjim Waterfront",
-                    activities: "Watersports available",
-                    dining: "5-star restaurants"
-                }
-            },
-            {
-                id: 9,
-                title: "Night Life Party Circuit",
-                category: "experience",
-                badge: "Nightlife",
-                image: "https://images.unsplash.com/photo-1535138963881-b7fe69b1ab54?w=600&h=400&fit=crop",
-                description: "Club hop through Goa's premier nightlife venues. Safe, reliable transportation to the hottest spots with local knowledge of the scene.",
-                details: {
-                    coverage: "North & South Goa",
-                    timing: "9 PM - 5 AM",
-                    service: "Professional drivers"
-                }
-            }
-        ];
-
-        let currentFilter = 'all';
-
-        function renderGallery(filter = 'all') {
-            const gallery = document.getElementById('gallery');
-            const filtered = filter === 'all' 
-                ? galleryData 
-                : galleryData.filter(item => item.category === filter);
-
-            gallery.innerHTML = filtered.map(item => `
-                <div class="gallery-item" data-id="${item.id}">
-                    <div class="gallery-item-image">
-                        <img src="${item.image}" alt="${item.title}">
-                        <span class="gallery-item-badge">${item.badge}</span>
-                    </div>
-                    <div class="gallery-item-content">
-                        <div class="gallery-item-category">${item.category}</div>
-                        <h3 class="gallery-item-title">${item.title}</h3>
-                        <p class="gallery-item-description">${item.description.substring(0, 100)}...</p>
-                    </div>
-                </div>
-            `).join('');
-
-            // Add click listeners
-            document.querySelectorAll('.gallery-item').forEach(item => {
-                item.addEventListener('click', () => openModal(parseInt(item.dataset.id)));
-            });
-        }
-
-        function openModal(id) {
-            const item = galleryData.find(i => i.id === id);
-            if (!item) return;
-
-            document.getElementById('modalImage').src = item.image;
-            document.getElementById('modalCategory').textContent = item.category;
-            document.getElementById('modalTitle').textContent = item.title;
-            document.getElementById('modalDescription').textContent = item.description;
-            
-            const detailsHtml = Object.entries(item.details).map(([key, value]) => `
-                <div class="detail-item">
-                    <div class="detail-label">${key}</div>
-                    <div class="detail-value">${value}</div>
-                </div>
-            `).join('');
-            document.getElementById('modalDetails').innerHTML = detailsHtml;
-
-            document.getElementById('modal').classList.add('active');
-        }
-
-        function closeModal() {
-            document.getElementById('modal').classList.remove('active');
-        }
-
-        // Event listeners
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                currentFilter = btn.dataset.filter;
-                renderGallery(currentFilter);
-            });
-        });
-
-        document.querySelectorAll('.nav-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const section = btn.dataset.section;
-                if (section !== 'all') {
-                    currentFilter = section;
-                    document.querySelectorAll('.filter-btn').forEach(fb => {
-                        fb.classList.remove('active');
-                        if (fb.dataset.filter === section) {
-                            fb.classList.add('active');
-                        }
-                    });
-                    renderGallery(currentFilter);
-                } else {
-                    currentFilter = 'all';
-                    document.querySelectorAll('.filter-btn')[0].classList.add('active');
-                    renderGallery('all');
-                }
-            });
-        });
-
-        document.querySelector('.modal-close').addEventListener('click', closeModal);
-        document.getElementById('modal').addEventListener('click', (e) => {
-            if (e.target === document.getElementById('modal')) {
-                closeModal();
-            }
-        });
-
-        // Initial render
-        renderGallery();
-    </script>
+    <script src="gallery.js"></script>
 </body>
 </html>
