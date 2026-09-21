@@ -55,7 +55,7 @@ function renderGallery() {
         card.dataset.id = item.id;
         card.style.setProperty('--card-index', index);
         card.innerHTML = `<button class="gallery-card__button" type="button" aria-label="Open ${item.title}">
-            <span class="gallery-card__image-wrap"><img src="${item.thumb}" data-full-src="${item.src}" alt="${item.alt}" loading="lazy" decoding="async"><span class="gallery-card__zoom" aria-hidden="true">&#8599;</span></span>
+            <span class="gallery-card__image-wrap"><img src="${item.thumb}" data-full-src="${item.src}" alt="${item.alt}" loading="lazy" decoding="async" width="800" height="600"><span class="gallery-card__zoom" aria-hidden="true">&#8599;</span></span>
             <span class="gallery-card__copy"><strong>${item.title}</strong><small>${item.tag}</small></span>
         </button>`;
         const image = card.querySelector('img');

@@ -2,68 +2,183 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nszgoaride.com/</loc>
-    <lastmod>2026-06-27</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nszgoaride.com/cars.html</loc>
-    <lastmod>2026-06-27</lastmod>
+    <loc>https://nszgoaride.com/self-drive-car-rental-goa</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.98</priority>
+  </url>
+  <url>
+    <loc>https://nszgoaride.com/best-self-drive-cars-goa</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.96</priority>
+  </url>
+  <url>
+    <loc>https://nszgoaride.com/goa-airport-car-rental</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.97</priority>
+  </url>
+  <url>
+    <loc>https://nszgoaride.com/mopa-airport-car-rental</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://nszgoaride.com/bikes.html</loc>
-    <lastmod>2026-06-27</lastmod>
+    <loc>https://nszgoaride.com/dabolim-airport-car-rental</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://nszgoaride.com/north-goa-car-rental</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.94</priority>
+  </url>
+  <url>
+    <loc>https://nszgoaride.com/south-goa-car-rental</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.94</priority>
+  </url>
+  <url>
+    <loc>https://nszgoaride.com/automatic-car-rental-goa</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://nszgoaride.com/cheap-car-rental-goa</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://nszgoaride.com/luxury-car-rental-goa</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://nszgoaride.com/7-seater-car-rental-goa</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://nszgoaride.com/calangute-car-rental</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://nszgoaride.com/baga-car-rental</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://nszgoaride.com/candolim-car-rental</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://nszgoaride.com/panjim-car-rental</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://nszgoaride.com/madgaon-car-rental</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://nszgoaride.com/palolem-car-rental</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://nszgoaride.com/cars/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://nszgoaride.com/bikes/</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://nszgoaride.com/car-rental-goa/</loc>
-    <lastmod>2026-06-27</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://nszgoaride.com/self-drive-car-goa/</loc>
-    <lastmod>2026-06-27</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://nszgoaride.com/goa-airport-taxi/</loc>
-    <lastmod>2026-06-27</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://nszgoaride.com/bike-rental-goa/</loc>
-    <lastmod>2026-06-27</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://nszgoaride.com/luxury-car-rental-goa/</loc>
-    <lastmod>2026-06-27</lastmod>
+    <loc>https://nszgoaride.com/car-rental-madgaon-railway-station/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://nszgoaride.com/gallery/</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://nszgoaride.com/thank-you.html</loc>
-    <lastmod>2026-06-27</lastmod>
+    <loc>https://nszgoaride.com/contact/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://nszgoaride.com/thank-you/</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.30</priority>
   </url>
   <url>
-    <loc>https://nszgoaride.com/privacy-policy.html</loc>
-    <lastmod>2026-06-27</lastmod>
+    <loc>https://nszgoaride.com/privacy-policy/</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.20</priority>
   </url>
   <url>
-    <loc>https://nszgoaride.com/terms-and-conditions.html</loc>
-    <lastmod>2026-06-27</lastmod>
+    <loc>https://nszgoaride.com/terms-and-conditions/</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.20</priority>
   </url>
 </urlset>
+
