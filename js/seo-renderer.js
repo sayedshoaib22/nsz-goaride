@@ -378,6 +378,108 @@
     if (twitterDesc) twitterDesc.setAttribute('content', page.seo.ogDescription || page.seo.metaDescription);
   }
 
+  function renderSchema(page) {
+    if (!page) return;
+
+    const seo = page.seo || {};
+    const canonical = seo.canonical || `${SITE_BASE}${page.slug || '/'}`;
+    const pageTitle = seo.title || page.primaryKeyword || 'NSZ Goa Ride';
+    const description = seo.metaDescription || page.hero?.description || 'NSZ Goa Ride car rental services in Goa.';
+    const serviceName = page.primaryKeyword || pageTitle;
+
+    const webPageSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': canonical,
+      url: canonical,
+      name: pageTitle,
+      description,
+      isPartOf: {
+        '@type': 'WebSite',
+        '@id': `${SITE_BASE}/#website`,
+        url: SITE_BASE,
+        name: 'NSZ Goa Ride'
+      },
+      breadcrumb: {
+        '@id': `${canonical}#breadcrumb`
+      }
+    };
+
+    const breadcrumbSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: SITE_BASE
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: pageTitle,
+          item: canonical
+        }
+      ]
+    };
+
+    const serviceSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: serviceName,
+      serviceType: serviceName,
+      description,
+      url: canonical,
+      provider: {
+        '@type': 'Organization',
+        name: 'NSZ Goa Ride',
+        url: SITE_BASE,
+        telephone: '+91 8262812997',
+        sameAs: [
+          'https://wa.me/918262812997',
+          'https://www.instagram.com/goaride',
+          'https://www.facebook.com/goaride'
+        ],
+        areaServed: ['Goa', 'North Goa', 'South Goa']
+      },
+      areaServed: ['Goa', 'North Goa', 'South Goa'],
+      offers: {
+        '@type': 'Offer',
+        priceCurrency: 'INR',
+        price: '1200',
+        availability: 'https://schema.org/InStock',
+        url: canonical
+      },
+      category: 'Car Rental'
+    };
+
+    const faqSchema = Array.isArray(page.faqs) && page.faqs.length ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: page.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer
+        }
+      }))
+    } : null;
+
+    const schema = [webPageSchema, breadcrumbSchema, serviceSchema];
+    if (faqSchema) schema.push(faqSchema);
+
+    const existingScripts = document.head.querySelectorAll('script[data-nsz-schema="true"]');
+    existingScripts.forEach((script) => script.remove());
+
+    const jsonLdScript = document.createElement('script');
+    jsonLdScript.type = 'application/ld+json';
+    jsonLdScript.setAttribute('data-nsz-schema', 'true');
+    jsonLdScript.textContent = JSON.stringify(schema);
+    document.head.appendChild(jsonLdScript);
+  }
+
   function renderPageNotFound() {
     document.title = 'Page Not Found | NSZ Goa Ride';
     const root = document.getElementById('seo-page-root');
@@ -399,6 +501,7 @@
     }
 
     applyMeta(page);
+    renderSchema(page);
     root.innerHTML = renderSeoMarkup(page);
     if (typeof window.initializePageInteractions === 'function') window.initializePageInteractions();
     if (typeof window.initDarkMode === 'function') window.initDarkMode();
