@@ -10,8 +10,8 @@ const carGalleryData = galleryPhotoNames.map((filename, index) => {
         id: index + 1,
         category: 'cars',
         title: `NSZ Goa Ride car photo ${photoNumber}`,
-        src: `assets/images/gallery/${filename}`,
-        thumb: `assets/images/gallery/${filename}`,
+        src: index < 29 ? `/image/timepass/${filename}` : `/assets/images/gallery/${filename}`,
+        thumb: index < 29 ? `/image/timepass/${filename}` : `/assets/images/gallery/${filename}`,
         alt: `NSZ Goa Ride car rental photo in Madgaon Goa, photo ${photoNumber}`,
         tag: 'Cars & SUVs'
     };
@@ -21,8 +21,8 @@ const bikeGalleryData = bikePhotoNames.map((filename, index) => ({
     id: carGalleryData.length + index + 1,
     category: 'bikes',
     title: `NSZ Goa Ride bike and scooter photo ${index + 1}`,
-    src: `assets/images/gallery/${filename}`,
-    thumb: `assets/images/gallery/${filename}`,
+    src: `/image/timepass/${filename}`,
+    thumb: `/image/timepass/${filename}`,
     alt: `NSZ Goa Ride bike and scooter rental photo in Madgaon Goa, photo ${index + 1}`,
     tag: 'Bikes & Scooters'
 }));

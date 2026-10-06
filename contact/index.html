@@ -17,9 +17,9 @@
     <meta name="theme-color" content="#ff6b1a">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="icon" href="image/logo.png" type="image/png">
-    <link rel="shortcut icon" href="image/logo.png">
-    <link rel="apple-touch-icon" href="image/logo.png">
+    <link rel="icon" href="../image/logo.png" type="image/png">
+    <link rel="shortcut icon" href="../image/logo.png">
+    <link rel="apple-touch-icon" href="../image/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -483,17 +483,23 @@
             </a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="/">Home</a></li>
-                <li><a href="../cars.html">Cars</a></li>
-                <li><a href="../bikes.html">Bikes</a></li>
-                <li><a href="/#booking">Book</a></li>
+                <li><a href="/cars/">Cars</a></li>
+                <li><a href="/bikes/">Bikes</a></li>
+                <li><a href="/booking/">Book Now</a></li>
                 <li><a href="/#features">Why Us</a></li>
                 <li><a href="/#testimonials">Reviews</a></li>
                 <li><a href="/#faq">FAQ</a></li>
-                <li><a href="../car-rental-goa/">Car Rental Goa</a></li>
-                <li><a href="../self-drive-car-goa/">Self Drive Cars</a></li>
-                <li><a href="../goa-airport-taxi/">Airport Taxi</a></li>
-                <li><a href="../bike-rental-goa/">Bike Rental</a></li>
-                <li><a href="../luxury-car-rental-goa/">Luxury Cars</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="nav-more-menu">More <span aria-hidden="true">▾</span></button>
+                    <ul class="dropdown-menu" id="nav-more-menu">
+                        <li><a href="/car-rental-goa/">Car Rental Goa</a></li>
+                        <li><a href="/self-drive-car-goa/">Self Drive Cars</a></li>
+                        <li><a href="/goa-airport-taxi/">Airport Taxi</a></li>
+                        <li><a href="/bike-rental-goa/">Bike Rental</a></li>
+                        <li><a href="/luxury-car-rental-goa/">Luxury Cars</a></li>
+                        <li><a href="/gallery/">Gallery</a></li>
+                    </ul>
+                </li>
                 <li><a href="/contact/" class="active" aria-current="page">Contact</a></li>
             </ul>
             <div class="nav-right">
@@ -503,7 +509,7 @@
                 <a id="nav-whatsapp-link" href="#" class="nav-cta" target="_blank" rel="noopener" onclick="gtag_report_conversion();">
                     <i class="fab fa-whatsapp"></i><span>Chat</span>
                 </a>
-                <button class="mobile-menu" id="mobile-menu" aria-label="Menu">
+                <button class="mobile-menu" id="mobile-menu" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
                     <span></span><span></span><span></span>
                 </button>
             </div>
@@ -733,7 +739,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 NSZ Goa Ride Car Rentals. All rights reserved. | Licensed Vehicle Rental Service |
-                    <a href="../privacy-policy.html">Privacy Policy</a> | <a href="../terms-and-conditions.html">Terms of Service</a>
+                    <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions/">Terms of Service</a>
                 </p>
             </div>
         </div>
@@ -779,8 +785,30 @@
 
         // ── Mobile Menu ──
         document.getElementById('mobile-menu')?.addEventListener('click', function () {
-            this.classList.toggle('active');
-            document.getElementById('nav-menu')?.classList.toggle('open');
+            const isExpanded = this.classList.toggle('active');
+            document.getElementById('nav-menu')?.classList.toggle('mobile-active', isExpanded);
+            this.setAttribute('aria-expanded', String(isExpanded));
+        });
+        document.querySelectorAll('#nav-menu > li > a').forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.getElementById('nav-menu');
+                const button = document.getElementById('mobile-menu');
+                menu?.classList.remove('mobile-active');
+                button?.classList.remove('active');
+                button?.setAttribute('aria-expanded', 'false');
+                menu?.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('dropdown-open');
+                    dropdown.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+                });
+            });
+        });
+        document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const dropdown = toggle.closest('.nav-dropdown');
+                if (!dropdown) return;
+                const isExpanded = dropdown.classList.toggle('dropdown-open');
+                toggle.setAttribute('aria-expanded', String(isExpanded));
+            });
         });
 
         // ── WhatsApp Links ──
@@ -826,8 +854,14 @@
                 gtag('event', 'conversion', { send_to: 'AW-17953205126/fM-_CJzzlsccEIbX4PBC' });
             }
 
+            const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(wa)}`;
+            const whatsappWindow = window.open(whatsappUrl, '_blank');
+            if (!whatsappWindow) {
+                msgDiv.innerHTML = '<div style="background:#fff5f5;color:#c53030;padding:.85rem 1rem;border-radius:10px;border-left:4px solid #fc8181;margin-bottom:.5rem;">Please allow pop-ups to open WhatsApp, then submit your enquiry again.</div>';
+                return;
+            }
+
             setTimeout(() => {
-                window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(wa)}`, '_blank');
                 document.getElementById('contact-form').reset();
                 msgDiv.innerHTML = '';
             }, 500);

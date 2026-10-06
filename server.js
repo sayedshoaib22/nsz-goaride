@@ -64,7 +64,7 @@ function serveStatic(req, res) {
     }
     if (err || !stats.isFile()) {
       if (reqPath === '/api/leads') return;
-      const notFoundPage = path.join(rootDir, '404.html');
+      const notFoundPage = path.join(rootDir, '404', 'index.html');
       fs.readFile(notFoundPage, 'utf8', (readErr, pageContent) => {
         if (readErr) {
           res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
@@ -85,8 +85,12 @@ function serveStatic(req, res) {
       '.png': 'image/png',
       '.jpg': 'image/jpeg',
       '.jpeg': 'image/jpeg',
+      '.webp': 'image/webp',
+      '.avif': 'image/avif',
+      '.gif': 'image/gif',
       '.svg': 'image/svg+xml',
       '.ico': 'image/x-icon',
+      '.xml': 'application/xml; charset=utf-8',
       '.txt': 'text/plain; charset=utf-8'
     };
     res.writeHead(200, { 'Content-Type': mimeTypes[ext] || 'application/octet-stream' });

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Book Your Ride | NSZ Goa Ride</title>
+    <meta name="description" content="Book a car or bike rental in Goa with NSZ Goa Ride. Choose your vehicle, dates and pickup location to send your request via WhatsApp.">
+    <link rel="canonical" href="https://nszgoaride.com/booking/">
+    <meta name="theme-color" content="#ff6b1a">
+    <link rel="icon" href="../image/logo.png" type="image/png">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a class="logo" href="/" aria-label="NSZ Goa Ride home">
+                <img src="../image/logo.png" alt="NSZ Goa Ride" width="120" height="38">
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/cars/">Cars</a></li>
+                <li><a href="/bikes/">Bikes</a></li>
+                <li><a href="/booking/" aria-current="page">Book Now</a></li>
+                <li><a href="/#features">Why Us</a></li>
+                <li><a href="/#testimonials">Reviews</a></li>
+                <li><a href="/#faq">FAQ</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="nav-more-menu">More <span aria-hidden="true">▾</span></button>
+                    <ul class="dropdown-menu" id="nav-more-menu">
+                        <li><a href="/car-rental-goa/">Car Rental Goa</a></li>
+                        <li><a href="/self-drive-car-goa/">Self Drive Cars</a></li>
+                        <li><a href="/goa-airport-taxi/">Airport Taxi</a></li>
+                        <li><a href="/bike-rental-goa/">Bike Rental</a></li>
+                        <li><a href="/luxury-car-rental-goa/">Luxury Cars</a></li>
+                        <li><a href="/gallery/">Gallery</a></li>
+                    </ul>
+                </li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a id="nav-whatsapp-link" href="#" class="nav-cta" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i><span>Chat</span>
+                </a>
+                <button class="mobile-menu" id="mobile-menu" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="booking" class="section booking-section">
+            <div class="container">
+                <div class="booking-layout">
+                    <div class="booking-intro">
+                        <div class="masthead-label">Reserve</div>
+                        <h1 class="booking-title">Book Your<br><em>Ride Now</em></h1>
+                        <p>Fill out the form and get instant confirmation via WhatsApp. No hidden charges — transparent pricing guaranteed.</p>
+                        <ul class="booking-perks">
+                            <li><i class="fas fa-check-circle"></i> Free airport pickup</li>
+                            <li><i class="fas fa-check-circle"></i> Instant WhatsApp confirmation</li>
+                            <li><i class="fas fa-check-circle"></i> No hidden charges</li>
+                            <li><i class="fas fa-check-circle"></i> 24/7 roadside support</li>
+                        </ul>
+                    </div>
+                    <div class="booking-form-wrap">
+                        <div id="booking-messages" aria-live="polite"></div>
+                        <form id="booking-form" class="booking-form">
+                            <div class="form-grid">
+                                <div class="form-group form-group--full">
+                                    <label for="vehicle">Select Vehicle</label>
+                                    <select id="vehicle" required aria-label="Select vehicle">
+                                        <option value="">Choose a vehicle...</option>
+                                        <optgroup label="Economy Cars">
+                                            <option value="Maruti Ignis Manual - ₹1,200/day">Maruti Ignis Manual - ₹1,200/day</option>
+                                            <option value="Maruti Ignis Automatic - ₹1,500/day">Maruti Ignis Automatic - ₹1,500/day</option>
+                                            <option value="Maruti Swift Manual - ₹1,200/day">Maruti Swift Manual - ₹1,200/day</option>
+                                            <option value="Maruti Swift Automatic - ₹1,500/day">Maruti Swift Automatic - ₹1,500/day</option>
+                                            <option value="Maruti Baleno Manual - ₹1,200/day">Maruti Baleno Manual - ₹1,200/day</option>
+                                            <option value="Maruti Baleno Automatic - ₹1,500/day">Maruti Baleno Automatic - ₹1,500/day</option>
+                                            <option value="Hyundai i20 Manual - ₹1,300/day">Hyundai i20 Manual - ₹1,300/day</option>
+                                            <option value="Hyundai i20 Automatic - ₹1,600/day">Hyundai i20 Automatic - ₹1,600/day</option>
+                                        </optgroup>
+                                        <optgroup label="SUVs &amp; Sedans">
+                                            <option value="Maruti Brezza Manual - ₹2,000/day">Maruti Brezza Manual - ₹2,000/day</option>
+                                            <option value="Maruti Brezza Automatic - ₹2,500/day">Maruti Brezza Automatic - ₹2,500/day</option>
+                                            <option value="Hyundai Creta Manual - ₹2,500/day">Hyundai Creta Manual - ₹2,500/day</option>
+                                            <option value="Hyundai Creta Automatic - ₹3,200/day">Hyundai Creta Automatic - ₹3,200/day</option>
+                                        </optgroup>
+                                        <optgroup label="Family &amp; MPVs">
+                                            <option value="Maruti Ertiga Manual - ₹2,200/day">Maruti Ertiga Manual - ₹2,200/day</option>
+                                            <option value="Maruti Ertiga Automatic - ₹3,000/day">Maruti Ertiga Automatic - ₹3,000/day</option>
+                                            <option value="Kia Carens Manual - ₹2,500/day">Kia Carens Manual - ₹2,500/day</option>
+                                            <option value="Kia Carens Automatic - ₹3,000/day">Kia Carens Automatic - ₹3,000/day</option>
+                                            <option value="Toyota Innova Crysta Manual - ₹3,000/day">Toyota Innova Crysta Manual - ₹3,000/day</option>
+                                            <option value="Toyota Innova Crysta Automatic - ₹3,500/day">Toyota Innova Crysta Automatic - ₹3,500/day</option>
+                                            <option value="Toyota Innova Hycross Automatic - ₹3,500/day">Toyota Innova Hycross Automatic - ₹3,500/day</option>
+                                        </optgroup>
+                                        <optgroup label="Adventure &amp; Premium">
+                                            <option value="Toyota Fortuner Automatic - ₹6,000/day">Toyota Fortuner Automatic - ₹6,000/day</option>
+                                            <option value="Mahindra Thar Hardtop Manual - ₹3,000/day">Mahindra Thar Hardtop Manual - ₹3,000/day</option>
+                                            <option value="Mahindra Thar Hardtop Automatic - ₹3,500/day">Mahindra Thar Hardtop Automatic - ₹3,500/day</option>
+                                            <option value="Mahindra Thar Convertible Manual - ₹3,300/day">Mahindra Thar Convertible Manual - ₹3,300/day</option>
+                                            <option value="Mahindra Thar Convertible Automatic - ₹4,000/day">Mahindra Thar Convertible Automatic - ₹4,000/day</option>
+                                            <option value="Mahindra Thar Roxx Automatic - ₹6,500/day">Mahindra Thar Roxx Automatic - ₹6,500/day</option>
+                                        </optgroup>
+                                        <optgroup label="Luxury Cars">
+                                            <option value="Mercedes-Benz C300 Automatic - ₹18,000/day">Mercedes-Benz C300 Automatic - ₹18,000/day</option>
+                                            <option value="Audi A3 Automatic - ₹20,000/day">Audi A3 Automatic - ₹20,000/day</option>
+                                            <option value="Mini Cooper Automatic - ₹16,000/day">Mini Cooper Automatic - ₹16,000/day</option>
+                                        </optgroup>
+                                        <optgroup label="2-Wheeler Bikes">
+                                            <option value="Yamaha Fascino 125 - ₹600/day">Yamaha Fascino 125 - ₹600/day</option>
+                                            <option value="Royal Enfield Hunter 350 - ₹2,000/day">Royal Enfield Hunter 350 - ₹2,000/day</option>
+                                            <option value="Royal Enfield Bullet 350 - ₹2,000/day">Royal Enfield Bullet 350 - ₹2,000/day</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" placeholder="Your full name" required minlength="2" maxlength="50">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" placeholder="+91 98765 43210" required inputmode="numeric">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" placeholder="your@email.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pickup">Pickup Date</label>
+                                    <input type="date" id="pickup" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dropoff">Drop-off Date</label>
+                                    <input type="date" id="dropoff" required>
+                                </div>
+                                <div class="form-group form-group--full">
+                                    <label for="location">Pickup Location</label>
+                                    <select id="location" required>
+                                        <option value="">Select location...</option>
+                                        <option value="Dabolim Airport">Dabolim Airport</option>
+                                        <option value="Madgaon Railway Station">Madgaon Railway Station</option>
+                                        <option value="Thivim Railway Station">Thivim Railway Station</option>
+                                        <option value="Hotel/Resort Pickup">Hotel / Resort Pickup</option>
+                                        <option value="North Goa">North Goa (Calangute, Baga, Anjuna)</option>
+                                        <option value="South Goa">South Goa (Colva, Benaulim, Palolem)</option>
+                                        <option value="Panaji City">Panaji City</option>
+                                        <option value="Other Location">Other Location</option>
+                                    </select>
+                                </div>
+                                <div class="form-group form-group--full">
+                                    <label for="requests">Special Requests <span class="label-opt">(Optional)</span></label>
+                                    <textarea id="requests" placeholder="Any special requirements..." rows="3"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-submit">
+                                <i class="fab fa-whatsapp"></i> Confirm via WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a class="fab-phone" href="tel:+918262812997" aria-label="Call NSZ Goa Ride"><i class="fas fa-phone"></i></a>
+    <a class="fab-whatsapp" id="fab-whatsapp-link" href="https://wa.me/918262812997" target="_blank" rel="noopener" aria-label="Chat with NSZ Goa Ride on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+</body>
+
+</html>

@@ -97,7 +97,9 @@ function showSection(section, skipScroll = false) {
     }
 
     // Close mobile menu
-    document.getElementById('mobile-menu')?.classList.remove('active');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu?.classList.remove('active');
+    mobileMenu?.setAttribute('aria-expanded', 'false');
     document.getElementById('nav-menu')?.classList.remove('mobile-active');
 }
 
@@ -261,12 +263,15 @@ Please confirm availability and total cost. Thank you!`;
         messagesDiv.innerHTML = `<div style="background:#c6f6d5;color:#22543d;padding:1rem;border-radius:10px;border-left:4px solid #38a169;"><i class="fas fa-check-circle"></i> Saving your request and redirecting to WhatsApp...</div>`;
     }
 
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    const whatsappWindow = window.open(whatsappUrl, '_blank');
+
     submitLead(leadPayload).finally(() => {
         setTimeout(() => {
-            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
             document.getElementById('booking-form')?.reset();
             if (messagesDiv) messagesDiv.innerHTML = '';
-            window.location.href = `thank-you.html?ref=${encodeURIComponent(bookingReference)}`;
+            if (!whatsappWindow) window.location.href = whatsappUrl;
+            else window.location.href = `/thank-you/?ref=${encodeURIComponent(bookingReference)}`;
         }, 500);
     });
 }
@@ -293,12 +298,15 @@ function initializeWhatsAppLinks() {
     const base = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
     document.getElementById('nav-whatsapp-link')?.setAttribute('href', base);
     document.getElementById('hero-whatsapp-btn')?.setAttribute('href', base);
+    document.getElementById('whatsapp-booking-btn')?.setAttribute('href', base);
     document.getElementById('fab-whatsapp-link')?.setAttribute('href', base);
     document.getElementById('footer-whatsapp-link')?.setAttribute('href', `https://wa.me/${WHATSAPP_NUMBER}`);
 }
 
 // ===== DOMContentLoaded =====
 document.addEventListener('DOMContentLoaded', () => {
+    // SEO pages render their interactive markup in a separate DOMContentLoaded listener.
+    setTimeout(() => {
     deferNonCriticalResources();
     initializeLazyLoading();
     initDarkMode();
@@ -321,16 +329,47 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.getElementById('nav-menu');
     if (mobileMenu && navMenu) {
         mobileMenu.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            navMenu.classList.toggle('mobile-active');
+            const isExpanded = mobileMenu.classList.toggle('active');
+            navMenu.classList.toggle('mobile-active', isExpanded);
+            mobileMenu.setAttribute('aria-expanded', String(isExpanded));
         });
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('active');
                 navMenu.classList.remove('mobile-active');
-            });
+                mobileMenu.setAttribute('aria-expanded', 'false');
+                navMenu.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('dropdown-open');
+                    dropdown.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+                });
+            }, 0);
         });
     }
+
+    document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const dropdown = toggle.closest('.nav-dropdown');
+            if (!dropdown) return;
+            const isExpanded = dropdown.classList.toggle('dropdown-open');
+            toggle.setAttribute('aria-expanded', String(isExpanded));
+        });
+    });
+
+    document.addEventListener('click', event => {
+        if (event.target instanceof Element && event.target.closest('.nav-dropdown')) return;
+        document.querySelectorAll('.nav-dropdown.dropdown-open').forEach(dropdown => {
+            dropdown.classList.remove('dropdown-open');
+            dropdown.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    document.addEventListener('keydown', event => {
+        if (event.key !== 'Escape') return;
+        document.querySelectorAll('.nav-dropdown.dropdown-open').forEach(dropdown => {
+            dropdown.classList.remove('dropdown-open');
+            dropdown.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+        });
+    });
 
     // Booking form
     document.getElementById('booking-form')?.addEventListener('submit', e => {
@@ -454,6 +493,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     console.log('NSZ Goa Ride website loaded successfully! ✅');
+    }, 0);
 });
 
 // ===== Skeleton Loader =====

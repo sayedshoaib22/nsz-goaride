@@ -176,25 +176,38 @@
           </a>
           <ul class="nav-menu" id="nav-menu">
             <li><a href="/">Home</a></li>
-            <li><a href="/self-drive-car-rental-goa">Self Drive</a></li>
-            <li><a href="/goa-airport-car-rental">Airport</a></li>
-            <li><a href="/north-goa-car-rental">North Goa</a></li>
-            <li><a href="/south-goa-car-rental">South Goa</a></li>
-            <li><a href="#booking">Book</a></li>
-            <li><a href="#features">Why Us</a></li>
+            <li><a href="/cars/">Cars</a></li>
+            <li><a href="/bikes/">Bikes</a></li>
+            <li><a href="/booking/">Book Now</a></li>
+            <li><a href="/#features">Why Us</a></li>
+            <li><a href="/#testimonials">Reviews</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="/gallery.html">Gallery</a></li>
-            <li><a href="/contact.html">Contact</a></li>
+            <li class="nav-dropdown">
+              <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="nav-more-menu">More <span aria-hidden="true">▾</span></button>
+              <ul class="dropdown-menu" id="nav-more-menu">
+                <li><a href="/car-rental-goa/">Car Rental Goa</a></li>
+                <li><a href="/self-drive-car-goa/">Self Drive Cars</a></li>
+                <li><a href="/goa-airport-taxi/">Airport Taxi</a></li>
+                <li><a href="/bike-rental-goa/">Bike Rental</a></li>
+                <li><a href="/luxury-car-rental-goa/">Luxury Cars</a></li>
+                <li><a href="/gallery/">Gallery</a></li>
+                <li><a href="/self-drive-car-rental-goa">Self Drive</a></li>
+                <li><a href="/goa-airport-car-rental">Airport</a></li>
+                <li><a href="/north-goa-car-rental">North Goa</a></li>
+                <li><a href="/south-goa-car-rental">South Goa</a></li>
+              </ul>
+            </li>
+            <li><a href="/contact/">Contact</a></li>
           </ul>
           <div class="nav-right">
             <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
             <a id="nav-whatsapp-link" href="https://wa.me/918262812997?text=${encodeURIComponent('Hi! I would like to book a car in Goa.')}" class="nav-cta" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i><span>Chat</span></a>
-            <button class="mobile-menu" id="mobile-menu" aria-label="Menu"><span></span><span></span><span></span></button>
+            <button class="mobile-menu" id="mobile-menu" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
           </div>
         </div>
       </nav>
 
-      <a class="sticky-booking-cta" href="#booking" aria-label="Book a car rental in Goa">
+      <a class="sticky-booking-cta" href="/booking/" aria-label="Book a car rental in Goa">
         <span><i class="fab fa-whatsapp"></i> Book Now</span>
         <strong>From ₹1,200/day</strong>
       </a>
@@ -212,7 +225,7 @@
             </h1>
             <p class="hero-sub">${escapeHtml(page.hero.description)}</p>
             <div class="hero-actions">
-              <a href="#booking" class="btn-hero-primary"><i class="fas fa-car"></i> Book Now</a>
+              <a href="/booking/" class="btn-hero-primary"><i class="fas fa-car"></i> Book Now</a>
               <a href="https://wa.me/918262812997" class="btn-hero-ghost" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
             </div>
           </div>
@@ -348,7 +361,7 @@
             </div>
           </div>
           <div class="footer-bottom">
-            <p>&copy; 2025 NSZ Goa Ride Car Rentals. All rights reserved. | <a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms-and-conditions.html">Terms of Service</a></p>
+            <p>&copy; 2025 NSZ Goa Ride Car Rentals. All rights reserved. | <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions/">Terms of Service</a></p>
           </div>
         </div>
       </footer>
@@ -485,7 +498,7 @@
     const root = document.getElementById('seo-page-root');
     if (!root) return;
     root.innerHTML = `
-      <nav class="navbar" id="navbar"><div class="nav-inner"><a class="logo" href="/"><img src="/image/logo.png" alt="NSZ Goa Ride" loading="lazy" width="120" height="38"></a><ul class="nav-menu" id="nav-menu"><li><a href="/">Home</a></li><li><a href="/self-drive-car-rental-goa">Self Drive</a></li><li><a href="/goa-airport-car-rental">Airport</a></li><li><a href="/contact.html">Contact</a></li></ul><div class="nav-right"><a href="https://wa.me/918262812997" class="nav-cta" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i><span>Chat</span></a></div></div></nav>
+      <nav class="navbar" id="navbar"><div class="nav-inner"><a class="logo" href="/"><img src="/image/logo.png" alt="NSZ Goa Ride" loading="lazy" width="120" height="38"></a><ul class="nav-menu" id="nav-menu"><li><a href="/">Home</a></li><li><a href="/self-drive-car-rental-goa">Self Drive</a></li><li><a href="/goa-airport-car-rental">Airport</a></li><li><a href="/contact/">Contact</a></li></ul><div class="nav-right"><a href="https://wa.me/918262812997" class="nav-cta" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i><span>Chat</span></a></div></div></nav>
       <section class="section features-section"><div class="container" style="padding:120px 0 60px; text-align:center;"><div class="masthead-label">404</div><h1 class="hero-heading" style="font-size:clamp(2.5rem,6vw,5rem);">Page Not Found</h1><p class="hero-sub">The page you requested is unavailable or has moved. Please return to the homepage to continue browsing NSZ Goa Ride.</p><div class="hero-actions"><a href="/" class="btn-hero-primary"><i class="fas fa-home"></i> Back to Home</a></div></div></section>
     `;
   }
@@ -503,6 +516,32 @@
     applyMeta(page);
     renderSchema(page);
     root.innerHTML = renderSeoMarkup(page);
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+    mobileMenu?.addEventListener('click', () => {
+      const isExpanded = mobileMenu.classList.toggle('active');
+      navMenu?.classList.toggle('mobile-active', isExpanded);
+      mobileMenu.setAttribute('aria-expanded', String(isExpanded));
+    });
+    navMenu?.querySelectorAll('.nav-dropdown-toggle').forEach((toggle) => {
+      toggle.addEventListener('click', () => {
+        const dropdown = toggle.closest('.nav-dropdown');
+        if (!dropdown) return;
+        const isExpanded = dropdown.classList.toggle('dropdown-open');
+        toggle.setAttribute('aria-expanded', String(isExpanded));
+      });
+    });
+    navMenu?.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu?.classList.remove('active');
+        mobileMenu?.setAttribute('aria-expanded', 'false');
+        navMenu.classList.remove('mobile-active');
+        navMenu.querySelectorAll('.nav-dropdown').forEach((dropdown) => {
+          dropdown.classList.remove('dropdown-open');
+          dropdown.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+        });
+      });
+    });
     if (typeof window.initializePageInteractions === 'function') window.initializePageInteractions();
     if (typeof window.initDarkMode === 'function') window.initDarkMode();
     if (typeof window.initRouter === 'function') window.initRouter();

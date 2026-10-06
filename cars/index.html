@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><link rel="icon" href="image/logo.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">    <link rel="icon" href="../image/logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../style.css">
@@ -47,7 +47,7 @@
 </head>
 
 <body>
-    <a class="sticky-booking-cta" href="#booking" aria-label="Book a car rental in Goa">
+    <a class="sticky-booking-cta" href="/booking/" aria-label="Book a car rental in Goa">
         <span><i class="fab fa-whatsapp"></i> Book Now</span>
         <strong>From ₹1,200/day</strong>
     </a>
@@ -55,16 +55,27 @@
     <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-inner">
             <a class="logo" href="/">
-                <img src="image/logo.png" alt="NSZ Goa Ride" loading="lazy" width="120" height="38">
+                <img src="../image/logo.png" alt="NSZ Goa Ride" loading="lazy" width="120" height="38">
             </a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="/">Home</a></li>
-                <li><a href="/cars" onclick="navigate('vehicles', event)">Cars</a></li>
-                <li><a href="/bikes" onclick="navigate('bikes', event)">Bikes</a></li>
-                <li><a href="#booking">Book</a></li>
-                <li><a href="#features">Why Us</a></li>
-                <li><a href="#testimonials">Reviews</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="/cars/">Cars</a></li>
+                <li><a href="/bikes/">Bikes</a></li>
+                <li><a href="/booking/">Book Now</a></li>
+                <li><a href="/#features">Why Us</a></li>
+                <li><a href="/#testimonials">Reviews</a></li>
+                <li><a href="/#faq">FAQ</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="nav-more-menu">More <span aria-hidden="true">▾</span></button>
+                    <ul class="dropdown-menu" id="nav-more-menu">
+                        <li><a href="/car-rental-goa/">Car Rental Goa</a></li>
+                        <li><a href="/self-drive-car-goa/">Self Drive Cars</a></li>
+                        <li><a href="/goa-airport-taxi/">Airport Taxi</a></li>
+                        <li><a href="/bike-rental-goa/">Bike Rental</a></li>
+                        <li><a href="/luxury-car-rental-goa/">Luxury Cars</a></li>
+                        <li><a href="/gallery/">Gallery</a></li>
+                    </ul>
+                </li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
             <div class="nav-right">
@@ -74,14 +85,14 @@
                 <a id="nav-whatsapp-link" href="#" class="nav-cta" target="_blank" rel="noopener">
                     <i class="fab fa-whatsapp"></i><span>Chat</span>
                 </a>
-                <button class="mobile-menu" id="mobile-menu" aria-label="Menu">
+                <button class="mobile-menu" id="mobile-menu" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
                     <span></span><span></span><span></span>
                 </button>
             </div>
         </div>
     </nav>
 
-    <main class="section" style="padding:2rem 1rem;">
+    <main class="section" style="padding:calc(var(--nav-h) + 2rem) 1rem 2rem;">
         <h1>Car Rentals in Goa — Self-Drive Cars</h1>
 
         <section id="vehicles" class="section vehicles-section" data-section="vehicles">
@@ -98,7 +109,7 @@
                     <!-- Ignis -->
                     <div class="vehicle-card">
                         <div class="vehicle-photo vehicle-photo--ignis"
-                            style="background-image:url('image/ignis.jpeg');"
+                            style="background-image:url('../image/ignis.jpeg');"
                             role="img" aria-label="Maruti Ignis rental Goa">
                             <div class="vehicle-badge">Popular</div>
                             <div class="vehicle-photo-num" aria-hidden="true">01</div>
@@ -139,7 +150,7 @@
                     <!-- Swift -->
                     <div class="vehicle-card">
                         <div class="vehicle-photo vehicle-photo--swift"
-                            style="background-image:url('image/swift.png');"
+                            style="background-image:url('../image/swift.png');"
                             role="img" aria-label="Maruti Swift rental Goa">
                             <div class="vehicle-badge">Popular</div>
                             <div class="vehicle-photo-num" aria-hidden="true">02</div>
@@ -194,7 +205,7 @@
             </div>
         </section>
         <div class="container" style="padding-top:1rem;padding-bottom:1rem;">
-            <p style="font-size:.95rem;line-height:1.8;">Explore more: <a href="index.html">home</a> · <a href="bikes.html">bike rental in Goa</a> · <a href="car-rental-goa/">car rental in Goa</a> · <a href="self-drive-car-goa/">self drive car Goa</a></p>
+            <p style="font-size:.95rem;line-height:1.8;">Explore more: <a href="/">home</a> · <a href="/bikes/">bike rental in Goa</a> · <a href="/car-rental-goa/">car rental in Goa</a> · <a href="/self-drive-car-goa/">self drive car Goa</a></p>
         </div>
     </main>
 
@@ -222,13 +233,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 NSZ Goa Ride Car Rentals. All rights reserved. | <a href="privacy-policy.html">Privacy
-                        Policy</a> | <a href="terms-and-conditions.html">Terms of Service</a></p>
+                <p>&copy; 2025 NSZ Goa Ride Car Rentals. All rights reserved. | <a href="/privacy-policy/">Privacy
+                        Policy</a> | <a href="/terms-and-conditions/">Terms of Service</a></p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>
