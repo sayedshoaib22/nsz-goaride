@@ -19,10 +19,14 @@ function serveStatic(req, res) {
   let reqPath = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
   const routeAliases = {
     '/cars': '/cars/index.html',
+    '/car-rental-goa': '/cars/index.html',
     '/bikes': '/bikes/index.html',
+    '/bike-rental-goa': '/bikes/index.html',
+    '/scooty-rental-goa': '/bikes/index.html',
     '/contact': '/contact/index.html',
     '/gallery': '/gallery/index.html',
-    '/self-drive-car-goa': '/self-drive-car-goa/index.html',
+    '/self-drive-car-goa': '/self-drive-car-rental-goa/index.html',
+    '/self-drive-cars-goa': '/self-drive-car-rental-goa/index.html',
     '/self-drive-car-rental-goa': '/self-drive-car-rental-goa/index.html',
     '/best-self-drive-cars-goa': '/best-self-drive-cars-goa/index.html',
     '/goa-airport-car-rental': '/goa-airport-car-rental/index.html',

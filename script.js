@@ -134,8 +134,19 @@ function deferNonCriticalResources() {
 }
 
 // ===== WhatsApp Booking =====
+function getVehicleDeposit(vehicleName) {
+    if (
+        vehicleName.includes('Mercedes-Benz C300')
+        || vehicleName === 'Audi'
+        || vehicleName.startsWith('Audi Automatic -')
+    ) return '₹50,000';
+    if (vehicleName.includes('Mini Cooper')) return '₹10,000';
+    return '₹3,000';
+}
+
 function bookViaWhatsApp(vehicleName, transmission, price) {
     if (!vehicleName || !transmission || !price) return;
+    const deposit = getVehicleDeposit(vehicleName);
     const message = `🚗 *Vehicle Booking Inquiry - NSZ Goa Ride*
 
 Hello Team 👋, I'm interested in booking:
@@ -143,7 +154,7 @@ Hello Team 👋, I'm interested in booking:
 📌 *Car:* ${vehicleName}
 ⚙️ *Transmission:* ${transmission}
 💵 *Price:* ${price}/day
-💰 *Refundable Deposit:* ₹3,000
+💰 *Refundable Deposit:* ${deposit}
 
 Could you please help me with:
 1️⃣ Availability check
@@ -239,7 +250,7 @@ function submitBooking() {
 • Drop-off Date: ${fmt(dropoff)}
 • Duration: ${days} day${days > 1 ? 's' : ''}
 • Pickup Location: ${location}
-• Refundable Deposit: ₹3,000
+• Refundable Deposit: ${getVehicleDeposit(vehicle)}
 
 ${requests ? `*Special Requests:* ${requests}` : ''}
 
