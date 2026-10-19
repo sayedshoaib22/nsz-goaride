@@ -117,7 +117,7 @@
 
     <!-- ===================== HERO ===================== -->
     <section id="home" class="hero" role="banner">
-        <div class="hero-bg-image" aria-hidden="true"></div>
+        <img class="hero-bg-image" src="../image/vehicle-19.jpg" alt="Scooters and motorcycles at the Goa rental location" width="800" height="600" fetchpriority="high" decoding="async" style="background:none;object-fit:cover">
         <div class="hero-tint" aria-hidden="true"></div>
 
         <div class="hero-layout">
@@ -201,8 +201,8 @@
 
                 <!-- Yamaha Fascino -->
                 <div class="bike-card">
-                    <div class="bike-photo"
-                        style="background-image:url('https://image2url.com/r2/default/images/1771141146471-5eb9de67-def0-4725-890d-4e4dbeae6b9e.jpeg');">
+                    <div class="bike-photo" style="background-image:none">
+                        <img src="https://image2url.com/r2/default/images/1771141146471-5eb9de67-def0-4725-890d-4e4dbeae6b9e.jpeg" alt="Yamaha Fascino 125 scooter" width="640" height="480" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
                         <div class="bike-badge">Stylish</div>
                     </div>
                     <div class="bike-body">
@@ -217,7 +217,7 @@
                             <span class="bike-price-val">₹600</span>
                             <span class="bike-price-unit">/day</span>
                         </div>
-                        <button class="btn-bike" onclick="gtag_report_conversion(); bookViaWhatsApp('Yamaha Fascino 125','Bike','₹600')">
+                        <button class="btn-bike" onclick="gtag_report_conversion(); bookBikeViaWhatsApp('Yamaha Fascino 125','₹600')">
                             <i class="fab fa-whatsapp"></i> Book Now
                         </button>
                     </div>
@@ -225,8 +225,8 @@
 
                 <!-- RE Hunter 350 -->
                 <div class="bike-card">
-                    <div class="bike-photo"
-                        style="background-image:url('https://images.unsplash.com/photo-1689599943500-0f73b9e5b78b?q=80&w=366&auto=format&fit=crop');">
+                    <div class="bike-photo" style="background-image:none">
+                        <img src="https://images.unsplash.com/photo-1689599943500-0f73b9e5b78b?q=80&amp;w=366&amp;auto=format&amp;fit=crop" alt="Royal Enfield Hunter 350 motorcycle" width="640" height="480" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
                         <div class="bike-badge">Premium</div>
                     </div>
                     <div class="bike-body">
@@ -241,7 +241,7 @@
                             <span class="bike-price-val">₹2,000</span>
                             <span class="bike-price-unit">/day</span>
                         </div>
-                        <button class="btn-bike" onclick="gtag_report_conversion(); bookViaWhatsApp('Royal Enfield Hunter 350','Bike','₹2000')">
+                        <button class="btn-bike" onclick="gtag_report_conversion(); bookBikeViaWhatsApp('Royal Enfield Hunter 350','₹2,000')">
                             <i class="fab fa-whatsapp"></i> Book Now
                         </button>
                     </div>
@@ -249,8 +249,8 @@
 
                 <!-- RE Bullet 350 -->
                 <div class="bike-card">
-                    <div class="bike-photo"
-                        style="background-image:url('https://images.unsplash.com/photo-1655179552613-4532b003cd50?q=80&w=420&auto=format&fit=crop');">
+                    <div class="bike-photo" style="background-image:none">
+                        <img src="https://images.unsplash.com/photo-1655179552613-4532b003cd50?q=80&amp;w=420&amp;auto=format&amp;fit=crop" alt="Royal Enfield Bullet 350 motorcycle" width="640" height="480" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
                         <div class="bike-badge">Classic</div>
                     </div>
                     <div class="bike-body">
@@ -265,7 +265,7 @@
                             <span class="bike-price-val">₹2,000</span>
                             <span class="bike-price-unit">/day</span>
                         </div>
-                        <button class="btn-bike" onclick="gtag_report_conversion(); bookViaWhatsApp('Royal Enfield Bullet 350','Bike','₹2000')">
+                        <button class="btn-bike" onclick="gtag_report_conversion(); bookBikeViaWhatsApp('Royal Enfield Bullet 350','₹2,000')">
                             <i class="fab fa-whatsapp"></i> Book Now
                         </button>
                     </div>
@@ -481,6 +481,24 @@
     </a>
 
     <script src="../script.js"></script>
+    <script>
+        (() => {
+            const sharedGetVehicleDeposit = window.getVehicleDeposit;
+            const bikeModels = ['Yamaha Fascino 125', 'Royal Enfield Hunter 350', 'Royal Enfield Bullet 350'];
+
+            window.getVehicleDeposit = (vehicleName) => {
+                if (bikeModels.some((model) => vehicleName.includes(model))) {
+                    return 'Confirm with NSZ Goa Ride';
+                }
+                return sharedGetVehicleDeposit(vehicleName);
+            };
+
+            window.bookBikeViaWhatsApp = (vehicleName, price) => {
+                const message = `Hi, I would like to enquire about renting the ${vehicleName} in Goa, listed at ${price}/day. Please confirm availability, the final rate, any deposit, required documents, pickup and return arrangements, and rental terms for my dates.`;
+                window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+            };
+        })();
+    </script>
 </body>
 
 </html>
