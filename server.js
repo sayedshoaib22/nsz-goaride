@@ -69,7 +69,7 @@ function serveStatic(req, res) {
     }
     if (err || !stats.isFile()) {
       if (reqPath === '/api/leads') return;
-      const notFoundPage = path.join(rootDir, '404', 'index.html');
+      const notFoundPage = path.join(rootDir, '404.html');
       fs.readFile(notFoundPage, 'utf8', (readErr, pageContent) => {
         if (readErr) {
           res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });

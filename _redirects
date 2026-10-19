@@ -29,3 +29,6 @@ https://www.nszgoaride.com/*   https://nszgoaride.com/:splat   301!
 
 # Keep the extensionless policy URL aligned with the existing directory page.
 /privacy-policy   /privacy-policy/   301
+
+# Serve the branded not-found page with a real 404 status for unknown paths.
+/* /404.html 404

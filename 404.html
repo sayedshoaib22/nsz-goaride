@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#1c1208">
+  <title>404 — Page Not Found | NSZ Goa Ride</title>
+  <link rel="icon" href="/image/logo.png" type="image/png">
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "DM Sans", "Segoe UI", Arial, sans-serif;
+      color: #23170e;
+      background: #f7f1e8;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 1.25rem;
+      background:
+        radial-gradient(ellipse at 90% 0%, rgb(255 107 26 / 12%), transparent 34rem),
+        #f7f1e8;
+    }
+
+    main {
+      width: min(100%, 760px);
+      padding: clamp(1.5rem, 6vw, 3.75rem);
+      border: 1px solid rgb(74 48 28 / 12%);
+      border-radius: 1.25rem;
+      background: #fffdfa;
+      box-shadow: 0 1.5rem 4rem rgb(48 30 12 / 10%);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: .75rem;
+      color: inherit;
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .brand img { width: 2.75rem; height: 2.75rem; object-fit: contain; }
+
+    .error-code {
+      margin: 2.5rem 0 .5rem;
+      color: #f26b21;
+      font-size: clamp(5rem, 18vw, 9rem);
+      font-weight: 900;
+      letter-spacing: -.09em;
+      line-height: .85;
+    }
+
+    h1 {
+      margin: 1rem 0 .75rem;
+      font-family: Syne, "Segoe UI", Arial, sans-serif;
+      font-size: clamp(2rem, 6vw, 3.25rem);
+      line-height: 1.08;
+    }
+
+    .intro {
+      max-width: 38rem;
+      margin: 0;
+      color: #62574d;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin-top: 1.75rem;
+    }
+
+    nav a {
+      display: inline-flex;
+      min-height: 2.9rem;
+      align-items: center;
+      justify-content: center;
+      padding: .75rem 1rem;
+      border: 1px solid #e7ded2;
+      border-radius: .5rem;
+      color: #332216;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color .15s ease, border-color .15s ease;
+    }
+
+    nav a:hover { border-color: #f26b21; background: #fff5ec; }
+    nav a:focus-visible { outline: 3px solid #f26b21; outline-offset: 3px; }
+    nav a.primary { border-color: #e96319; background: #e96319; color: white; }
+    nav a.primary:hover { background: #cb4e0c; }
+
+    .help {
+      margin: 1.5rem 0 0;
+      color: #62574d;
+      line-height: 1.6;
+    }
+
+    .help a { color: #a63f0b; font-weight: 700; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main aria-labelledby="error-title">
+    <a class="brand" href="/" aria-label="NSZ Goa Ride home">
+      <img src="/image/logo.png" alt="" width="44" height="44">
+      <span>NSZ Goa Ride</span>
+    </a>
+    <p class="error-code" aria-hidden="true">404</p>
+    <h1 id="error-title">404 — Page Not Found</h1>
+    <p class="intro">We couldn’t find the page you requested. It may have moved, or the address may be incorrect. Choose a page below to continue exploring NSZ Goa Ride.</p>
+    <nav aria-label="Helpful pages">
+      <a class="primary" href="/">Home</a>
+      <a href="/cars/">Cars</a>
+      <a href="/bikes/">Bikes</a>
+      <a href="/booking/">Booking</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+    <p class="help">Need help? <a href="https://wa.me/918262812997" target="_blank" rel="noopener noreferrer" aria-label="Contact NSZ Goa Ride on WhatsApp">Message NSZ Goa Ride on WhatsApp</a>.</p>
+  </main>
+</body>
+</html>
