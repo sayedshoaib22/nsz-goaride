@@ -88,6 +88,14 @@
     return vehicles;
   }
 
+  function getBreadcrumbs(page) {
+    if (Array.isArray(page.breadcrumbs) && page.breadcrumbs.length) return page.breadcrumbs;
+    return [
+      { name: 'Home', url: '/' },
+      { name: page.seo?.title || page.hero?.h1 || page.primaryKeyword }
+    ];
+  }
+
   function renderBreadcrumbs(breadcrumbs) {
     if (!Array.isArray(breadcrumbs) || !breadcrumbs.length) return '';
     const items = breadcrumbs.map((item, index) => {
@@ -402,7 +410,7 @@
     const heroImage = safeUrl(page.hero.image);
     const primaryHref = page.primaryCTA && safeUrl(page.primaryCTA.href, { sameOrigin: true });
     const secondaryHref = page.secondaryCTA && safeUrl(page.secondaryCTA.href);
-    const breadcrumbs = renderBreadcrumbs(page.breadcrumbs);
+    const breadcrumbs = renderBreadcrumbs(getBreadcrumbs(page));
     const faqMarkup = renderFaqs(page.faqs);
     const bookingPerks = Array.isArray(page.bookingPerks) ? page.bookingPerks : [
       'Confirm the selected vehicle and dates before travelling.',
@@ -665,9 +673,7 @@
     const pageTitle = seo.title || page.primaryKeyword || 'NSZ Goa Ride';
     const description = seo.metaDescription || page.hero?.description || 'NSZ Goa Ride car rental services in Goa.';
     const serviceName = page.primaryKeyword || pageTitle;
-    const configuredBreadcrumbs = Array.isArray(page.breadcrumbs) && page.breadcrumbs.length
-      ? page.breadcrumbs
-      : [{ name: 'Home', url: '/' }, { name: pageTitle }];
+    const configuredBreadcrumbs = getBreadcrumbs(page);
     const schemaBreadcrumbs = configuredBreadcrumbs.map((item, index) => {
       const href = item.url && safeUrl(item.url, { sameOrigin: true });
       const itemUrl = href ? new URL(href, SITE_BASE).href : index === configuredBreadcrumbs.length - 1 ? canonicalUrl : null;
