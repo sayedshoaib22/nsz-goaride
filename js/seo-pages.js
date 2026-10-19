@@ -332,14 +332,14 @@ window.seoPages = {
     hero: {
       eyebrow: "FAMILY & GROUP CAR RENTAL",
       h1: "7 Seater Car Rental in Goa",
-      description: "Compare the seven-seat Toyota Innova options listed by NSZ Goa Ride. Check seating, transmission and daily rates, then confirm availability and pickup details for your dates.",
+      description: "Compare the seven-seat Maruti Ertiga and Toyota Innova options listed by NSZ Goa Ride. Check seating, transmission and daily rates, then confirm availability and pickup details for your dates.",
       image: "https://image2url.com/r2/default/images/1771082409934-b12afb7d-7dfd-42d5-a583-c6b96ae3b097.jpeg",
       imageAlt: "Toyota Innova Crysta listed by NSZ Goa Ride"
     },
     introduction: {
       heading: "Choose a seven-seater for your Goa trip",
       paragraphs: [
-        "The listed seven-seat options are the Toyota Innova Crysta and Toyota Innova Hycross. The Crysta is listed with manual and automatic transmissions; the Hycross is listed with automatic transmission.",
+        "The existing fleet listing identifies the Maruti Ertiga as a seven-seater, with manual and automatic prices. It also lists the Toyota Innova Crysta with manual and automatic options and the Toyota Innova Hycross with automatic transmission.",
         "Passenger and luggage space depend on how many seats are in use and the vehicle selected. If your group will travel with all seats occupied or has bulky bags, mention this when you enquire so the team can help you choose."
       ]
     },
@@ -349,11 +349,24 @@ window.seoPages = {
       showAllVehicles: false
     },
     highlights: [
+      "Maruti Ertiga: manual and automatic listings",
       "Toyota Innova Crysta: manual and automatic listings",
       "Toyota Innova Hycross: automatic listing",
       "Passenger and luggage space varies with the vehicle and seats in use"
     ],
     vehicles: [
+      {
+        name: "Maruti Ertiga",
+        category: "family",
+        seatingCapacity: "7 seats",
+        image: "https://image2url.com/r2/default/images/1771083423558-6d9933ca-f849-46ea-8f35-24715d02f016.jpeg",
+        imageAlt: "Maruti Ertiga seven-seat rental",
+        features: ["MPV"],
+        transmissions: [
+          { type: "Manual", dailyPrice: 2200 },
+          { type: "Automatic", dailyPrice: 3000 }
+        ]
+      },
       {
         name: "Toyota Innova Crysta",
         category: "family",
@@ -379,6 +392,10 @@ window.seoPages = {
       }
     ],
     gallery: [
+      {
+        image: "https://image2url.com/r2/default/images/1771083423558-6d9933ca-f849-46ea-8f35-24715d02f016.jpeg",
+        alt: "Maruti Ertiga listed as a seven-seat rental in Goa"
+      },
       {
         image: "https://image2url.com/r2/default/images/1771082409934-b12afb7d-7dfd-42d5-a583-c6b96ae3b097.jpeg",
         alt: "Toyota Innova Crysta available as a seven-seat rental in Goa"
@@ -426,15 +443,15 @@ window.seoPages = {
         id: "7-seater-guide",
         heading: "Which seven-seater should you choose?",
         paragraphs: [
-          "Choose between the Crysta's listed manual and automatic options or the Hycross automatic, based on the transmission you need and the team's confirmation for your travel dates.",
+          "Choose between the Ertiga or Innova Crysta's listed manual and automatic options or the Hycross automatic, based on the transmission you need and the team's confirmation for your travel dates.",
           "For a group with several passengers, compare luggage space as well as seat count. Share your passenger and bag count with the rental team before confirming."
         ]
       }
     ],
     faqs: [
-      { question: "Which seven-seater cars are listed in Goa?", answer: "The current NSZ Goa Ride fleet listing includes the Toyota Innova Crysta and Toyota Innova Hycross. Vehicle availability depends on your dates and must be confirmed with the team." },
-      { question: "Are automatic seven-seater cars available?", answer: "The fleet listing shows an automatic Toyota Innova Crysta and an automatic Toyota Innova Hycross. Confirm which vehicle is available for your dates before booking." },
-      { question: "How much does a seven-seater rental cost?", answer: "The published listing shows the Innova Crysta at ₹3,000 per day manual or ₹3,500 per day automatic, and the Innova Hycross automatic at ₹3,500 per day. Confirm the final price and terms for your dates." },
+      { question: "Which seven-seater cars are listed in Goa?", answer: "The current fleet listings identify the Maruti Ertiga, Toyota Innova Crysta and Toyota Innova Hycross as seven-seat options. Vehicle availability depends on your dates and must be confirmed with the team." },
+      { question: "Are automatic seven-seater cars available?", answer: "The fleet listings show automatic options for the Maruti Ertiga and Toyota Innova Crysta, as well as an automatic Toyota Innova Hycross. Confirm which vehicle is available for your dates before booking." },
+      { question: "How much does a seven-seater rental cost?", answer: "The published listing shows the Ertiga at ₹2,200 per day manual or ₹3,000 per day automatic; the Innova Crysta at ₹3,000 manual or ₹3,500 automatic; and the Innova Hycross automatic at ₹3,500 per day. Confirm the final price and terms for your dates." },
       { question: "Is a security deposit required?", answer: "Confirm the security deposit amount and refund terms for your selected vehicle and dates with the team before booking." },
       { question: "Can I arrange pickup at an airport or railway station?", answer: "Ask the team to confirm pickup availability at Dabolim Airport, Mopa Airport or Madgaon Railway Station for your dates, and whether any pickup charge applies." },
       { question: "How do I check vehicle availability?", answer: "Use the booking form or contact NSZ Goa Ride on WhatsApp with your dates, preferred vehicle and transmission, passenger count and pickup point." }
