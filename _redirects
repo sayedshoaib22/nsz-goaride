@@ -3,6 +3,24 @@
 # file/route would otherwise match, and each rule is a direct 301 to the
 # final URL (no chaining through an intermediate host).
 
+/self-drive-car-rental-goa https://nszgoaride.com/self-drive-car-rental-goa/ 301!
+/best-self-drive-cars-goa https://nszgoaride.com/best-self-drive-cars-goa/ 301!
+/goa-airport-car-rental https://nszgoaride.com/goa-airport-car-rental/ 301!
+/mopa-airport-car-rental https://nszgoaride.com/mopa-airport-car-rental/ 301!
+/dabolim-airport-car-rental https://nszgoaride.com/dabolim-airport-car-rental/ 301!
+/north-goa-car-rental https://nszgoaride.com/north-goa-car-rental/ 301!
+/south-goa-car-rental https://nszgoaride.com/south-goa-car-rental/ 301!
+/automatic-car-rental-goa https://nszgoaride.com/automatic-car-rental-goa/ 301!
+/cheap-car-rental-goa https://nszgoaride.com/cheap-car-rental-goa/ 301!
+/luxury-car-rental-goa https://nszgoaride.com/luxury-car-rental-goa/ 301!
+/7-seater-car-rental-goa https://nszgoaride.com/7-seater-car-rental-goa/ 301!
+/calangute-car-rental https://nszgoaride.com/calangute-car-rental/ 301!
+/baga-car-rental https://nszgoaride.com/baga-car-rental/ 301!
+/candolim-car-rental https://nszgoaride.com/candolim-car-rental/ 301!
+/panjim-car-rental https://nszgoaride.com/panjim-car-rental/ 301!
+/madgaon-car-rental https://nszgoaride.com/madgaon-car-rental/ 301!
+/palolem-car-rental https://nszgoaride.com/palolem-car-rental/ 301!
+
 http://nszgoaride.com/*        https://nszgoaride.com/:splat   301!
 http://www.nszgoaride.com/*    https://nszgoaride.com/:splat   301!
 https://www.nszgoaride.com/*   https://nszgoaride.com/:splat   301!

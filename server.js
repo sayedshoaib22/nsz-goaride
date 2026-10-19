@@ -29,6 +29,7 @@ function serveStatic(req, res) {
     '/self-drive-cars-goa': '/self-drive-car-rental-goa/index.html',
     '/self-drive-car-rental-goa': '/self-drive-car-rental-goa/index.html',
     '/best-self-drive-cars-goa': '/best-self-drive-cars-goa/index.html',
+    '/goa-airport-taxi': '/goa-airport-taxi/index.html',
     '/goa-airport-car-rental': '/goa-airport-car-rental/index.html',
     '/mopa-airport-car-rental': '/mopa-airport-car-rental/index.html',
     '/dabolim-airport-car-rental': '/dabolim-airport-car-rental/index.html',

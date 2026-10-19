@@ -90,7 +90,7 @@ window.seoPages = {
     slug: "/self-drive-car-rental-goa",
     primaryKeyword: "Self Drive Car Rental in Goa",
     secondaryKeywords: ["self drive car Goa", "self drive cars in Goa", "car rental without driver Goa", "rent self drive car Goa"],
-    seo: { title: "Self Drive Car Rental in Goa | NSZ Goa Ride", metaDescription: "Book self drive cars in Goa with NSZ Goa Ride. Explore Goa at your own pace with reliable rentals, airport pickup, and flexible booking options.", canonical: "https://nszgoaride.com/self-drive-car-rental-goa", robots: "index, follow, max-image-preview:large", ogTitle: "Self Drive Car Rental in Goa | NSZ Goa Ride", ogDescription: "Hire a self drive car in Goa and enjoy a flexible, easy road trip with NSZ Goa Ride.", ogUrl: "https://nszgoaride.com/self-drive-car-rental-goa", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
+    seo: { title: "Self Drive Car Rental in Goa | NSZ Goa Ride", metaDescription: "Book self drive cars in Goa with NSZ Goa Ride. Explore Goa at your own pace with reliable rentals, airport pickup, and flexible booking options.", canonical: "https://nszgoaride.com/self-drive-car-rental-goa/", robots: "index, follow, max-image-preview:large", ogTitle: "Self Drive Car Rental in Goa | NSZ Goa Ride", ogDescription: "Hire a self drive car in Goa and enjoy a flexible, easy road trip with NSZ Goa Ride.", ogUrl: "https://nszgoaride.com/self-drive-car-rental-goa/", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
     hero: { eyebrow: "SELF DRIVE CAR RENTAL", h1: "Self Drive Car Rental in Goa", description: "Explore Goa on your own schedule with a clean, well-maintained self drive car rental from NSZ Goa Ride." },
     introduction: { heading: "Drive Goa at your own pace", paragraphs: ["A self drive car gives you the freedom to move between beaches, villages, and viewpoints without depending on fixed taxi schedules.", "NSZ Goa Ride offers straightforward booking, airport pickup, and a range of self-drive cars suited to solo travelers, couples, families, and holiday plans across Goa."] },
     sections: [
@@ -112,7 +112,7 @@ window.seoPages = {
     slug: "/best-self-drive-cars-goa",
     primaryKeyword: "Best Self Drive Cars in Goa",
     secondaryKeywords: ["best self drive car in Goa", "best car for self drive Goa", "best cars to rent in Goa"],
-    seo: { title: "Best Self Drive Cars in Goa | NSZ Goa Ride", metaDescription: "Compare the best self drive cars in Goa from NSZ Goa Ride, including compact, family, and automatic options for smooth travel.", canonical: "https://nszgoaride.com/best-self-drive-cars-goa", robots: "index, follow, max-image-preview:large", ogTitle: "Best Self Drive Cars in Goa | NSZ Goa Ride", ogDescription: "Choose the best self drive car in Goa for comfort, flexibility, and easy beach-town travel.", ogUrl: "https://nszgoaride.com/best-self-drive-cars-goa", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
+    seo: { title: "Best Self Drive Cars in Goa | NSZ Goa Ride", metaDescription: "Compare the best self drive cars in Goa from NSZ Goa Ride, including compact, family, and automatic options for smooth travel.", canonical: "https://nszgoaride.com/best-self-drive-cars-goa/", robots: "index, follow, max-image-preview:large", ogTitle: "Best Self Drive Cars in Goa | NSZ Goa Ride", ogDescription: "Choose the best self drive car in Goa for comfort, flexibility, and easy beach-town travel.", ogUrl: "https://nszgoaride.com/best-self-drive-cars-goa/", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
     hero: { eyebrow: "BEST SELF DRIVE CARS", h1: "Best Self Drive Cars in Goa", description: "Find comfortable, practical, and value-for-money cars for your Goa trip, from compact hatchbacks to SUV and automatic rentals." },
     introduction: { heading: "Top choices for self drive travel", paragraphs: ["Choosing the right car depends on your route, luggage, passenger count, and how comfortable you want the trip to feel. NSZ Goa Ride offers popular self-drive models that suit beaches, family travel, and city driving across Goa.", "Whether you are renting for a short weekend or a week-long vacation, there are simple options for easy driving, airport pickups, and smooth local travel."] },
     sections: [{ id: "best-car-guide", heading: "How to pick the best self drive car", paragraphs: ["For a beach town holiday, compact cars are great for fuel efficiency and easy parking. Families often prefer extra luggage space, while travelers who want added comfort may prefer SUV or automatic options."], bullets: ["Budget-friendly hatchbacks and sedans", "Automatic options for easier city driving", "Spacious family SUVs for groups", "Comfort-first choices for longer routes"] }, { id: "fleet-best-fit", heading: "Popular models for Goa trips", paragraphs: ["Popular options include Maruti Swift, Ignis, Baleno, Brezza, and premium SUV models depending on the current fleet and your travel dates."] }],
@@ -126,7 +126,7 @@ window.seoPages = {
     slug: "/goa-airport-car-rental",
     primaryKeyword: "Goa Airport Car Rental",
     secondaryKeywords: ["Goa airport self drive car", "car rental at Goa airport", "airport car rental Goa", "self drive car Goa airport"],
-    seo: { title: "Goa Airport Car Rental | NSZ Goa Ride", metaDescription: "Book a Goa Airport car rental with NSZ Goa Ride. Convenient pickup for arriving travelers at Dabolim and Mopa with simple, transparent booking.", canonical: "https://nszgoaride.com/goa-airport-car-rental", robots: "index, follow, max-image-preview:large", ogTitle: "Goa Airport Car Rental | NSZ Goa Ride", ogDescription: "Get a smooth, convenient airport car rental in Goa for your arrival and onward travel.", ogUrl: "https://nszgoaride.com/goa-airport-car-rental", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
+    seo: { title: "Goa Airport Car Rental | NSZ Goa Ride", metaDescription: "Book a Goa Airport car rental with NSZ Goa Ride. Convenient pickup for arriving travelers at Dabolim and Mopa with simple, transparent booking.", canonical: "https://nszgoaride.com/goa-airport-car-rental/", robots: "index, follow, max-image-preview:large", ogTitle: "Goa Airport Car Rental | NSZ Goa Ride", ogDescription: "Get a smooth, convenient airport car rental in Goa for your arrival and onward travel.", ogUrl: "https://nszgoaride.com/goa-airport-car-rental/", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
     hero: { eyebrow: "GOA AIRPORT CAR RENTAL", h1: "Goa Airport Car Rental", description: "Start your Goa trip hassle-free with a convenient airport pickup and direct rental support from NSZ Goa Ride." },
     introduction: { heading: "Rental support for airport arrivals", paragraphs: ["Whether you are landing at Dabolim or planning onward travel after arriving in Goa, airport car rental makes it easy to reach your accommodation without waiting for local transport. Our rental process is designed to be simple and stress-free for arriving travelers.", "NSZ Goa Ride helps you pick up your vehicle at the airport, railway station, or hotel and start exploring Goa with complete flexibility."] },
     sections: [{ id: "airport-why", heading: "Why airport pickup matters", paragraphs: ["Airports are often the first point of arrival in Goa, and a pre-booked rental lets you skip queues, avoid uncertainty, and get moving quickly."], bullets: ["Direct airport collection", "Faster start to your trip", "Best for family and group arrivals", "Flexible travel after landing"] }, { id: "airport-routes", heading: "Popular airport-to-destination routes", paragraphs: ["Many travelers head from the airport toward Calangute, Baga, Candolim, Panjim, or South Goa resorts. A rental car gives you a convenient way to reach your destination without depending on multiple transport transfers."] }],
@@ -140,7 +140,7 @@ window.seoPages = {
     slug: "/mopa-airport-car-rental",
     primaryKeyword: "Mopa Airport Car Rental",
     secondaryKeywords: ["Mopa airport car rental", "Goa Mopa airport rental", "Manohar International Airport car rental"],
-    seo: { title: "Mopa Airport Car Rental | NSZ Goa Ride", metaDescription: "Rent a car near Mopa Airport in Goa with NSZ Goa Ride for convenient airport arrivals, flexible travel, and local sightseeing.", canonical: "https://nszgoaride.com/mopa-airport-car-rental", robots: "index, follow, max-image-preview:large", ogTitle: "Mopa Airport Car Rental | NSZ Goa Ride", ogDescription: "Book a Mopa Airport car rental and travel into Goa without waiting for a last-minute taxi.", ogUrl: "https://nszgoaride.com/mopa-airport-car-rental", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
+    seo: { title: "Mopa Airport Car Rental | NSZ Goa Ride", metaDescription: "Rent a car near Mopa Airport in Goa with NSZ Goa Ride for convenient airport arrivals, flexible travel, and local sightseeing.", canonical: "https://nszgoaride.com/mopa-airport-car-rental/", robots: "index, follow, max-image-preview:large", ogTitle: "Mopa Airport Car Rental | NSZ Goa Ride", ogDescription: "Book a Mopa Airport car rental and travel into Goa without waiting for a last-minute taxi.", ogUrl: "https://nszgoaride.com/mopa-airport-car-rental/", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
     hero: { eyebrow: "MOPA AIRPORT CAR RENTAL", h1: "Mopa Airport Car Rental", description: "If you are landing at Manohar International Airport, a pre-booked car helps you reach North Goa and surrounding areas quickly and comfortably." },
     introduction: { heading: "Smooth arrivals at Mopa", paragraphs: ["Mopa Airport is a major entry point for Goa travel, and a rental car is a practical option for reaching beach towns, city areas, and resort destinations without depending on public transport or random taxi availability.", "NSZ Goa Ride supports travelers who want a simple rental plan and direct pickup arrangements around Mopa Airport and the wider Goa region."] },
     sections: [{ id: "mopa-areas", heading: "Popular routes from Mopa", paragraphs: ["Common destinations include North Goa beach towns like Baga, Calangute, and Candolim, along with onward travel toward Panjim, Anjuna, and nearby stops. A self-drive option gives you flexibility from the moment you land."], bullets: ["North Goa access", "Easy hotel transfers", "Flexible luggage handling", "Value for group travel"] }],
@@ -154,7 +154,7 @@ window.seoPages = {
     slug: "/dabolim-airport-car-rental",
     primaryKeyword: "Dabolim Airport Car Rental",
     secondaryKeywords: ["Dabolim airport car rental", "car rental near Dabolim Goa", "goa airport rental Dabolim"],
-    seo: { title: "Dabolim Airport Car Rental | NSZ Goa Ride", metaDescription: "Book a Dabolim Airport car rental in Goa with NSZ Goa Ride for flexible pickup, quick airport access, and reliable travel.", canonical: "https://nszgoaride.com/dabolim-airport-car-rental", robots: "index, follow, max-image-preview:large", ogTitle: "Dabolim Airport Car Rental | NSZ Goa Ride", ogDescription: "Enjoy easier airport transfers with a Dabolim Airport car rental in Goa.", ogUrl: "https://nszgoaride.com/dabolim-airport-car-rental", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
+    seo: { title: "Dabolim Airport Car Rental | NSZ Goa Ride", metaDescription: "Book a Dabolim Airport car rental in Goa with NSZ Goa Ride for flexible pickup, quick airport access, and reliable travel.", canonical: "https://nszgoaride.com/dabolim-airport-car-rental/", robots: "index, follow, max-image-preview:large", ogTitle: "Dabolim Airport Car Rental | NSZ Goa Ride", ogDescription: "Enjoy easier airport transfers with a Dabolim Airport car rental in Goa.", ogUrl: "https://nszgoaride.com/dabolim-airport-car-rental/", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
     hero: { eyebrow: "DABOLIM AIRPORT CAR RENTAL", h1: "Dabolim Airport Car Rental", description: "If you are arriving at Dabolim Airport, a pre-booked rental gives you independence and convenience from the moment you land." },
     introduction: { heading: "Convenient pick-up from Dabolim", paragraphs: ["Dabolim Airport is one of the main arrival hubs in Goa, and having a rental car ready allows you to avoid waiting for transport and reach your beach stay or hotel without delays.", "NSZ Goa Ride offers direct support for airport arrivals and local travel plans, helping you start your trip with less stress."] },
     sections: [{ id: "dabolim-benefits", heading: "Why travelers book a Dabolim Airport rental", paragraphs: ["The benefit of a rental from Dabolim is flexibility. You can move straight to Panjim, Colva, Benaulim, Candolim, or any other destination without being tied to fixed taxi schedules or timed pickups."], bullets: ["Speedy onward travel", "Use your booking for the whole trip", "Ideal for family and luggage needs", "Flexible route planning"] }],
@@ -168,7 +168,7 @@ window.seoPages = {
     slug: "/north-goa-car-rental",
     primaryKeyword: "Car Rental in North Goa",
     secondaryKeywords: ["north goa car rental", "car rental in Baga", "calangute car rental", "north goa self drive car"],
-    seo: { title: "Car Rental in North Goa | NSZ Goa Ride", metaDescription: "Book a car rental in North Goa for Calangute, Baga, Candolim, Anjuna, and Vagator with flexible pickup and clear pricing.", canonical: "https://nszgoaride.com/north-goa-car-rental", robots: "index, follow, max-image-preview:large", ogTitle: "Car Rental in North Goa | NSZ Goa Ride", ogDescription: "Drive across North Goa with a rental car tailored to beach-hopping and relaxed sightseeing.", ogUrl: "https://nszgoaride.com/north-goa-car-rental", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
+    seo: { title: "Car Rental in North Goa | NSZ Goa Ride", metaDescription: "Book a car rental in North Goa for Calangute, Baga, Candolim, Anjuna, and Vagator with flexible pickup and clear pricing.", canonical: "https://nszgoaride.com/north-goa-car-rental/", robots: "index, follow, max-image-preview:large", ogTitle: "Car Rental in North Goa | NSZ Goa Ride", ogDescription: "Drive across North Goa with a rental car tailored to beach-hopping and relaxed sightseeing.", ogUrl: "https://nszgoaride.com/north-goa-car-rental/", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
     hero: { eyebrow: "NORTH GOA CAR RENTAL", h1: "Car Rental in North Goa", description: "Move smoothly between Calangute, Baga, Candolim, Vagator, and other North Goa hotspots with a flexible rental car." },
     introduction: { heading: "Explore North Goa with a rental car", paragraphs: ["North Goa is best explored by road, especially when you want to move quickly between beaches, cafes, markets, and travel-friendly neighborhoods. A rental car gives you flexibility for sightseeing without waiting around for repeated transport arrangements.", "Whether you are staying in Baga, Calangute, Candolim, or another area, NSZ Goa Ride helps you start with a vehicle that fits your trip and pickup location."] },
     sections: [{ id: "north-goa-routes", heading: "Popular routes in North Goa", paragraphs: ["Many travelers pick a rental car to move between Calangute, Baga, Candolim, Anjuna, and Vagator without losing time at each stop. The freedom to set your own route makes a big difference when your trip includes beaches, shopping, and dining."] }],
@@ -182,7 +182,7 @@ window.seoPages = {
     slug: "/south-goa-car-rental",
     primaryKeyword: "Car Rental in South Goa",
     secondaryKeywords: ["south goa car rental", "car rental in Palolem", "Madgaon car rental", "south goa self drive"],
-    seo: { title: "Car Rental in South Goa | NSZ Goa Ride", metaDescription: "Rent a car in South Goa for Palolem, Colva, Madgaon, and nearby areas with easy pickup and transparent pricing.", canonical: "https://nszgoaride.com/south-goa-car-rental", robots: "index, follow, max-image-preview:large", ogTitle: "Car Rental in South Goa | NSZ Goa Ride", ogDescription: "Explore South Goa with a flexible rental car and easy local pickup support.", ogUrl: "https://nszgoaride.com/south-goa-car-rental", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
+    seo: { title: "Car Rental in South Goa | NSZ Goa Ride", metaDescription: "Rent a car in South Goa for Palolem, Colva, Madgaon, and nearby areas with easy pickup and transparent pricing.", canonical: "https://nszgoaride.com/south-goa-car-rental/", robots: "index, follow, max-image-preview:large", ogTitle: "Car Rental in South Goa | NSZ Goa Ride", ogDescription: "Explore South Goa with a flexible rental car and easy local pickup support.", ogUrl: "https://nszgoaride.com/south-goa-car-rental/", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
     hero: { eyebrow: "SOUTH GOA CAR RENTAL", h1: "Car Rental in South Goa", description: "Enjoy relaxed travel across South Goa with a self-drive rental built around beaches, villages, and scenic routes." },
     introduction: { heading: "Drive through South Goa easily", paragraphs: ["South Goa is known for beaches, quiet roads, scenic drives, and a more relaxed pace than the busy tourist zones of the north. A rental car helps you enjoy that pace without the limitations of fixed transport arrangements.", "Compared with waiting for taxis or relying on local transport, a rental lets you set your own route between destinations like Colva, Benaulim, Palolem, and Madgaon."] },
     sections: [{ id: "south-goa-routes", heading: "Destinations best reached by car", paragraphs: ["A rental car is a practical choice for traveling between villages, beaches, and railway or airport pickup points in South Goa. It also helps if you want to plan your day without locking into a fixed route or time window."], bullets: ["Madgaon pickup support", "Colva and Benaulim access", "Palolem and beach-route flexibility", "Hotel-to-hotel travel convenience"] }],
@@ -196,7 +196,7 @@ window.seoPages = {
     slug: "/calangute-car-rental",
     primaryKeyword: "Car Rental in Calangute",
     secondaryKeywords: ["calangute car rental", "car rental Calangute Goa", "self drive Calangute"],
-    seo: { title: "Car Rental in Calangute | NSZ Goa Ride", metaDescription: "Book a car rental in Calangute for beach travel, North Goa trips, and airport transfers with flexible pickup and simple pricing.", canonical: "https://nszgoaride.com/calangute-car-rental", robots: "index, follow, max-image-preview:large", ogTitle: "Car Rental in Calangute | NSZ Goa Ride", ogDescription: "Explore Calangute and the wider North Goa coast with a flexible self-drive car rental.", ogUrl: "https://nszgoaride.com/calangute-car-rental", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
+    seo: { title: "Car Rental in Calangute | NSZ Goa Ride", metaDescription: "Book a car rental in Calangute for beach travel, North Goa trips, and airport transfers with flexible pickup and simple pricing.", canonical: "https://nszgoaride.com/calangute-car-rental/", robots: "index, follow, max-image-preview:large", ogTitle: "Car Rental in Calangute | NSZ Goa Ride", ogDescription: "Explore Calangute and the wider North Goa coast with a flexible self-drive car rental.", ogUrl: "https://nszgoaride.com/calangute-car-rental/", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
     hero: { eyebrow: "CALANGUTE CAR RENTAL", h1: "Car Rental in Calangute", description: "Enjoy convenient travel around Calangute, Baga, and nearby North Goa beaches with a self-drive rental.*" },
     introduction: { heading: "Travel around Calangute more freely", paragraphs: ["Calangute is one of the busiest and most popular beach areas in North Goa, so a rental car can make moving around much easier. It lets you head to nearby beaches, dining spots, and your accommodation without waiting for taxis or repeated transfers." ] },
     sections: [{ id: "calangute-area", heading: "Why a car helps in Calangute", paragraphs: ["If you are staying near Calangute, a rented car gives you flexibility to explore beyond the immediate beach area. It is useful for beach days, evening plans, and onward travel to nearby North Goa destinations."], bullets: ["Flexible beach-hopping", "Convenient route planning", "Airport and hotel pickup support", "Simple daily rentals"] }],
@@ -210,7 +210,7 @@ window.seoPages = {
     slug: "/baga-car-rental",
     primaryKeyword: "Car Rental in Baga Goa",
     secondaryKeywords: ["car rental in Baga Goa", "Baga car rental", "self drive car Baga"],
-    seo: { title: "Car Rental in Baga Goa | NSZ Goa Ride", metaDescription: "Book a car rental in Baga Goa for easy beach travel, local sightseeing, and flexible North Goa pickup options.", canonical: "https://nszgoaride.com/baga-car-rental", robots: "index, follow, max-image-preview:large", ogTitle: "Car Rental in Baga Goa | NSZ Goa Ride", ogDescription: "Explore Baga and surrounding North Goa beaches with a flexible, easy-to-book rental car.", ogUrl: "https://nszgoaride.com/baga-car-rental", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
+    seo: { title: "Car Rental in Baga Goa | NSZ Goa Ride", metaDescription: "Book a car rental in Baga Goa for easy beach travel, local sightseeing, and flexible North Goa pickup options.", canonical: "https://nszgoaride.com/baga-car-rental/", robots: "index, follow, max-image-preview:large", ogTitle: "Car Rental in Baga Goa | NSZ Goa Ride", ogDescription: "Explore Baga and surrounding North Goa beaches with a flexible, easy-to-book rental car.", ogUrl: "https://nszgoaride.com/baga-car-rental/", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
     hero: { eyebrow: "BAGA CAR RENTAL", h1: "Car Rental in Baga Goa", description: "Move around Baga and nearby beach areas with a rental car that gives you independence and flexibility." },
     introduction: { heading: "Stay mobile in Baga", paragraphs: ["Baga is a popular destination for beach outings and nightlife, and having a rental car makes it easier to travel between different areas without waiting around. It also helps with airport transfers and broader exploration of North Goa." ] },
     sections: [{ id: "baga-area", heading: "Why rent in Baga", paragraphs: ["A rental car is useful if you want to plan your day around beach activities, restaurant stops, and relaxed sightseeing without relying on fixed local transport. It helps you cover more of the coastline and nearby towns in a flexible way."], bullets: ["North Goa flexibility", "Easy route planning", "Airport and hotel support", "Smooth sightseeing"] }],
@@ -224,7 +224,7 @@ window.seoPages = {
     slug: "/candolim-car-rental",
     primaryKeyword: "Car Rental in Candolim",
     secondaryKeywords: ["candolim car rental", "car rental in Candolim", "self drive Candolim"],
-    seo: { title: "Car Rental in Candolim | NSZ Goa Ride", metaDescription: "Book a car rental in Candolim for North Goa beach trips, family travel, and flexible airport pickup with transparent pricing.", canonical: "https://nszgoaride.com/candolim-car-rental", robots: "index, follow, max-image-preview:large", ogTitle: "Car Rental in Candolim | NSZ Goa Ride", ogDescription: "Enjoy easier travel around Candolim and nearby Goa beaches with a simple rental car option.", ogUrl: "https://nszgoaride.com/candolim-car-rental", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
+    seo: { title: "Car Rental in Candolim | NSZ Goa Ride", metaDescription: "Book a car rental in Candolim for North Goa beach trips, family travel, and flexible airport pickup with transparent pricing.", canonical: "https://nszgoaride.com/candolim-car-rental/", robots: "index, follow, max-image-preview:large", ogTitle: "Car Rental in Candolim | NSZ Goa Ride", ogDescription: "Enjoy easier travel around Candolim and nearby Goa beaches with a simple rental car option.", ogUrl: "https://nszgoaride.com/candolim-car-rental/", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
     hero: { eyebrow: "CANDOLIM CAR RENTAL", h1: "Car Rental in Candolim", description: "Travel around Candolim and nearby North Goa areas with a flexible rental that matches your pace." },
     introduction: { heading: "Easy travel around Candolim", paragraphs: ["Candolim is popular with families and holiday travelers, and a rental car makes it easier to visit nearby beaches, restaurants, and sightseeing spots without relying on fixed taxi trips. It also helps when you want to move between the coast and the airport or hotel within the same itinerary." ] },
     sections: [{ id: "candolim-area", heading: "Why rent around Candolim", paragraphs: ["The main advantage is flexibility. You can move at your own pace across North Goa, whether you want a beach day, a shopping run, or a more relaxed sightseeing route."], bullets: ["Flexible sightseeing", "Airport and hotel support", "Budget and family options", "Easy local travel"] }],
@@ -238,7 +238,7 @@ window.seoPages = {
     slug: "/panjim-car-rental",
     primaryKeyword: "Car Rental in Panjim",
     secondaryKeywords: ["car rental in Panjim", "Panjim car rental", "self drive car Panjim"],
-    seo: { title: "Car Rental in Panjim | NSZ Goa Ride", metaDescription: "Book a car rental in Panjim with NSZ Goa Ride for city travel, beach access, and easy movement across Goa.", canonical: "https://nszgoaride.com/panjim-car-rental", robots: "index, follow, max-image-preview:large", ogTitle: "Car Rental in Panjim | NSZ Goa Ride", ogDescription: "Move around Panjim and Goa more flexibly with an easy-to-book rental car.", ogUrl: "https://nszgoaride.com/panjim-car-rental", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
+    seo: { title: "Car Rental in Panjim | NSZ Goa Ride", metaDescription: "Book a car rental in Panjim with NSZ Goa Ride for city travel, beach access, and easy movement across Goa.", canonical: "https://nszgoaride.com/panjim-car-rental/", robots: "index, follow, max-image-preview:large", ogTitle: "Car Rental in Panjim | NSZ Goa Ride", ogDescription: "Move around Panjim and Goa more flexibly with an easy-to-book rental car.", ogUrl: "https://nszgoaride.com/panjim-car-rental/", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
     hero: { eyebrow: "PANJIM CAR RENTAL", h1: "Car Rental in Panjim", description: "Stay flexible while moving through Panjim, nearby beaches, and the rest of Goa." },
     introduction: { heading: "City and coast access from Panjim", paragraphs: ["Panjim is a useful base when you want to explore the heart of Goa and connect to surrounding coastal areas. A rental car helps you move efficiently between city visits, beaches, and other destinations without waiting for repeated transfers." ] },
     sections: [{ id: "panjim-area", heading: "Why a car helps in Panjim", paragraphs: ["A rental is useful if you are balancing city travel, beach plans, and day trips. It keeps your schedule under your control and helps you move across different areas of Goa in a more flexible way."], bullets: ["City and coast access", "Flexible sightseeing", "Easy airport route support", "Simple rental claims"] }],
@@ -252,7 +252,7 @@ window.seoPages = {
     slug: "/madgaon-car-rental",
     primaryKeyword: "Car Rental in Madgaon",
     secondaryKeywords: ["madgaon car rental", "car rental in Madgaon Goa", "self drive in Madgaon"],
-    seo: { title: "Car Rental in Madgaon | NSZ Goa Ride", metaDescription: "Book a car rental in Madgaon for railway station access, South Goa travel, and smooth onward travel across Goa.", canonical: "https://nszgoaride.com/madgaon-car-rental", robots: "index, follow, max-image-preview:large", ogTitle: "Car Rental in Madgaon | NSZ Goa Ride", ogDescription: "Enjoy flexible local and South Goa travel with a Madgaon car rental from NSZ Goa Ride.", ogUrl: "https://nszgoaride.com/madgaon-car-rental", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
+    seo: { title: "Car Rental in Madgaon | NSZ Goa Ride", metaDescription: "Book a car rental in Madgaon for railway station access, South Goa travel, and smooth onward travel across Goa.", canonical: "https://nszgoaride.com/madgaon-car-rental/", robots: "index, follow, max-image-preview:large", ogTitle: "Car Rental in Madgaon | NSZ Goa Ride", ogDescription: "Enjoy flexible local and South Goa travel with a Madgaon car rental from NSZ Goa Ride.", ogUrl: "https://nszgoaride.com/madgaon-car-rental/", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
     hero: { eyebrow: "MADGAON CAR RENTAL", h1: "Car Rental in Madgaon", description: "Start your South Goa trip with a rental car, perfect for station pickup, local travel, and scenic road plans." },
     introduction: { heading: "Flexible travel from Madgaon", paragraphs: ["Madgaon is a practical base for South Goa travel and for connecting to the wider state, especially when you want to set your own route. A rental car makes it easier to move between the railway station, nearby towns, beaches, and onward destinations in Goa." ] },
     sections: [{ id: "madgaon-area", heading: "Why a car is useful in Madgaon", paragraphs: ["If you are arriving by train or planning to explore South Goa, a rental car gives you greater flexibility and reduces the need to arrange repeated local transport. It is useful for both short stays and longer beach itineraries."], bullets: ["Railway station convenience", "South Goa travel access", "Flexible local routes", "Easy onward trip support"] }],
@@ -266,7 +266,7 @@ window.seoPages = {
     slug: "/palolem-car-rental",
     primaryKeyword: "Car Rental in Palolem",
     secondaryKeywords: ["palolem car rental", "car rental in Palolem Goa", "self drive Palolem"],
-    seo: { title: "Car Rental in Palolem | NSZ Goa Ride", metaDescription: "Book a car rental in Palolem for scenic South Goa travel and hassle-free beach-side trips across the region.", canonical: "https://nszgoaride.com/palolem-car-rental", robots: "index, follow, max-image-preview:large", ogTitle: "Car Rental in Palolem | NSZ Goa Ride", ogDescription: "Travel around Palolem and South Goa more freely with a flexible rental car.", ogUrl: "https://nszgoaride.com/palolem-car-rental", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
+    seo: { title: "Car Rental in Palolem | NSZ Goa Ride", metaDescription: "Book a car rental in Palolem for scenic South Goa travel and hassle-free beach-side trips across the region.", canonical: "https://nszgoaride.com/palolem-car-rental/", robots: "index, follow, max-image-preview:large", ogTitle: "Car Rental in Palolem | NSZ Goa Ride", ogDescription: "Travel around Palolem and South Goa more freely with a flexible rental car.", ogUrl: "https://nszgoaride.com/palolem-car-rental/", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
     hero: { eyebrow: "PALELOM CAR RENTAL", h1: "Car Rental in Palolem", description: "Move through Palolem and surrounding South Goa beaches with a self-drive rental that keeps your trip flexible." },
     introduction: { heading: "Explore Palolem on your own route", paragraphs: ["Palolem is one of the most scenic beach areas in South Goa, and a rental car makes it easier to visit nearby beaches, restaurants, and villages without being tied to public transport or fixed taxi timings." ] },
     sections: [{ id: "palolem-area", heading: "Why a car helps in Palolem", paragraphs: ["If you want a slower, more scenic trip through South Goa, a rental car gives you the freedom to move between destinations at your own pace. It works well for beach days, local sightseeing, and onward travel plans across the state."], bullets: ["Flexible coastal travel", "More freedom than local taxis", "Good for groups and luggage", "Ideal for South Goa stays"] }],
@@ -280,7 +280,7 @@ window.seoPages = {
     slug: "/automatic-car-rental-goa",
     primaryKeyword: "Automatic Car Rental in Goa",
     secondaryKeywords: ["automatic car rental in Goa", "self drive automatic car Goa", "automatic rental in Goa"],
-    seo: { title: "Automatic Car Rental in Goa | NSZ Goa Ride", metaDescription: "Book an automatic car rental in Goa with NSZ Goa Ride for comfortable city driving, beach trips, and an easier travel experience.", canonical: "https://nszgoaride.com/automatic-car-rental-goa", robots: "index, follow, max-image-preview:large", ogTitle: "Automatic Car Rental in Goa | NSZ Goa Ride", ogDescription: "Enjoy easier driving in Goa with an automatic car rental that suits city, airport, and coastal travel.", ogUrl: "https://nszgoaride.com/automatic-car-rental-goa", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
+    seo: { title: "Automatic Car Rental in Goa | NSZ Goa Ride", metaDescription: "Book an automatic car rental in Goa with NSZ Goa Ride for comfortable city driving, beach trips, and an easier travel experience.", canonical: "https://nszgoaride.com/automatic-car-rental-goa/", robots: "index, follow, max-image-preview:large", ogTitle: "Automatic Car Rental in Goa | NSZ Goa Ride", ogDescription: "Enjoy easier driving in Goa with an automatic car rental that suits city, airport, and coastal travel.", ogUrl: "https://nszgoaride.com/automatic-car-rental-goa/", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
     hero: { eyebrow: "AUTOMATIC CAR RENTAL", h1: "Automatic Car Rental in Goa", description: "If you prefer easier, low-stress driving, an automatic car makes city driving and beach-town trips more comfortable." },
     introduction: { heading: "Drive more comfortably in Goa", paragraphs: ["Automatic rentals are a practical option for travelers who want easier driving in busy areas, airport arrivals, and day-to-day coastal routes. They are especially useful for drivers who prefer a smoother, less demanding experience behind the wheel." ] },
     sections: [{ id: "automatic-fleet", heading: "Why choose an automatic rental", paragraphs: ["Automatic cars can feel easier in traffic, during city travel, and while moving between beach spots and local roads. They give you a more comfortable experience when you are exploring multiple areas in a single day."], bullets: ["Easier city driving", "Lower stress while exploring", "Suitable for beginners or occasional drivers", "Comfortable for daily Goa travel"] }],
@@ -294,7 +294,7 @@ window.seoPages = {
     slug: "/cheap-car-rental-goa",
     primaryKeyword: "Cheap Car Rental in Goa",
     secondaryKeywords: ["cheap car rental Goa", "budget car rental Goa", "low cost car rental Goa"],
-    seo: { title: "Cheap Car Rental in Goa | NSZ Goa Ride", metaDescription: "Find affordable car rental in Goa with NSZ Goa Ride. Budget-friendly options, clear pricing, and flexible pickup across the state.", canonical: "https://nszgoaride.com/cheap-car-rental-goa", robots: "index, follow, max-image-preview:large", ogTitle: "Cheap Car Rental in Goa | NSZ Goa Ride", ogDescription: "Book a budget-friendly car rental in Goa with clear pricing and flexible travel options.", ogUrl: "https://nszgoaride.com/cheap-car-rental-goa", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
+    seo: { title: "Cheap Car Rental in Goa | NSZ Goa Ride", metaDescription: "Find affordable car rental in Goa with NSZ Goa Ride. Budget-friendly options, clear pricing, and flexible pickup across the state.", canonical: "https://nszgoaride.com/cheap-car-rental-goa/", robots: "index, follow, max-image-preview:large", ogTitle: "Cheap Car Rental in Goa | NSZ Goa Ride", ogDescription: "Book a budget-friendly car rental in Goa with clear pricing and flexible travel options.", ogUrl: "https://nszgoaride.com/cheap-car-rental-goa/", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
     hero: { eyebrow: "CHEAP CAR RENTAL", h1: "Cheap Car Rental in Goa", description: "Explore budget-friendly options for daily Goa travel with transparent pricing and simple pickup support." },
     introduction: { heading: "Affordable travel in Goa", paragraphs: ["Budget-conscious travelers often look for a rental that balances value, comfort, and clear pricing. Compact hatchbacks and everyday sedan options are popular choices when you want to keep costs down without sacrificing flexibility." ] },
     sections: [{ id: "cheap-rental-options", heading: "Budget-friendly options", paragraphs: ["For many Goa trips, a compact car is the best balance of affordability and practicality. It is easy to drive, easier to park, and helpful for sightseeing across different parts of the state."], bullets: ["Affordable daily rates", "Compact and fuel-efficient choices", "Useful for short and medium trips", "Transparent prices"] }],
@@ -308,7 +308,7 @@ window.seoPages = {
     slug: "/luxury-car-rental-goa",
     primaryKeyword: "Luxury Car Rental in Goa",
     secondaryKeywords: ["luxury car rental Goa", "premium car rental Goa", "self drive luxury car Goa"],
-    seo: { title: "Luxury Car Rental in Goa | NSZ Goa Ride", metaDescription: "Book a luxury car rental in Goa with NSZ Goa Ride for premium travel, comfortable sightseeing, and memorable road trips.", canonical: "https://nszgoaride.com/luxury-car-rental-goa", robots: "index, follow, max-image-preview:large", ogTitle: "Luxury Car Rental in Goa | NSZ Goa Ride", ogDescription: "Drive in comfort with a luxury rental car in Goa for special occasions and premium travel plans.", ogUrl: "https://nszgoaride.com/luxury-car-rental-goa", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
+    seo: { title: "Luxury Car Rental in Goa | NSZ Goa Ride", metaDescription: "Book a luxury car rental in Goa with NSZ Goa Ride for premium travel, comfortable sightseeing, and memorable road trips.", canonical: "https://nszgoaride.com/luxury-car-rental-goa/", robots: "index, follow, max-image-preview:large", ogTitle: "Luxury Car Rental in Goa | NSZ Goa Ride", ogDescription: "Drive in comfort with a luxury rental car in Goa for special occasions and premium travel plans.", ogUrl: "https://nszgoaride.com/luxury-car-rental-goa/", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
     hero: { eyebrow: "LUXURY CAR RENTAL", h1: "Luxury Car Rental in Goa", description: "Upgrade your Goa trip with a premium rental built for comfort, style, and memorable sightseeing days." },
     introduction: { heading: "Travel in comfort and style", paragraphs: ["Luxury rentals are a good fit for special trips, family vacations, and travelers who want a more comfortable driving experience. They are useful when you want a more premium feel while moving between beaches, towns, and scenic routes." ] },
     sections: [{ id: "luxury-rental", heading: "Why choose luxury rental in Goa", paragraphs: ["A premium car can make longer travel days more comfortable and give a stronger sense of ease when moving through multiple destinations. It is a popular choice for celebrations, family travel, or a more relaxed road trip experience."], bullets: ["More comfort for longer journeys", "Premium feel for special occasions", "Useful for family travel", "Strong road-trip experience"] }],
@@ -320,16 +320,125 @@ window.seoPages = {
   },
   "/7-seater-car-rental-goa": {
     slug: "/7-seater-car-rental-goa",
+    pageType: "vehicle-category",
     primaryKeyword: "7 Seater Car Rental in Goa",
     secondaryKeywords: ["7 seater car rental in Goa", "7 seater self drive Goa", "family car rental Goa"],
-    seo: { title: "7 Seater Car Rental in Goa | NSZ Goa Ride", metaDescription: "Book a 7 seater car rental in Goa for family travel, luggage space, and flexible routes across North and South Goa.", canonical: "https://nszgoaride.com/7-seater-car-rental-goa", robots: "index, follow, max-image-preview:large", ogTitle: "7 Seater Car Rental in Goa | NSZ Goa Ride", ogDescription: "Travel with a spacious 7 seater car rental in Goa and keep your group comfortable on every trip.", ogUrl: "https://nszgoaride.com/7-seater-car-rental-goa", ogType: "website", ogImage: "https://nszgoaride.com/image/logo.png", twitterCard: "summary_large_image" },
-    hero: { eyebrow: "7 SEATER CAR RENTAL", h1: "7 Seater Car Rental in Goa", description: "For family trips and group travel, a 7-seater rental offers space, comfort, and route flexibility across Goa." },
-    introduction: { heading: "Travel with more room in Goa", paragraphs: ["A 7-seater rental is useful when you are traveling with family, extra luggage, or several people who need more comfort on road trips. It keeps the journey easier and helps you move around without compromising on space." ] },
-    sections: [{ id: "7-seater-guide", heading: "When a 7-seater works best", paragraphs: ["This option suits family trips, airport arrivals, and group sightseeing across Goa. It is especially practical if you want one vehicle for multiple passengers and luggage without juggling more than one car."], bullets: ["Extra passenger room", "More luggage space", "Family trip convenience", "Useful for airport pickups"] }],
-    fleet: { heading: "7-seater fleet options", description: "Choose a roomy option for family and group travel in Goa.", showAllVehicles: true },
-    benefits: { heading: "Why travelers prefer 7-seat rentals", items: [{ title: "Extra comfort", description: "Better for families, group trips, and luggage-heavy travel." }, { title: "More flexibility", description: "Keep travel together without splitting into multiple vehicles." }, { title: "Helpful for longer stays", description: "A practical option for multi-day Goa vacations." }] },
-    howItWorks: { heading: "How to book a 7-seater", steps: [{ number: 1, title: "Pick your trip style", description: "Choose a 7-seater if your group is larger or your luggage needs are higher." }, { number: 2, title: "Confirm dates", description: "Set your rental dates and pickup area." }, { number: 3, title: "Travel together", description: "Stay comfortable while exploring Goa as a group." }] },
-    faqs: [{ question: "Do you offer 7 seater car rental in Goa?", answer: "Yes, subject to current availability and dates, we can help with 7-seater rental options suitable for groups and families." }, { question: "Who should choose a 7-seater rental?", answer: "It is ideal for family travel, larger groups, and trips involving more baggage or beach equipment." }],
-    relatedPages: ["/self-drive-car-rental-goa", "/best-self-drive-cars-goa", "/automatic-car-rental-goa", "/north-goa-car-rental"]
+    seo: { title: "7 Seater Car Rental in Goa | NSZ Goa Ride", metaDescription: "Compare listed 7-seater self-drive cars in Goa, including Toyota Innova Crysta manual and automatic options and the automatic Innova Hycross. Confirm dates and pickup details with NSZ Goa Ride.", canonical: "https://nszgoaride.com/7-seater-car-rental-goa/", robots: "index, follow, max-image-preview:large", ogTitle: "7 Seater Car Rental in Goa | NSZ Goa Ride", ogDescription: "Compare listed 7-seater self-drive cars in Goa, including Toyota Innova Crysta manual and automatic options and the automatic Innova Hycross. Confirm dates and pickup details with NSZ Goa Ride.", ogUrl: "https://nszgoaride.com/7-seater-car-rental-goa/", ogType: "website", ogImage: "https://image2url.com/r2/default/images/1771082409934-b12afb7d-7dfd-42d5-a583-c6b96ae3b097.jpeg", twitterCard: "summary_large_image" },
+    breadcrumbs: [
+      { name: "Home", url: "/" },
+      { name: "Cars", url: "/cars/" },
+      { name: "7 Seater Car Rental in Goa" }
+    ],
+    hero: {
+      eyebrow: "FAMILY & GROUP CAR RENTAL",
+      h1: "7 Seater Car Rental in Goa",
+      description: "Compare the seven-seat Toyota Innova options listed by NSZ Goa Ride. Check seating, transmission and daily rates, then confirm availability and pickup details for your dates.",
+      image: "https://image2url.com/r2/default/images/1771082409934-b12afb7d-7dfd-42d5-a583-c6b96ae3b097.jpeg",
+      imageAlt: "Toyota Innova Crysta listed by NSZ Goa Ride"
+    },
+    introduction: {
+      heading: "Choose a seven-seater for your Goa trip",
+      paragraphs: [
+        "The listed seven-seat options are the Toyota Innova Crysta and Toyota Innova Hycross. The Crysta is listed with manual and automatic transmissions; the Hycross is listed with automatic transmission.",
+        "Passenger and luggage space depend on how many seats are in use and the vehicle selected. If your group will travel with all seats occupied or has bulky bags, mention this when you enquire so the team can help you choose."
+      ]
+    },
+    fleet: {
+      heading: "Listed seven-seater vehicles",
+      description: "Compare the vehicle and transmission options currently shown in the NSZ Goa Ride fleet.",
+      showAllVehicles: false
+    },
+    highlights: [
+      "Toyota Innova Crysta: manual and automatic listings",
+      "Toyota Innova Hycross: automatic listing",
+      "Passenger and luggage space varies with the vehicle and seats in use"
+    ],
+    vehicles: [
+      {
+        name: "Toyota Innova Crysta",
+        category: "family",
+        seatingCapacity: "7–8 seats",
+        image: "https://image2url.com/r2/default/images/1771082409934-b12afb7d-7dfd-42d5-a583-c6b96ae3b097.jpeg",
+        imageAlt: "Toyota Innova Crysta seven-seat rental",
+        features: ["Premium MPV"],
+        transmissions: [
+          { type: "Manual", dailyPrice: 3000 },
+          { type: "Automatic", dailyPrice: 3500 }
+        ]
+      },
+      {
+        name: "Toyota Innova Hycross",
+        category: "family",
+        seatingCapacity: "7–8 seats",
+        image: "https://image2url.com/r2/default/images/1771086867555-f1b998ba-9d26-4c0e-b1c8-d55ddb7e33b8.jpeg",
+        imageAlt: "Toyota Innova Hycross seven-seat rental",
+        features: ["Hybrid"],
+        transmissions: [
+          { type: "Automatic", dailyPrice: 3500 }
+        ]
+      }
+    ],
+    gallery: [
+      {
+        image: "https://image2url.com/r2/default/images/1771082409934-b12afb7d-7dfd-42d5-a583-c6b96ae3b097.jpeg",
+        alt: "Toyota Innova Crysta available as a seven-seat rental in Goa"
+      },
+      {
+        image: "https://image2url.com/r2/default/images/1771086867555-f1b998ba-9d26-4c0e-b1c8-d55ddb7e33b8.jpeg",
+        alt: "Toyota Innova Hycross available as a seven-seat rental in Goa"
+      }
+    ],
+    pricing: {
+      heading: "Published daily rates",
+      description: "The current fleet listing shows these daily rates. Confirm the final price, security deposit, rental terms and vehicle availability with the team before booking."
+    },
+    pickupInformation: {
+      heading: "Confirm your pickup point",
+      locations: ["Dabolim Airport", "Mopa Airport", "Madgaon Railway Station", "Hotel / Resort"],
+      paragraphs: [
+        "Share your arrival details and preferred pickup point when enquiring. Ask the team to confirm availability at Dabolim Airport, Mopa Airport, Madgaon Railway Station or your accommodation for your dates.",
+        "Any delivery or pickup charge, if applicable, should be confirmed before the booking is finalized."
+      ]
+    },
+    travelInformation: {
+      heading: "Plan passenger and luggage space",
+      paragraphs: [
+        "The amount of luggage space changes with the vehicle and the number of seats in use. Tell the team how many passengers and bags you have before choosing a vehicle; do not assume every bag will fit when all seats are occupied.",
+        "Confirm the exact transmission, rental conditions and pickup arrangement for your dates before travel."
+      ]
+    },
+    primaryCTA: { label: "Check availability", href: "#booking" },
+    secondaryCTA: {
+      label: "Ask on WhatsApp",
+      href: "https://wa.me/918262812997?text=Hi%20NSZ%20Goa%20Ride%2C%20I%27m%20interested%20in%20a%207-seater%20car%20rental%20in%20Goa."
+    },
+    bookingPerks: [
+      "Confirm the vehicle, transmission and dates before booking.",
+      "Ask the team to confirm pickup availability and any applicable charge.",
+      "Confirm the security deposit and rental conditions before payment."
+    ],
+    schemaData: {
+      serviceType: "Seven-seat self-drive car rental",
+      areaServed: "Goa"
+    },
+    sections: [
+      {
+        id: "7-seater-guide",
+        heading: "Which seven-seater should you choose?",
+        paragraphs: [
+          "Choose between the Crysta's listed manual and automatic options or the Hycross automatic, based on the transmission you need and the team's confirmation for your travel dates.",
+          "For a group with several passengers, compare luggage space as well as seat count. Share your passenger and bag count with the rental team before confirming."
+        ]
+      }
+    ],
+    faqs: [
+      { question: "Which seven-seater cars are listed in Goa?", answer: "The current NSZ Goa Ride fleet listing includes the Toyota Innova Crysta and Toyota Innova Hycross. Vehicle availability depends on your dates and must be confirmed with the team." },
+      { question: "Are automatic seven-seater cars available?", answer: "The fleet listing shows an automatic Toyota Innova Crysta and an automatic Toyota Innova Hycross. Confirm which vehicle is available for your dates before booking." },
+      { question: "How much does a seven-seater rental cost?", answer: "The published listing shows the Innova Crysta at ₹3,000 per day manual or ₹3,500 per day automatic, and the Innova Hycross automatic at ₹3,500 per day. Confirm the final price and terms for your dates." },
+      { question: "Is a security deposit required?", answer: "Confirm the security deposit amount and refund terms for your selected vehicle and dates with the team before booking." },
+      { question: "Can I arrange pickup at an airport or railway station?", answer: "Ask the team to confirm pickup availability at Dabolim Airport, Mopa Airport or Madgaon Railway Station for your dates, and whether any pickup charge applies." },
+      { question: "How do I check vehicle availability?", answer: "Use the booking form or contact NSZ Goa Ride on WhatsApp with your dates, preferred vehicle and transmission, passenger count and pickup point." }
+    ],
+    relatedPages: ["/self-drive-car-rental-goa/", "/automatic-car-rental-goa/", "/goa-airport-car-rental/", "/north-goa-car-rental/"]
   }
 };

@@ -135,6 +135,9 @@ function deferNonCriticalResources() {
 
 // ===== WhatsApp Booking =====
 function getVehicleDeposit(vehicleName) {
+    if (vehicleName.includes('Toyota Innova Crysta') || vehicleName.includes('Toyota Innova Hycross')) {
+        return 'Confirm with NSZ Goa Ride';
+    }
     if (
         vehicleName.includes('Mercedes-Benz C300')
         || vehicleName === 'Audi'
