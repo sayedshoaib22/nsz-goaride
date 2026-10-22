@@ -483,19 +483,8 @@
     <script src="../script.js"></script>
     <script>
         (() => {
-            const sharedGetVehicleDeposit = window.getVehicleDeposit;
-            const bikeModels = ['Yamaha Fascino 125', 'Royal Enfield Hunter 350', 'Royal Enfield Bullet 350'];
-
-            window.getVehicleDeposit = (vehicleName) => {
-                if (bikeModels.some((model) => vehicleName.includes(model))) {
-                    return 'Confirm with NSZ Goa Ride';
-                }
-                return sharedGetVehicleDeposit(vehicleName);
-            };
-
             window.bookBikeViaWhatsApp = (vehicleName, price) => {
-                const message = `Hi, I would like to enquire about renting the ${vehicleName} in Goa, listed at ${price}/day. Please confirm availability, the final rate, any deposit, required documents, pickup and return arrangements, and rental terms for my dates.`;
-                window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+                window.bookViaWhatsApp(vehicleName, 'Bike', price);
             };
         })();
     </script>

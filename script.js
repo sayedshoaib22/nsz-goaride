@@ -134,7 +134,8 @@ function deferNonCriticalResources() {
 }
 
 // ===== WhatsApp Booking =====
-function getVehicleDeposit(vehicleName) {
+function getVehicleDeposit(vehicleName, vehicleType) {
+    if (vehicleType === 'bike' || vehicleType === 'scooter') return '₹1,000';
     if (vehicleName.includes('Maruti Ertiga') || vehicleName.includes('Toyota Innova Crysta') || vehicleName.includes('Toyota Innova Hycross')) {
         return 'Confirm with NSZ Goa Ride';
     }
@@ -148,25 +149,53 @@ function getVehicleDeposit(vehicleName) {
 }
 
 function bookViaWhatsApp(vehicleName, transmission, price) {
-    if (!vehicleName || !transmission || !price) return;
-    const deposit = getVehicleDeposit(vehicleName);
-    const message = `🚗 *Vehicle Booking Inquiry - NSZ Goa Ride*
+    if (!vehicleName || !price) return;
+    const vehicleType = ['bike', 'scooter'].includes(String(transmission || '').toLowerCase())
+        || /bike|scooter/i.test(vehicleName)
+        ? 'bike'
+        : 'car';
+    if (vehicleType === 'car' && !transmission) return;
 
-Hello Team 👋, I'm interested in booking:
+    const deposit = getVehicleDeposit(vehicleName, vehicleType);
+    const formattedPrice = String(price).startsWith('₹') ? price : `₹${price}`;
+    const message = vehicleType === 'car'
+        ? `🚗 *Vehicle Booking Inquiry – NSZ Goa Ride*
 
-📌 *Car:* ${vehicleName}
+Hello Team 👋, I'm interested in booking a car for exploring Goa.
+
+🚘 *Vehicle:* ${vehicleName}
 ⚙️ *Transmission:* ${transmission}
-💵 *Price:* ${price}/day
-💰 *Refundable Deposit:* ${deposit}
+💰 *Price:* ${formattedPrice}/day
+🔒 *Refundable Security Deposit:* ${deposit}
 
 Could you please help me with:
-1️⃣ Availability check
-2️⃣ Booking process
-3️⃣ Pickup location
-4️⃣ Required documents
-5️⃣ Security deposit info
 
-✅ Looking forward to exploring Goa with NSZ Goa Ride! 🙏`;
+✅ Vehicle availability
+✅ Booking process
+✅ Pickup and drop-off locations
+✅ Required documents and driving licence requirements
+✅ Security deposit and refund policy
+
+Looking forward to exploring Goa with NSZ Goa Ride! 🌴`
+        : `🛵 *Vehicle Booking Inquiry – NSZ Goa Ride*
+
+Hello Team 👋, I'm interested in booking a two-wheeler for exploring Goa.
+
+🛵 *Vehicle:* ${vehicleName}
+💰 *Price:* ${formattedPrice}/day
+🔒 *Refundable Security Deposit:* ${deposit}
+
+Could you please help me with:
+
+✅ Two-wheeler availability
+✅ Booking process
+✅ Pickup and drop-off locations
+✅ Required documents and driving licence requirements
+✅ Security deposit payment and refund policy
+
+Please let me know how I can confirm my booking.
+
+Looking forward to exploring Goa with NSZ Goa Ride! 🌴`;
 
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
 }
