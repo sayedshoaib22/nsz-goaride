@@ -110,6 +110,8 @@ try {
         '/',
         '/bikes/',
         '/cars/',
+        '/privacy-policy/',
+        '/best-self-drive-cars-goa/',
         '/automatic-car-rental-goa/',
         '/goa-airport-car-rental/',
         '/7-seater-car-rental-goa/'
@@ -121,6 +123,35 @@ try {
     }
 
     if (-not $Local) {
+        $canonicalHome = "$canonicalOrigin/"
+        $homeAlternates = @(
+            'http://nszgoaride.com/',
+            'http://www.nszgoaride.com/',
+            'https://www.nszgoaride.com/'
+        )
+
+        foreach ($alternate in $homeAlternates) {
+            $result = Get-RedirectTrace -StartUri ([Uri]$alternate)
+            if ($result.StatusCode -lt 200 -or $result.StatusCode -ge 300 -or
+                $result.FinalUri.AbsoluteUri -ne $canonicalHome -or
+                $result.Chain.Count -gt 2 -or
+                @($result.Chain | Where-Object { $_ -notmatch '^301 ' }).Count -gt 0) {
+                throw "$alternate did not resolve with permanent redirects to $canonicalHome."
+            }
+
+            Write-Host "PASS $alternate -> HTTP $($result.StatusCode), $($result.Chain.Count) redirect(s), $($result.FinalUri.AbsoluteUri)"
+        }
+
+        $searchUri = [Uri]"$canonicalOrigin/?s=%7Bsearch_term_string%7D"
+        $searchResult = Get-RedirectTrace -StartUri $searchUri
+        $searchCanonical = [regex]::Match($searchResult.Body, '<link\b(?=[^>]*\brel=["'']canonical["''])(?=[^>]*\bhref=["'']([^"'']+)["''])[^>]*>', 'IgnoreCase')
+        if ($searchResult.StatusCode -ne 200 -or $searchResult.Chain.Count -ne 0 -or
+            -not $searchCanonical.Success -or $searchCanonical.Groups[1].Value -ne $canonicalHome -or
+            $searchResult.Body -match 'SearchAction|search_term_string') {
+            throw 'The unused search-template query should return the homepage without redirecting and without SearchAction markup.'
+        }
+        Write-Host "PASS $($searchUri.AbsoluteUri) -> HTTP 200, no redirect, homepage canonical"
+
         $canonicalSevenSeater = "$canonicalOrigin/7-seater-car-rental-goa/"
         $alternates = @(
             'http://nszgoaride.com/7-seater-car-rental-goa/',
@@ -138,6 +169,59 @@ try {
             }
 
             Write-Host "PASS $alternate -> HTTP $($result.StatusCode), $($result.Chain.Count) redirect(s), $($result.FinalUri.AbsoluteUri)"
+        }
+
+        $canonicalPrivacyPolicy = "$canonicalOrigin/privacy-policy/"
+        $privacyPolicyAlternates = @(
+            'http://nszgoaride.com/privacy-policy',
+            'https://www.nszgoaride.com/privacy-policy',
+            'http://www.nszgoaride.com/privacy-policy'
+        )
+
+        foreach ($alternate in $privacyPolicyAlternates) {
+            $result = Get-RedirectTrace -StartUri ([Uri]$alternate)
+            if ($result.StatusCode -lt 200 -or $result.StatusCode -ge 300 -or
+                $result.FinalUri.AbsoluteUri -ne $canonicalPrivacyPolicy -or
+                $result.Chain.Count -gt 3 -or
+                @($result.Chain | Where-Object { $_ -notmatch '^301 ' }).Count -gt 0) {
+                throw "$alternate did not resolve to $canonicalPrivacyPolicy."
+            }
+
+            Write-Host "PASS $alternate -> HTTP $($result.StatusCode), $($result.Chain.Count) redirect(s), $($result.FinalUri.AbsoluteUri)"
+        }
+
+        $canonicalCars = "$canonicalOrigin/cars/"
+        $carsAlternates = @(
+            'https://nszgoaride.com/cars',
+            'https://nszgoaride.com/cars.html'
+        )
+        $pageAlternates = @(
+            @{ Url = 'https://nszgoaride.com/best-self-drive-cars-goa'; Canonical = "$canonicalOrigin/best-self-drive-cars-goa/" },
+            @{ Url = 'https://nszgoaride.com/automatic-car-rental-goa'; Canonical = "$canonicalOrigin/automatic-car-rental-goa/" }
+        )
+
+        foreach ($alternate in $carsAlternates) {
+            $result = Get-RedirectTrace -StartUri ([Uri]$alternate)
+            if ($result.StatusCode -lt 200 -or $result.StatusCode -ge 300 -or
+                $result.FinalUri.AbsoluteUri -ne $canonicalCars -or
+                $result.Chain.Count -ne 1 -or
+                $result.Chain[0] -notmatch '^301 ') {
+                throw "$alternate did not resolve directly to $canonicalCars."
+            }
+
+            Write-Host "PASS $alternate -> HTTP $($result.StatusCode), $($result.Chain.Count) redirect(s), $($result.FinalUri.AbsoluteUri)"
+        }
+
+        foreach ($alternate in $pageAlternates) {
+            $result = Get-RedirectTrace -StartUri ([Uri]$alternate.Url)
+            if ($result.StatusCode -lt 200 -or $result.StatusCode -ge 300 -or
+                $result.FinalUri.AbsoluteUri -ne $alternate.Canonical -or
+                $result.Chain.Count -ne 1 -or
+                $result.Chain[0] -notmatch '^301 ') {
+                throw "$($alternate.Url) did not resolve directly to $($alternate.Canonical)."
+            }
+
+            Write-Host "PASS $($alternate.Url) -> HTTP $($result.StatusCode), $($result.Chain.Count) redirect(s), $($result.FinalUri.AbsoluteUri)"
         }
     }
 } finally {

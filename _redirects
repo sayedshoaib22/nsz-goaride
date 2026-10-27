@@ -5,6 +5,12 @@
 
 # Do not force these directory redirects: the canonical /slug/ directory
 # must be served when it exists instead of redirecting to itself.
+# Send the extensionless privacy URL directly to its canonical URL.
+/privacy-policy https://nszgoaride.com/privacy-policy/ 301!
+
+# /cars.html is a legacy URL for the current car fleet page.
+/cars.html https://nszgoaride.com/cars/ 301!
+
 /self-drive-car-rental-goa https://nszgoaride.com/self-drive-car-rental-goa/ 301
 /best-self-drive-cars-goa https://nszgoaride.com/best-self-drive-cars-goa/ 301
 /goa-airport-car-rental https://nszgoaride.com/goa-airport-car-rental/ 301
@@ -26,9 +32,6 @@
 http://nszgoaride.com/*        https://nszgoaride.com/:splat   301!
 http://www.nszgoaride.com/*    https://nszgoaride.com/:splat   301!
 https://www.nszgoaride.com/*   https://nszgoaride.com/:splat   301!
-
-# Keep the extensionless policy URL aligned with the existing directory page.
-/privacy-policy   /privacy-policy/   301
 
 # Serve the branded not-found page with a real 404 status for unknown paths.
 /* /404.html 404
