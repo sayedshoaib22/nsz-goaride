@@ -18,6 +18,8 @@
     <meta name="twitter:description" content="Book a car or bike rental in Goa with NSZ Goa Ride. Choose your vehicle, dates and pickup location to send your request via WhatsApp.">
     <meta name="twitter:image" content="https://nszgoaride.com/image/logo.png">
     <meta name="theme-color" content="#ff6b1a">
+    <meta name="google-maps-api-key" content="">
+    <meta name="google-maps-map-id" content="">
     <link rel="icon" href="../image/logo.png" type="image/png">
     <link rel="stylesheet" href="../style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -163,18 +165,41 @@
                                     <input type="date" id="dropoff" required>
                                 </div>
                                 <div class="form-group form-group--full">
-                                    <label for="location">Pickup Location</label>
-                                    <select id="location" required>
-                                        <option value="">Select location...</option>
-                                        <option value="Dabolim Airport">Dabolim Airport</option>
-                                        <option value="Madgaon Railway Station">Madgaon Railway Station</option>
-                                        <option value="Thivim Railway Station">Thivim Railway Station</option>
-                                        <option value="Hotel/Resort Pickup">Hotel / Resort Pickup</option>
-                                        <option value="North Goa">North Goa (Calangute, Baga, Anjuna)</option>
-                                        <option value="South Goa">South Goa (Colva, Benaulim, Palolem)</option>
-                                        <option value="Panaji City">Panaji City</option>
-                                        <option value="Other Location">Other Location</option>
-                                    </select>
+                                    <label for="location-autocomplete">Pickup Address</label>
+                                    <div id="location-autocomplete" class="location-autocomplete"></div>
+                                    <input type="hidden" id="location" name="location">
+                                    <p class="field-help" id="location-help">Search for a pickup address in India and select a suggestion. The map starts near Margao; its initial marker is not a verified business location.</p>
+                                    <p class="field-feedback" id="location-feedback" role="status" aria-live="polite"></p>
+                                    <div class="pickup-map-wrap">
+                                        <div id="booking-map" role="region" aria-label="Pickup address map"></div>
+                                        <p class="map-feedback" id="map-feedback" role="status" aria-live="polite">Loading the interactive map and address search…</p>
+                                    </div>
+                                    <div class="address-details-grid" id="pickup-address-details" hidden>
+                                        <div class="form-group">
+                                            <label for="location-street">Street number and route</label>
+                                            <input id="location-street" type="text" readonly>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="location-sublocality">Neighborhood / Sublocality</label>
+                                            <input id="location-sublocality" type="text" readonly>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="location-city">City / Locality</label>
+                                            <input id="location-city" type="text" readonly>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="location-state">State</label>
+                                            <input id="location-state" type="text" readonly>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="location-postal-code">Postal code</label>
+                                            <input id="location-postal-code" type="text" readonly>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="location-country">Country</label>
+                                            <input id="location-country" type="text" readonly>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="form-group form-group--full">
                                     <label for="requests">Special Requests <span class="label-opt">(Optional)</span></label>

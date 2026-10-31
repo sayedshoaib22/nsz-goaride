@@ -1969,6 +1969,69 @@ body.dark-mode .booking-form-wrap {
   grid-column: 1/-1;
 }
 
+.location-autocomplete {
+  width: 100%;
+  min-width: 0;
+}
+
+.location-autocomplete gmp-place-autocomplete {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  font: inherit;
+}
+
+.field-help,
+.field-feedback,
+.map-feedback {
+  margin: .25rem 0 0;
+  color: var(--txt-sub);
+  font-size: .78rem;
+  line-height: 1.5;
+}
+
+.field-feedback:empty {
+  display: none;
+}
+
+.field-feedback.is-error,
+.map-feedback.is-error {
+  color: #c53030;
+}
+
+.pickup-map-wrap {
+  margin-top: .75rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+}
+
+#booking-map {
+  width: 100%;
+  height: 320px;
+  background: var(--bg);
+}
+
+.map-feedback {
+  margin: 0;
+  padding: .65rem .8rem;
+}
+
+.address-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .85rem;
+  margin-top: .85rem;
+}
+
+.address-details-grid[hidden] {
+  display: none;
+}
+
+.address-details-grid input[readonly] {
+  cursor: default;
+}
+
 .form-group label {
   font-size: .6rem;
   font-weight: 700;
@@ -2912,6 +2975,14 @@ body.dark-mode .blog-excerpt {
 
 /* RESPONSIVE */
 @media(max-width:480px) {
+
+  #booking-map {
+    height: 260px;
+  }
+
+  .address-details-grid {
+    grid-template-columns: 1fr;
+  }
 
   .vehicles-grid,
   .bikes-grid {

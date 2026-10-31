@@ -2,6 +2,11 @@
 const WHATSAPP_NUMBER = '918262812997';
 const NAVBAR_OFFSET_MOBILE = 62;
 const NAVBAR_OFFSET_DESKTOP = 70;
+const BOOKING_MAP_CONFIG = Object.freeze({
+    center: { lat: 15.2832, lng: 73.9862 },
+    zoom: 14,
+    selectedAddressZoom: 16
+});
 function getNavbarScrollOffset() {
     return window.innerWidth >= 1025 ? NAVBAR_OFFSET_DESKTOP : NAVBAR_OFFSET_MOBILE;
 }
@@ -9,6 +14,7 @@ function getNavbarScrollOffset() {
 // ===== Global State =====
 let currentSection = null;
 let imagesLazyLoaded = false;
+let selectedPickupAddress = null;
 
 // ===== URL Router =====
 // Maps URL path → section to show
@@ -234,6 +240,242 @@ async function submitLead(payload) {
     }
 }
 
+function setMapFeedback(message, isError = false) {
+    const feedback = document.getElementById('map-feedback');
+    if (!feedback) return;
+    feedback.textContent = message;
+    feedback.classList.toggle('is-error', isError);
+}
+
+function setPickupFeedback(message, isError = false) {
+    const feedback = document.getElementById('location-feedback');
+    if (!feedback) return;
+    feedback.textContent = message;
+    feedback.classList.toggle('is-error', isError);
+    feedback.setAttribute('role', isError ? 'alert' : 'status');
+}
+
+function clearPickupAddress() {
+    selectedPickupAddress = null;
+    const locationInput = document.getElementById('location');
+    if (locationInput) locationInput.value = '';
+    document.getElementById('pickup-address-details')?.setAttribute('hidden', '');
+    [
+        'location-street',
+        'location-sublocality',
+        'location-city',
+        'location-state',
+        'location-postal-code',
+        'location-country'
+    ].forEach(id => {
+        const field = document.getElementById(id);
+        if (field) field.value = '';
+    });
+}
+
+function loadGoogleMapsApi(apiKey) {
+    if (window.google?.maps?.importLibrary) return Promise.resolve();
+
+    return new Promise((resolve, reject) => {
+        const callbackName = '__nszGoogleMapsLoaded';
+        const script = document.createElement('script');
+        let timeoutId;
+        const finish = (error) => {
+            window.clearTimeout(timeoutId);
+            delete window[callbackName];
+            if (error) reject(error);
+            else resolve();
+        };
+
+        window[callbackName] = () => finish();
+        timeoutId = window.setTimeout(
+            () => finish(new Error('Google Maps API loading timed out.')),
+            20000
+        );
+        script.async = true;
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}&v=weekly&loading=async&callback=${callbackName}`;
+        script.onerror = () => finish(new Error('Google Maps API could not be loaded.'));
+        document.head.appendChild(script);
+    });
+}
+
+function initializeBookingMap() {
+    const mapElement = document.getElementById('booking-map');
+    const autocompleteContainer = document.getElementById('location-autocomplete');
+    if (!mapElement || !autocompleteContainer) return;
+
+    const apiKey = document.querySelector('meta[name="google-maps-api-key"]')?.content.trim();
+    const mapId = document.querySelector('meta[name="google-maps-map-id"]')?.content.trim();
+    if (!apiKey || !mapId) {
+        const missing = [
+            !apiKey && 'a browser-restricted Maps JavaScript API key',
+            !mapId && 'a Google Maps map ID'
+        ].filter(Boolean).join(' and ');
+        const message = `Map and address search are unavailable until ${missing} is configured on this page.`;
+        setMapFeedback(message, true);
+        setPickupFeedback(message, true);
+        return;
+    }
+
+    window.gm_authFailure = () => {
+        const message = 'Google Maps authorization failed. Check the API key restrictions, enabled APIs, and billing configuration.';
+        setMapFeedback(message, true);
+        setPickupFeedback(message, true);
+    };
+
+    loadGoogleMapsApi(apiKey)
+        .then(async () => {
+            const [mapsLibrary, placesLibrary, markerLibrary] = await Promise.all([
+                google.maps.importLibrary('maps'),
+                google.maps.importLibrary('places'),
+                google.maps.importLibrary('marker')
+            ]);
+            const map = new mapsLibrary.Map(mapElement, {
+                center: BOOKING_MAP_CONFIG.center,
+                zoom: BOOKING_MAP_CONFIG.zoom,
+                mapId,
+                fullscreenControl: true,
+                zoomControl: true,
+                streetViewControl: true
+            });
+            let marker = null;
+            let tilesLoaded = false;
+            const tileTimeout = window.setTimeout(() => {
+                if (!tilesLoaded) {
+                    setMapFeedback('Map tiles did not load. Check Maps JavaScript API enablement, billing, and network access.', true);
+                }
+            }, 15000);
+            map.addListener('tilesloaded', () => {
+                tilesLoaded = true;
+                window.clearTimeout(tileTimeout);
+                setMapFeedback('Map ready. Search for a pickup address in India and select a suggestion.');
+            });
+
+            const placeAutocomplete = new placesLibrary.PlaceAutocompleteElement();
+            placeAutocomplete.includedRegionCodes = ['in'];
+            placeAutocomplete.placeholder = 'Search an address in India…';
+            placeAutocomplete.setAttribute('aria-label', 'Pickup address');
+            autocompleteContainer.appendChild(placeAutocomplete);
+
+            let selectionVersion = 0;
+            placeAutocomplete.addEventListener('input', () => {
+                selectionVersion += 1;
+                clearPickupAddress();
+                if (marker) {
+                    marker.map = null;
+                    marker = null;
+                }
+                setPickupFeedback('Select an address from the suggestions to confirm the pickup point.');
+            });
+
+            placeAutocomplete.addEventListener('gmp-select', async ({ placePrediction }) => {
+                const currentVersion = ++selectionVersion;
+                clearPickupAddress();
+                if (marker) {
+                    marker.map = null;
+                    marker = null;
+                }
+                setPickupFeedback('Checking the selected address…');
+                try {
+                    const place = placePrediction.toPlace();
+                    await place.fetchFields({
+                        fields: ['addressComponents', 'formattedAddress', 'location']
+                    });
+                    if (currentVersion !== selectionVersion) return;
+
+                    const components = place.addressComponents || [];
+                    const component = (type, shortText = false) => {
+                        const found = components.find(item => item.types?.includes(type));
+                        return found ? (shortText ? found.shortText : found.longText) || found.shortText || '' : '';
+                    };
+                    const country = component('country');
+                    const countryCode = component('country', true).toUpperCase();
+                    const city = component('locality') || component('postal_town');
+                    const state = component('administrative_area_level_1');
+                    if (!place.location || !place.formattedAddress || !country
+                        || (countryCode !== 'IN' && country.toLowerCase() !== 'india')
+                        || (!city && !state)) {
+                        setPickupFeedback(
+                            'That suggestion does not include a complete Indian pickup address. Choose a more specific address from the suggestions.',
+                            true
+                        );
+                        return;
+                    }
+
+                    const streetAddress = [
+                        component('street_number'),
+                        component('route')
+                    ].filter(Boolean).join(' ');
+                    const sublocality = component('neighborhood')
+                        || component('sublocality_level_1')
+                        || component('sublocality_level_2')
+                        || component('sublocality');
+                    selectedPickupAddress = {
+                        formattedAddress: place.formattedAddress,
+                        streetAddress,
+                        sublocality,
+                        city,
+                        state,
+                        postalCode: component('postal_code'),
+                        country
+                    };
+
+                    const locationInput = document.getElementById('location');
+                    if (locationInput) locationInput.value = place.formattedAddress;
+                    const addressFields = {
+                        'location-street': streetAddress,
+                        'location-sublocality': sublocality,
+                        'location-city': city,
+                        'location-state': state,
+                        'location-postal-code': selectedPickupAddress.postalCode,
+                        'location-country': country
+                    };
+                    Object.entries(addressFields).forEach(([id, value]) => {
+                        const field = document.getElementById(id);
+                        if (field) field.value = value;
+                    });
+                    document.getElementById('pickup-address-details')?.removeAttribute('hidden');
+
+                    const position = {
+                        lat: place.location.lat(),
+                        lng: place.location.lng()
+                    };
+                    if (!marker) {
+                        marker = new markerLibrary.AdvancedMarkerElement({
+                            map,
+                            position,
+                            title: place.formattedAddress
+                        });
+                    } else {
+                        marker.position = position;
+                        marker.map = map;
+                        marker.title = place.formattedAddress;
+                    }
+                    map.setCenter(position);
+                    map.setZoom(BOOKING_MAP_CONFIG.selectedAddressZoom);
+
+                    const missingDetails = [
+                        !city && 'city/locality',
+                        !state && 'state',
+                        !selectedPickupAddress.postalCode && 'postal code'
+                    ].filter(Boolean);
+                    setPickupFeedback(missingDetails.length
+                        ? `Address selected. Google did not provide ${missingDetails.join(', ')}; please verify the pickup details.`
+                        : 'Pickup address selected. You can edit the search to choose a different address.');
+                } catch (error) {
+                    console.error('Unable to retrieve the selected pickup address.', error);
+                    setPickupFeedback('Google could not verify that address. Please select another suggestion or try again.', true);
+                }
+            });
+        })
+        .catch(error => {
+            console.error('Google Maps failed to initialize.', error);
+            const message = 'Google Maps could not be loaded. Check the API key, enabled APIs, billing, and network access.';
+            setMapFeedback(message, true);
+            setPickupFeedback(message, true);
+        });
+}
+
 function submitBooking() {
     const vehicle = document.getElementById('vehicle')?.value || '';
     const name = document.getElementById('name')?.value || '';
@@ -251,7 +493,8 @@ function submitBooking() {
     if (!vehicle) errors.push('Please select a vehicle');
     if (!pickup) errors.push('Pickup date is required');
     if (!dropoff) errors.push('Drop-off date is required');
-    if (!location) errors.push('Pickup location is required');
+    if (!selectedPickupAddress || !location) errors.push('Select a valid pickup address from the Google suggestions');
+    if (pickup && dropoff && dropoff <= pickup) errors.push('Drop-off date must be after the pickup date');
 
     const messagesDiv = document.getElementById('booking-messages');
     if (errors.length > 0) {
@@ -282,6 +525,10 @@ function submitBooking() {
 • Drop-off Date: ${fmt(dropoff)}
 • Duration: ${days} day${days > 1 ? 's' : ''}
 • Pickup Location: ${location}
+• City / Locality: ${selectedPickupAddress.city || 'Not provided'}
+• State: ${selectedPickupAddress.state || 'Not provided'}
+• Postal Code: ${selectedPickupAddress.postalCode || 'Not provided'}
+• Country: ${selectedPickupAddress.country || 'Not provided'}
 • Refundable Deposit: ${getVehicleDeposit(vehicle)}
 
 ${requests ? `*Special Requests:* ${requests}` : ''}
@@ -297,6 +544,7 @@ Please confirm availability and total cost. Thank you!`;
         pickup,
         dropoff,
         location,
+        pickupAddress: selectedPickupAddress,
         requests,
         source: 'booking-form',
         bookingReference
@@ -415,6 +663,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Booking form
+    initializeBookingMap();
     document.getElementById('booking-form')?.addEventListener('submit', e => {
         e.preventDefault();
         submitBooking();
