@@ -15,6 +15,28 @@ function sendJson(res, statusCode, payload) {
   res.end(JSON.stringify(payload));
 }
 
+function festivalAssetPrefix(reqPath) {
+  const clean = reqPath.replace(/\/index\.html$/i, '/');
+  const depth = clean.split('/').filter(Boolean).length;
+  if (depth === 0) return '';
+  return '../'.repeat(depth);
+}
+
+function injectFestivalAssets(html, reqPath) {
+  if (!html || /festival-theme\.js/.test(html)) return html;
+  const prefix = festivalAssetPrefix(reqPath);
+  const cssTag = `<link rel="stylesheet" href="${prefix}css/festival-themes.css">`;
+  const jsTag = `<script src="${prefix}js/festival-theme.js" defer></script>`;
+  let next = html;
+  if (!/festival-themes\.css/.test(next) && /<\/head>/i.test(next)) {
+    next = next.replace(/<\/head>/i, `    ${cssTag}\n</head>`);
+  }
+  if (/<\/body>/i.test(next)) {
+    next = next.replace(/<\/body>/i, `    ${jsTag}\n</body>`);
+  }
+  return next;
+}
+
 function serveStatic(req, res) {
   let reqPath = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
   const routeAliases = {
@@ -98,6 +120,18 @@ function serveStatic(req, res) {
       '.xml': 'application/xml; charset=utf-8',
       '.txt': 'text/plain; charset=utf-8'
     };
+    if (ext === '.html') {
+      fs.readFile(safePath, 'utf8', (readErr, html) => {
+        if (readErr) {
+          res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
+          res.end('Unable to read page');
+          return;
+        }
+        res.writeHead(200, { 'Content-Type': mimeTypes[ext] });
+        res.end(injectFestivalAssets(html, reqPath));
+      });
+      return;
+    }
     res.writeHead(200, { 'Content-Type': mimeTypes[ext] || 'application/octet-stream' });
     fs.createReadStream(safePath).pipe(res);
   });
@@ -128,6 +162,18 @@ const server = http.createServer((req, res) => {
   const reqUrl = new URL(req.url, 'http://localhost');
   if (req.method === 'POST' && reqUrl.pathname === '/api/leads') {
     handleLead(req, res);
+    return;
+  }
+  if (req.method === 'GET' && reqUrl.pathname === '/api/festivals') {
+    const calendarFile = path.join(dataDir, 'festivals.json');
+    fs.readFile(calendarFile, 'utf8', (err, content) => {
+      if (err) {
+        sendJson(res, 500, { ok: false, error: 'Festival calendar unavailable.' });
+        return;
+      }
+      res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+      res.end(content);
+    });
     return;
   }
   serveStatic(req, res);

@@ -1,0 +1,350 @@
+/* NSZ festival overlay. Pointer-events stay off so listings, forms and FABs remain usable. */
+#nsz-festival-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.nsz-festival-badge {
+  position: absolute;
+  left: max(12px, env(safe-area-inset-left));
+  bottom: max(12px, env(safe-area-inset-bottom));
+  padding: .35rem .7rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--espresso, #1c1208) 82%, transparent);
+  color: var(--ivory, #f5f0e4);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 24px rgba(28, 18, 8, .18);
+}
+
+body.festival-theme {
+  --festival-orange: var(--orange);
+  --festival-tan: var(--tan);
+  --festival-glow: var(--orange-glow);
+}
+
+body.festival-theme--diwali {
+  --orange: #e8a317;
+  --orange-2: #c4890c;
+  --tan: #f3d27a;
+  --rust: #b45309;
+  --orange-glow: rgba(232, 163, 23, .18);
+}
+
+body.festival-theme--christmas {
+  --orange: #c62f2f;
+  --orange-2: #9f1e1e;
+  --tan: #d4af37;
+  --rust: #165b33;
+  --orange-glow: rgba(198, 47, 47, .14);
+}
+
+body.festival-theme--holi {
+  --orange: #ff3d8a;
+  --orange-2: #ff7a18;
+  --tan: #ffe566;
+  --rust: #7c4dff;
+  --orange-glow: rgba(255, 61, 138, .16);
+}
+
+body.festival-theme--eid {
+  --orange: #0e8f6b;
+  --orange-2: #0b6b51;
+  --tan: #d4af37;
+  --rust: #14532d;
+  --orange-glow: rgba(14, 143, 107, .16);
+}
+
+body.festival-theme--independence {
+  --orange: #ff671f;
+  --orange-2: #046a38;
+  --tan: #c4a97a;
+  --rust: #06038d;
+  --orange-glow: rgba(255, 103, 31, .14);
+}
+
+body.festival-theme--ganesh {
+  --orange: #e85d04;
+  --orange-2: #dc2f02;
+  --tan: #ffba08;
+  --rust: #9d0208;
+  --orange-glow: rgba(232, 93, 4, .16);
+}
+
+body.festival-theme--navratri {
+  --orange: #d00000;
+  --orange-2: #e85d04;
+  --tan: #ffba08;
+  --rust: #6a040f;
+  --orange-glow: rgba(208, 0, 0, .14);
+}
+
+body.festival-theme--newyear {
+  --orange: #ff6b1a;
+  --orange-2: #7c3aed;
+  --tan: #fbbf24;
+  --rust: #1d4ed8;
+  --orange-glow: rgba(124, 58, 237, .16);
+}
+
+body.festival-theme .btn-hero-primary,
+body.festival-theme .nav-cta,
+body.festival-theme .service-button--primary {
+  box-shadow: 0 8px 24px var(--festival-glow);
+}
+
+.nsz-lights {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 18px;
+  background-image: radial-gradient(circle, var(--festival-tan, #f3d27a) 1.6px, transparent 2.1px);
+  background-size: 18px 18px;
+  background-repeat: repeat-x;
+  opacity: .85;
+}
+
+.nsz-lights--top {
+  top: 0;
+  box-shadow: 0 8px 18px var(--festival-glow, rgba(232, 163, 23, .18));
+}
+
+.nsz-lights--soft {
+  top: 0;
+  opacity: .45;
+}
+
+.nsz-diya-row {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 6vw 8px;
+}
+
+.nsz-diya {
+  width: 14px;
+  height: 10px;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(#7a3e12, #c47a1a);
+  position: relative;
+}
+
+.nsz-diya::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+  width: 5px;
+  height: 10px;
+  border-radius: 50% 50% 40% 40%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle at 50% 30%, #fff6c2, #ffb703 42%, #e85d04 70%, transparent 76%);
+  animation: nsz-diya-glow 1.8s ease-in-out infinite;
+}
+
+.nsz-garland {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 16px;
+  background:
+    radial-gradient(circle at 8px 10px, #c62f2f 5px, transparent 6px),
+    radial-gradient(circle at 24px 6px, #165b33 4px, transparent 5px),
+    radial-gradient(circle at 40px 10px, #d4af37 5px, transparent 6px);
+  background-size: 48px 16px;
+}
+
+.nsz-snow {
+  position: absolute;
+  inset: 0;
+}
+
+.nsz-flake {
+  position: absolute;
+  top: -8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .85);
+  animation: nsz-snow 9s linear infinite;
+}
+
+.nsz-holi-wash {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 8% 18%, rgba(255, 61, 138, .16), transparent 28%),
+    radial-gradient(circle at 92% 12%, rgba(255, 122, 24, .16), transparent 26%),
+    radial-gradient(circle at 80% 88%, rgba(124, 77, 255, .14), transparent 30%),
+    radial-gradient(circle at 14% 86%, rgba(255, 229, 102, .16), transparent 24%);
+}
+
+.nsz-gulal {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  filter: blur(12px);
+  opacity: .28;
+}
+
+.nsz-gulal--a { left: -20px; top: 18%; background: #ff3d8a; }
+.nsz-gulal--b { right: -10px; top: 8%; background: #7c4dff; }
+.nsz-gulal--c { right: 12%; bottom: 8%; background: #ff7a18; }
+
+.nsz-crescent {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  box-shadow: 8px -4px 0 0 #d4af37;
+  opacity: .9;
+}
+
+.nsz-lanterns {
+  position: absolute;
+  top: 8px;
+  left: 10%;
+  right: 18%;
+  height: 42px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nsz-lanterns span {
+  width: 12px;
+  height: 18px;
+  border-radius: 4px 4px 8px 8px;
+  background: linear-gradient(#0e8f6b, #14532d);
+  box-shadow: 0 8px 16px rgba(14, 143, 107, .28);
+  animation: nsz-lantern 2.4s ease-in-out infinite;
+}
+
+.nsz-lanterns span:nth-child(2) { animation-delay: .4s; background: linear-gradient(#d4af37, #9a7b1a); }
+.nsz-lanterns span:nth-child(3) { animation-delay: .8s; }
+
+.nsz-tricolor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(90deg, #ff671f 0 33.33%, #ffffff 33.33% 66.66%, #046a38 66.66%);
+  box-shadow: 0 6px 16px rgba(6, 3, 141, .12);
+}
+
+.nsz-marigold {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 18px;
+  background-image: radial-gradient(circle at 10px 10px, #ffba08 6px, #e85d04 7px, transparent 8px);
+  background-size: 20px 18px;
+}
+
+.nsz-navratri-ribbon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(90deg, #d00000, #e85d04, #ffba08, #55a630, #0077b6, #5a189a, #9d4edd, #ff006e, #fff);
+  background-size: 200% 100%;
+  animation: nsz-ribbon 12s linear infinite;
+}
+
+.nsz-sparks {
+  position: absolute;
+  inset: 0;
+}
+
+.nsz-sparks span {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #fbbf24;
+  box-shadow: 0 0 10px #fff;
+  animation: nsz-spark 2.2s ease-in-out infinite;
+}
+
+.nsz-sparks span:nth-child(1) { left: 12%; top: 18%; }
+.nsz-sparks span:nth-child(2) { left: 28%; top: 8%; animation-delay: .2s; }
+.nsz-sparks span:nth-child(3) { left: 48%; top: 14%; animation-delay: .4s; }
+.nsz-sparks span:nth-child(4) { left: 67%; top: 7%; animation-delay: .1s; }
+.nsz-sparks span:nth-child(5) { left: 84%; top: 16%; animation-delay: .5s; }
+.nsz-sparks span:nth-child(6) { left: 18%; bottom: 14%; animation-delay: .3s; }
+.nsz-sparks span:nth-child(7) { left: 52%; bottom: 10%; animation-delay: .6s; }
+.nsz-sparks span:nth-child(8) { left: 76%; bottom: 18%; animation-delay: .15s; }
+.nsz-sparks span:nth-child(9) { left: 91%; bottom: 12%; animation-delay: .45s; }
+
+@keyframes nsz-diya-glow {
+  0%, 100% { transform: translateX(-50%) scale(.92); opacity: .75; }
+  50% { transform: translateX(-50%) scale(1.08); opacity: 1; }
+}
+
+@keyframes nsz-snow {
+  0% { transform: translateY(0); opacity: .9; }
+  100% { transform: translateY(110vh); opacity: .15; }
+}
+
+@keyframes nsz-lantern {
+  0%, 100% { transform: rotate(-6deg); }
+  50% { transform: rotate(6deg); }
+}
+
+@keyframes nsz-ribbon {
+  0% { background-position: 0 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes nsz-spark {
+  0%, 100% { opacity: .2; transform: scale(.7); }
+  50% { opacity: 1; transform: scale(1.25); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nsz-diya::before,
+  .nsz-flake,
+  .nsz-lanterns span,
+  .nsz-navratri-ribbon,
+  .nsz-sparks span {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .nsz-festival-badge {
+    display: none;
+  }
+}
+
+@media print {
+  #nsz-festival-layer {
+    display: none !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .nsz-festival-badge {
+    font-size: .6rem;
+    bottom: max(76px, env(safe-area-inset-bottom));
+  }
+
+  .nsz-gulal {
+    width: 72px;
+    height: 72px;
+  }
+}
