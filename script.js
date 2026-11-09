@@ -592,6 +592,135 @@ function initializeWhatsAppLinks() {
     document.getElementById('whatsapp-booking-btn')?.setAttribute('href', base);
     document.getElementById('fab-whatsapp-link')?.setAttribute('href', base);
     document.getElementById('footer-whatsapp-link')?.setAttribute('href', `https://wa.me/${WHATSAPP_NUMBER}`);
+    const sightseeingMessage = encodeURIComponent("Hi! I'm interested in NSZ Goa Ride's chauffeur-driven sightseeing service. Please share the price and availability.");
+    document.querySelectorAll('.sightseeing-whatsapp').forEach(link => {
+        link.setAttribute('href', `https://wa.me/${WHATSAPP_NUMBER}?text=${sightseeingMessage}`);
+    });
+}
+
+function initializeSightseeingCarousel() {
+    const carousel = document.getElementById('sightseeing-carousel');
+    if (!carousel) return;
+
+    const viewport = carousel.querySelector('.sightseeing-viewport');
+    const track = carousel.querySelector('.sightseeing-track');
+    const slides = Array.from(carousel.querySelectorAll('.sightseeing-slide'));
+    const dots = Array.from(carousel.querySelectorAll('.sightseeing-dot'));
+    const count = carousel.querySelector('.sightseeing-count span');
+    const announcement = carousel.querySelector('.sightseeing-announcement');
+    const previousButton = carousel.querySelector('.sightseeing-arrow--previous');
+    const nextButton = carousel.querySelector('.sightseeing-arrow--next');
+    if (!viewport || !track || slides.length < 2 || dots.length !== slides.length) return;
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let activeIndex = 0;
+    let autoplayTimer = 0;
+    let pointerStartX = null;
+    let pointerId = null;
+    let hovered = false;
+    let focused = false;
+    let suppressClick = false;
+
+    const stopAutoplay = () => {
+        window.clearTimeout(autoplayTimer);
+        autoplayTimer = 0;
+    };
+
+    const scheduleAutoplay = () => {
+        stopAutoplay();
+        if (reducedMotion.matches || hovered || focused || document.hidden) return;
+        autoplayTimer = window.setTimeout(() => {
+            showSlide(activeIndex + 1, false);
+            scheduleAutoplay();
+        }, 5500);
+    };
+
+    const showSlide = (index, announce) => {
+        activeIndex = (index + slides.length) % slides.length;
+        track.style.transform = `translateX(-${activeIndex * 100}%)`;
+        slides.forEach((slide, slideIndex) => {
+            const isActive = slideIndex === activeIndex;
+            slide.setAttribute('aria-hidden', String(!isActive));
+            slide.inert = !isActive;
+        });
+        dots.forEach((dot, dotIndex) => {
+            dot.setAttribute('aria-pressed', String(dotIndex === activeIndex));
+        });
+        if (count) count.textContent = String(activeIndex + 1).padStart(2, '0');
+        if (announce && announcement) {
+            announcement.textContent = slides[activeIndex].getAttribute('aria-label') || `Slide ${activeIndex + 1}`;
+        }
+    };
+
+    previousButton?.addEventListener('click', () => {
+        showSlide(activeIndex - 1, true);
+        scheduleAutoplay();
+    });
+    nextButton?.addEventListener('click', () => {
+        showSlide(activeIndex + 1, true);
+        scheduleAutoplay();
+    });
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index, true);
+            scheduleAutoplay();
+        });
+    });
+
+    carousel.addEventListener('mouseenter', () => {
+        hovered = true;
+        stopAutoplay();
+    });
+    carousel.addEventListener('mouseleave', () => {
+        hovered = false;
+        scheduleAutoplay();
+    });
+    carousel.addEventListener('focusin', () => {
+        focused = true;
+        stopAutoplay();
+    });
+    carousel.addEventListener('focusout', event => {
+        if (!carousel.contains(event.relatedTarget)) {
+            focused = false;
+            scheduleAutoplay();
+        }
+    });
+
+    viewport.addEventListener('pointerdown', event => {
+        if (event.pointerType !== 'touch' || !event.isPrimary) return;
+        pointerStartX = event.clientX;
+        pointerId = event.pointerId;
+        stopAutoplay();
+        viewport.setPointerCapture(event.pointerId);
+    });
+    viewport.addEventListener('pointerup', event => {
+        if (pointerId !== event.pointerId || pointerStartX === null) return;
+        const distance = event.clientX - pointerStartX;
+        if (Math.abs(distance) > 50) {
+            showSlide(activeIndex + (distance < 0 ? 1 : -1), true);
+            suppressClick = true;
+            window.setTimeout(() => { suppressClick = false; }, 0);
+        }
+        pointerStartX = null;
+        pointerId = null;
+        scheduleAutoplay();
+    });
+    viewport.addEventListener('pointercancel', () => {
+        pointerStartX = null;
+        pointerId = null;
+        scheduleAutoplay();
+    });
+    viewport.addEventListener('click', event => {
+        if (!suppressClick) return;
+        event.preventDefault();
+        event.stopPropagation();
+        suppressClick = false;
+    }, true);
+
+    document.addEventListener('visibilitychange', scheduleAutoplay);
+    reducedMotion.addEventListener('change', scheduleAutoplay);
+    showSlide(activeIndex, false);
+    scheduleAutoplay();
 }
 
 // ===== DOMContentLoaded =====
@@ -603,6 +732,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initDarkMode();
     initializeWhatsAppLinks();
     initializePhoneClickTracking();
+    initializeSightseeingCarousel();
 
     // Run router — reads current URL path on load
     initRouter();

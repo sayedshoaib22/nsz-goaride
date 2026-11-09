@@ -3128,6 +3128,464 @@ body.dark-mode .blog-excerpt {
 @media(max-width:900px){.madgaon-fleet{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.madgaon-fleet{grid-template-columns:1fr}}
 
+/* CHAUFFEUR-DRIVEN SIGHTSEEING CAROUSEL */
+.sightseeing-section {
+  padding: 1rem 2rem;
+  background: var(--espresso);
+  color: var(--ivory);
+}
+
+.sightseeing-carousel {
+  position: relative;
+  width: min(100%, var(--max-w));
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(245, 240, 228, .12);
+  border-radius: var(--r-lg);
+  background:
+    radial-gradient(ellipse at 18% 0%, rgba(255, 107, 26, .12), transparent 42%),
+    var(--espresso-2);
+}
+
+.sightseeing-viewport {
+  overflow: hidden;
+  min-height: 470px;
+  touch-action: pan-y;
+}
+
+.sightseeing-track {
+  display: flex;
+  min-height: 470px;
+  transition: transform .65s var(--ease);
+  will-change: transform;
+}
+
+.sightseeing-slide {
+  display: grid;
+  flex: 0 0 100%;
+  min-width: 0;
+  min-height: 470px;
+  grid-template-columns: 1.08fr .92fr;
+  align-items: stretch;
+}
+
+.sightseeing-copy {
+  align-self: center;
+  padding: 1.25rem 2.5rem 3.75rem;
+}
+
+.sightseeing-eyebrow,
+.sightseeing-brand {
+  font-size: .64rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.sightseeing-eyebrow {
+  margin-bottom: .3rem;
+  color: var(--orange);
+}
+
+.sightseeing-brand {
+  margin-bottom: .7rem;
+  color: rgba(245, 240, 228, .56);
+}
+
+.sightseeing-brand span {
+  padding: 0 .25rem;
+  color: var(--orange);
+}
+
+.sightseeing-title {
+  margin-bottom: .65rem;
+  font-family: 'Syne', 'Arial Black', sans-serif;
+  font-size: clamp(1.65rem, 2.35vw, 2.15rem);
+  font-weight: 800;
+  letter-spacing: -.045em;
+  line-height: 1.08;
+}
+
+.sightseeing-title span {
+  display: block;
+  margin-top: .2rem;
+  color: var(--orange);
+}
+
+.sightseeing-description {
+  max-width: 600px;
+  margin-bottom: .7rem;
+  color: rgba(245, 240, 228, .72);
+  font-size: .84rem;
+  line-height: 1.55;
+}
+
+.sightseeing-features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .35rem .8rem;
+  margin-bottom: .65rem;
+}
+
+.sightseeing-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: .45rem;
+  color: rgba(245, 240, 228, .83);
+  font-size: .73rem;
+  line-height: 1.4;
+}
+
+.sightseeing-features i,
+.sightseeing-driver-note i {
+  flex: 0 0 auto;
+  margin-top: .18rem;
+  color: var(--orange);
+}
+
+.sightseeing-driver-note {
+  margin-bottom: .6rem;
+  color: var(--ivory);
+  font-size: .76rem;
+  font-weight: 700;
+}
+
+.sightseeing-driver-note i {
+  margin-right: .25rem;
+}
+
+.sightseeing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+
+.sightseeing-button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: .7rem 1rem;
+  border: 1px solid transparent;
+  border-radius: var(--r-xs);
+  font-family: 'Syne', sans-serif;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .045em;
+  line-height: 1.35;
+  text-align: center;
+  text-transform: uppercase;
+  transition: color var(--t) var(--ease), background var(--t) var(--ease), border-color var(--t) var(--ease), transform var(--t) var(--ease);
+}
+
+.sightseeing-button:hover {
+  transform: translateY(-2px);
+}
+
+.sightseeing-button--primary {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.sightseeing-button--primary:hover {
+  background: var(--orange-2);
+}
+
+.sightseeing-button--secondary {
+  border-color: rgba(245, 240, 228, .32);
+  color: var(--ivory);
+}
+
+.sightseeing-button--secondary:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.sightseeing-price-note {
+  margin-top: .4rem;
+  color: rgba(245, 240, 228, .58);
+  font-size: .68rem;
+}
+
+.sightseeing-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin-top: .25rem;
+  color: var(--ivory);
+  font-size: .72rem;
+  font-weight: 600;
+}
+
+.sightseeing-whatsapp i {
+  color: var(--orange);
+}
+
+.sightseeing-visual {
+  position: relative;
+  min-width: 0;
+  min-height: 420px;
+  margin: 1rem 1rem 1rem 0;
+  overflow: hidden;
+  border-radius: var(--r-md);
+  background: var(--espresso-3);
+}
+
+.sightseeing-visual::after {
+  position: absolute;
+  inset: 45% 0 0;
+  background: linear-gradient(transparent, rgba(28, 18, 8, .62));
+  content: "";
+  pointer-events: none;
+}
+
+.sightseeing-primary-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: center 56%;
+}
+
+.sightseeing-photo-strip {
+  position: absolute;
+  z-index: 1;
+  right: .75rem;
+  bottom: .75rem;
+  display: flex;
+  gap: .4rem;
+  padding: .4rem;
+  border: 1px solid rgba(255, 255, 255, .22);
+  border-radius: var(--r-sm);
+  background: rgba(28, 18, 8, .68);
+  backdrop-filter: blur(8px);
+}
+
+.sightseeing-photo-strip img {
+  width: clamp(48px, 5.2vw, 70px);
+  height: 52px;
+  border: 1px solid rgba(255, 255, 255, .35);
+  border-radius: var(--r-xs);
+  object-fit: cover;
+}
+
+.sightseeing-visual-caption {
+  position: absolute;
+  z-index: 1;
+  top: 1rem;
+  left: 1rem;
+  color: var(--white);
+  font-family: 'Syne', sans-serif;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.sightseeing-controls {
+  position: absolute;
+  z-index: 2;
+  right: 2.5rem;
+  bottom: .7rem;
+  left: 2.5rem;
+  display: flex;
+  height: 42px;
+  align-items: center;
+  gap: .85rem;
+}
+
+.sightseeing-arrow {
+  display: inline-grid;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(245, 240, 228, .28);
+  border-radius: 50%;
+  color: var(--ivory);
+  transition: border-color var(--t) var(--ease), color var(--t) var(--ease), background var(--t) var(--ease);
+}
+
+.sightseeing-arrow:hover {
+  border-color: var(--orange);
+  background: var(--orange);
+  color: var(--white);
+}
+
+.sightseeing-pagination {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+}
+
+.sightseeing-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--r-pill);
+  background: rgba(245, 240, 228, .38);
+  transition: width var(--t) var(--ease), background var(--t) var(--ease);
+}
+
+.sightseeing-dot[aria-pressed="true"] {
+  width: 24px;
+  background: var(--orange);
+}
+
+.sightseeing-count {
+  margin-left: auto;
+  color: rgba(245, 240, 228, .55);
+  font-family: 'Syne', sans-serif;
+  font-size: .68rem;
+  letter-spacing: .08em;
+}
+
+.sightseeing-count span {
+  color: var(--ivory);
+}
+
+.sightseeing-announcement {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+@media(max-width:1000px) {
+  .sightseeing-copy {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .sightseeing-title {
+    font-size: clamp(1.5rem, 2.8vw, 1.8rem);
+  }
+
+  .sightseeing-controls {
+    position: relative;
+    inset: auto;
+    margin: 0 1.5rem .65rem;
+  }
+
+  .sightseeing-visual {
+    min-height: 390px;
+  }
+}
+
+@media(max-width:720px) {
+  .sightseeing-section {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  .sightseeing-viewport,
+  .sightseeing-track {
+    min-height: 0;
+  }
+
+  .sightseeing-slide {
+    grid-template-columns: 1fr;
+  }
+
+  .sightseeing-visual {
+    grid-column: 1;
+    grid-row: 1;
+    min-height: clamp(250px, 48vw, 370px);
+    margin: .75rem .75rem 0;
+  }
+
+  .sightseeing-copy {
+    padding: 1.5rem 1.5rem 4.5rem;
+  }
+
+  .sightseeing-controls {
+    position: absolute;
+    right: 1.5rem;
+    bottom: .8rem;
+    left: 1.5rem;
+    margin: 0;
+  }
+}
+
+@media(max-width:520px) {
+  .sightseeing-section {
+    padding: 1rem .75rem;
+  }
+
+  .sightseeing-carousel {
+    border-radius: var(--r-md);
+  }
+
+  .sightseeing-visual {
+    min-height: 245px;
+  }
+
+  .sightseeing-photo-strip {
+    right: .5rem;
+    bottom: .5rem;
+    gap: .25rem;
+    padding: .3rem;
+  }
+
+  .sightseeing-photo-strip img {
+    width: 48px;
+    height: 42px;
+  }
+
+  .sightseeing-copy {
+    padding: 1.25rem 1rem 4.4rem;
+  }
+
+  .sightseeing-eyebrow,
+  .sightseeing-brand {
+    font-size: .58rem;
+  }
+
+  .sightseeing-title {
+    font-size: clamp(1.65rem, 8vw, 2.25rem);
+  }
+
+  .sightseeing-description {
+    font-size: .83rem;
+  }
+
+  .sightseeing-features {
+    gap: .45rem;
+  }
+
+  .sightseeing-features li {
+    font-size: .68rem;
+  }
+
+  .sightseeing-actions {
+    flex-direction: column;
+  }
+
+  .sightseeing-button {
+    width: 100%;
+  }
+
+  .sightseeing-controls {
+    right: 1rem;
+    left: 1rem;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  .sightseeing-track,
+  .sightseeing-dot,
+  .sightseeing-button,
+  .sightseeing-arrow {
+    scroll-behavior: auto;
+    transition-duration: .01ms;
+  }
+}
+
 /* Fleet gallery */
 .gallery-page{background:var(--ivory);color:var(--espresso)}
 .gallery-header{background:var(--espresso);color:var(--ivory)}
