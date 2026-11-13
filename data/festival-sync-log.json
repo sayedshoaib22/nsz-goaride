@@ -1,6 +1,888 @@
 {
   "entries": [
     {
+      "at": "2026-11-13T09:51:11.117Z",
+      "action": "source-check",
+      "source": "imd-rashtriya-panchanga",
+      "year": 2026,
+      "status": "year-calendar-not-listed"
+    },
+    {
+      "at": "2026-11-13T09:51:11.118Z",
+      "festival": "republic-day",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-01-26",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.119Z",
+      "festival": "independence-day",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-08-15",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.119Z",
+      "festival": "gandhi-jayanti",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-10-02",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.119Z",
+      "festival": "christmas",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-12-25",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.119Z",
+      "festival": "new-year",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-01-01",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.119Z",
+      "festival": "valentines-day",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-02-14",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.119Z",
+      "festival": "easter",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-04-05",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.119Z",
+      "festival": "good-friday",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-04-03",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.119Z",
+      "festival": "lohri",
+      "year": "2026",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "lohri",
+          "date": "2026-01-13",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:11.120Z",
+      "festival": "makar-sankranti",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-01-14",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.120Z",
+      "festival": "vasant-panchami",
+      "year": "2026",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "vasant-panchami",
+          "date": "2026-01-23",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:11.120Z",
+      "festival": "maha-shivratri",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-02-15",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.120Z",
+      "festival": "holika-dahan",
+      "year": "2026",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "holika-dahan",
+          "date": "2026-03-03",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
+        },
+        {
+          "id": "holika-dahan",
+          "date": "2026-03-03",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
+        },
+        {
+          "id": "holika-dahan",
+          "date": "2026-03-02",
+          "source": "tirth-panchang",
+          "sourceUrl": "https://www.tirth.com/astro/festivals/2026"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:11.120Z",
+      "festival": "holi",
+      "year": "2026",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "holi",
+          "date": "2026-03-04",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
+        },
+        {
+          "id": "holi",
+          "date": "2026-03-03",
+          "source": "tirth-panchang",
+          "sourceUrl": "https://www.tirth.com/astro/festivals/2026"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:11.120Z",
+      "festival": "ugadi-gudi-padwa",
+      "year": "2026",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "ugadi-gudi-padwa",
+          "date": "2026-03-19",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
+        },
+        {
+          "id": "ugadi-gudi-padwa",
+          "date": "2026-03-19",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:11.120Z",
+      "festival": "eid-ul-fitr",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-03-21",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.120Z",
+      "festival": "ram-navami",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-03-26",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.120Z",
+      "festival": "baisakhi",
+      "year": "2026",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "baisakhi",
+          "date": "2026-04-14",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:11.120Z",
+      "festival": "buddha-purnima",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-05-01",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.121Z",
+      "festival": "eid-ul-adha",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-05-27",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.121Z",
+      "festival": "muharram",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-06-26",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.121Z",
+      "festival": "guru-purnima",
+      "year": "2026",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "guru-purnima",
+          "date": "2026-07-29",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:11.121Z",
+      "festival": "onam",
+      "year": "2026",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "onam",
+          "date": "2026-08-26",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:11.121Z",
+      "festival": "milad-un-nabi",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-08-26",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.121Z",
+      "festival": "raksha-bandhan",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-08-28",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.121Z",
+      "festival": "janmashtami",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-09-04",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.121Z",
+      "festival": "ganesh-chaturthi",
+      "year": "2026",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "ganesh-chaturthi",
+          "date": "2026-09-14",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:11.121Z",
+      "festival": "dussehra",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-10-20",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.122Z",
+      "festival": "karwa-chauth",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-10-29",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.122Z",
+      "festival": "diwali",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-11-08",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.122Z",
+      "festival": "govardhan-puja",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-11-10",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.122Z",
+      "festival": "bhai-dooj",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-11-11",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.122Z",
+      "festival": "chhath-puja",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-11-15",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.122Z",
+      "festival": "guru-nanak-jayanti",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-11-24",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.122Z",
+      "festival": "navratri",
+      "year": "2026",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "navratri",
+          "date": "2026-10-11",
+          "source": "tirth-panchang",
+          "sourceUrl": "https://www.tirth.com/astro/festivals/2026"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:11.122Z",
+      "festival": "dhanteras",
+      "year": "2026",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "dhanteras",
+          "date": "2026-11-06",
+          "source": "tirth-panchang",
+          "sourceUrl": "https://www.tirth.com/astro/festivals/2026"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:11.123Z",
+      "festival": "mahavir-jayanti",
+      "year": "2026",
+      "action": "updated",
+      "date": "2026-03-31",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:11.123Z",
+      "festival": "ramadan",
+      "year": "2026",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "ramadan",
+          "date": "2026-02-18",
+          "source": "aladhan",
+          "sourceUrl": "https://api.aladhan.com/v1/hToG/01-09-1447",
+          "moonDependent": true
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:12.521Z",
+      "action": "source-check",
+      "source": "imd-rashtriya-panchanga",
+      "year": 2027,
+      "status": "year-calendar-not-listed"
+    },
+    {
+      "at": "2026-11-13T09:51:12.522Z",
+      "festival": "republic-day",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-01-26",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.522Z",
+      "festival": "independence-day",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-08-15",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.522Z",
+      "festival": "gandhi-jayanti",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-10-02",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.522Z",
+      "festival": "christmas",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-12-25",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.522Z",
+      "festival": "new-year",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-01-01",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.522Z",
+      "festival": "valentines-day",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-02-14",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.522Z",
+      "festival": "easter",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-03-28",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "good-friday",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-03-26",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "lohri",
+      "year": "2027",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "lohri",
+          "date": "2027-01-14",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "makar-sankranti",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-01-15",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "vasant-panchami",
+      "year": "2027",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "vasant-panchami",
+          "date": "2027-02-11",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "maha-shivratri",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-03-06",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "eid-ul-fitr",
+      "year": "2027",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "eid-ul-fitr",
+          "date": "2027-03-10",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
+        },
+        {
+          "id": "eid-ul-fitr",
+          "date": "2027-03-09",
+          "source": "aladhan",
+          "sourceUrl": "https://api.aladhan.com/v1/hToG/01-10-1448",
+          "moonDependent": true
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "holika-dahan",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-03-21",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "holi",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-03-22",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "ugadi-gudi-padwa",
+      "year": "2027",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "ugadi-gudi-padwa",
+          "date": "2027-04-07",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
+        },
+        {
+          "id": "ugadi-gudi-padwa",
+          "date": "2027-04-07",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "baisakhi",
+      "year": "2027",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "baisakhi",
+          "date": "2027-04-14",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "ram-navami",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-04-15",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "eid-ul-adha",
+      "year": "2027",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "eid-ul-adha",
+          "date": "2027-05-17",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
+        },
+        {
+          "id": "eid-ul-adha",
+          "date": "2027-05-16",
+          "source": "aladhan",
+          "sourceUrl": "https://api.aladhan.com/v1/hToG/10-12-1448",
+          "moonDependent": true
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "buddha-purnima",
+      "year": "2027",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "buddha-purnima",
+          "date": "2027-05-20",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "muharram",
+      "year": "2027",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "muharram",
+          "date": "2027-06-15",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
+        },
+        {
+          "id": "muharram",
+          "date": "2027-06-15",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
+        },
+        {
+          "id": "muharram",
+          "date": "2027-06-15",
+          "source": "aladhan",
+          "sourceUrl": "https://api.aladhan.com/v1/hToG/10-01-1449",
+          "moonDependent": true
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "guru-purnima",
+      "year": "2027",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "guru-purnima",
+          "date": "2027-07-18",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "milad-un-nabi",
+      "year": "2027",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "milad-un-nabi",
+          "date": "2027-08-15",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
+        },
+        {
+          "id": "milad-un-nabi",
+          "date": "2027-08-14",
+          "source": "aladhan",
+          "sourceUrl": "https://api.aladhan.com/v1/hToG/12-03-1449",
+          "moonDependent": true
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "raksha-bandhan",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-08-17",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "janmashtami",
+      "year": "2027",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "janmashtami",
+          "date": "2027-08-25",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
+        },
+        {
+          "id": "janmashtami",
+          "date": "2027-08-24",
+          "source": "tirth-panchang",
+          "sourceUrl": "https://www.tirth.com/astro/festivals/2027"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "ganesh-chaturthi",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-09-04",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.523Z",
+      "festival": "onam",
+      "year": "2027",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "onam",
+          "date": "2027-09-12",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:12.524Z",
+      "festival": "dussehra",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-10-09",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.524Z",
+      "festival": "karwa-chauth",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-10-18",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.524Z",
+      "festival": "diwali",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-10-29",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.524Z",
+      "festival": "govardhan-puja",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-10-30",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.524Z",
+      "festival": "bhai-dooj",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-10-31",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.524Z",
+      "festival": "chhath-puja",
+      "year": "2027",
+      "action": "updated",
+      "date": "2027-11-04",
+      "status": "verified"
+    },
+    {
+      "at": "2026-11-13T09:51:12.524Z",
+      "festival": "guru-nanak-jayanti",
+      "year": "2027",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "guru-nanak-jayanti",
+          "date": "2027-11-14",
+          "source": "drik-panchang",
+          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:12.524Z",
+      "festival": "navratri",
+      "year": "2027",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "navratri",
+          "date": "2027-09-30",
+          "source": "tirth-panchang",
+          "sourceUrl": "https://www.tirth.com/astro/festivals/2027"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:12.524Z",
+      "festival": "dhanteras",
+      "year": "2027",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "dhanteras",
+          "date": "2027-10-27",
+          "source": "tirth-panchang",
+          "sourceUrl": "https://www.tirth.com/astro/festivals/2027"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-13T09:51:12.524Z",
+      "festival": "ramadan",
+      "year": "2027",
+      "action": "kept-existing",
+      "reason": "no-consensus",
+      "sources": [
+        {
+          "id": "ramadan",
+          "date": "2027-02-08",
+          "source": "aladhan",
+          "sourceUrl": "https://api.aladhan.com/v1/hToG/01-09-1448",
+          "moonDependent": true
+        }
+      ]
+    },
+    {
       "at": "2026-11-12T10:02:27.102Z",
       "action": "source-error",
       "error": "https://www.timeanddate.com/holidays/india/2026 -> 403",
@@ -4901,971 +5783,7 @@
           "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
         }
       ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.158Z",
-      "festival": "dussehra",
-      "year": "2026",
-      "action": "updated",
-      "date": "2026-10-20",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:29:25.158Z",
-      "festival": "karwa-chauth",
-      "year": "2026",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "karwa-chauth",
-          "date": "2026-10-29",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.160Z",
-      "festival": "diwali",
-      "year": "2026",
-      "action": "updated",
-      "date": "2026-11-08",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:29:25.161Z",
-      "festival": "govardhan-puja",
-      "year": "2026",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "govardhan-puja",
-          "date": "2026-11-10",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.161Z",
-      "festival": "bhai-dooj",
-      "year": "2026",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "bhai-dooj",
-          "date": "2026-11-11",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.161Z",
-      "festival": "chhath-puja",
-      "year": "2026",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "chhath-puja",
-          "date": "2026-11-15",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.162Z",
-      "festival": "guru-nanak-jayanti",
-      "year": "2026",
-      "action": "updated",
-      "date": "2026-11-24",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:29:25.163Z",
-      "festival": "mahavir-jayanti",
-      "year": "2026",
-      "action": "updated",
-      "date": "2026-03-31",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:29:25.163Z",
-      "festival": "ramadan",
-      "year": "2026",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "ramadan",
-          "date": "2026-02-18",
-          "source": "aladhan",
-          "sourceUrl": "https://api.aladhan.com/v1/hToG/01-09-1447",
-          "moonDependent": true
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.403Z",
-      "action": "source-error",
-      "error": "https://www.timeanddate.com/holidays/india/2027 -> 403",
-      "source": "timeanddate"
-    },
-    {
-      "at": "2026-11-07T16:29:25.403Z",
-      "action": "source-error",
-      "error": "https://api.aladhan.com/v1/hToG/10-12-1448 -> 429",
-      "source": "aladhan"
-    },
-    {
-      "at": "2026-11-07T16:29:25.403Z",
-      "action": "source-error",
-      "error": "https://api.aladhan.com/v1/hToG/10-01-1448 -> 429",
-      "source": "aladhan"
-    },
-    {
-      "at": "2026-11-07T16:29:25.403Z",
-      "action": "source-error",
-      "error": "https://api.aladhan.com/v1/hToG/12-03-1448 -> 429",
-      "source": "aladhan"
-    },
-    {
-      "at": "2026-11-07T16:29:25.403Z",
-      "action": "source-error",
-      "error": "https://api.aladhan.com/v1/hToG/01-09-1449 -> 429",
-      "source": "aladhan"
-    },
-    {
-      "at": "2026-11-07T16:29:25.403Z",
-      "action": "source-error",
-      "error": "https://api.aladhan.com/v1/hToG/01-10-1449 -> 429",
-      "source": "aladhan"
-    },
-    {
-      "at": "2026-11-07T16:29:25.403Z",
-      "action": "source-error",
-      "error": "https://api.aladhan.com/v1/hToG/10-12-1449 -> 429",
-      "source": "aladhan"
-    },
-    {
-      "at": "2026-11-07T16:29:25.403Z",
-      "action": "source-error",
-      "error": "https://api.aladhan.com/v1/hToG/10-01-1449 -> 429",
-      "source": "aladhan"
-    },
-    {
-      "at": "2026-11-07T16:29:25.403Z",
-      "action": "source-error",
-      "error": "https://api.aladhan.com/v1/hToG/12-03-1449 -> 429",
-      "source": "aladhan"
-    },
-    {
-      "at": "2026-11-07T16:29:25.403Z",
-      "action": "source-check",
-      "source": "imd-rashtriya-panchanga",
-      "year": 2027,
-      "status": "year-calendar-not-listed"
-    },
-    {
-      "at": "2026-11-07T16:29:25.404Z",
-      "festival": "republic-day",
-      "year": "2027",
-      "action": "updated",
-      "date": "2027-01-26",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:29:25.405Z",
-      "festival": "independence-day",
-      "year": "2027",
-      "action": "updated",
-      "date": "2027-08-15",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:29:25.405Z",
-      "festival": "gandhi-jayanti",
-      "year": "2027",
-      "action": "updated",
-      "date": "2027-10-02",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:29:25.406Z",
-      "festival": "christmas",
-      "year": "2027",
-      "action": "updated",
-      "date": "2027-12-25",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:29:25.407Z",
-      "festival": "new-year",
-      "year": "2027",
-      "action": "updated",
-      "date": "2027-01-01",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:29:25.407Z",
-      "festival": "valentines-day",
-      "year": "2027",
-      "action": "updated",
-      "date": "2027-02-14",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:29:25.408Z",
-      "festival": "easter",
-      "year": "2027",
-      "action": "updated",
-      "date": "2027-03-28",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "good-friday",
-      "year": "2027",
-      "action": "updated",
-      "date": "2027-03-26",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "lohri",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "lohri",
-          "date": "2027-01-14",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "makar-sankranti",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "makar-sankranti",
-          "date": "2027-01-15",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        },
-        {
-          "id": "makar-sankranti",
-          "date": "2027-01-15",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "vasant-panchami",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "vasant-panchami",
-          "date": "2027-02-11",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "maha-shivratri",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "maha-shivratri",
-          "date": "2027-03-06",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "eid-ul-fitr",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "eid-ul-fitr",
-          "date": "2027-03-10",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        },
-        {
-          "id": "eid-ul-fitr",
-          "date": "2027-03-09",
-          "source": "aladhan",
-          "sourceUrl": "https://api.aladhan.com/v1/hToG/01-10-1448",
-          "moonDependent": true
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "holika-dahan",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "holika-dahan",
-          "date": "2027-03-21",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        },
-        {
-          "id": "holika-dahan",
-          "date": "2027-03-21",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "holi",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "holi",
-          "date": "2027-03-22",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "ugadi-gudi-padwa",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "ugadi-gudi-padwa",
-          "date": "2027-04-07",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        },
-        {
-          "id": "ugadi-gudi-padwa",
-          "date": "2027-04-07",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "baisakhi",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "baisakhi",
-          "date": "2027-04-14",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "ram-navami",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "ram-navami",
-          "date": "2027-04-15",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "eid-ul-adha",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "eid-ul-adha",
-          "date": "2027-05-17",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "buddha-purnima",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "buddha-purnima",
-          "date": "2027-05-20",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "muharram",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "muharram",
-          "date": "2027-06-15",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        },
-        {
-          "id": "muharram",
-          "date": "2027-06-15",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "guru-purnima",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "guru-purnima",
-          "date": "2027-07-18",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "milad-un-nabi",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "milad-un-nabi",
-          "date": "2027-08-15",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "raksha-bandhan",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "raksha-bandhan",
-          "date": "2027-08-17",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        },
-        {
-          "id": "raksha-bandhan",
-          "date": "2027-08-17",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "janmashtami",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "janmashtami",
-          "date": "2027-08-25",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "ganesh-chaturthi",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "ganesh-chaturthi",
-          "date": "2027-09-04",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "onam",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "onam",
-          "date": "2027-09-12",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "dussehra",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "dussehra",
-          "date": "2027-10-09",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "karwa-chauth",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "karwa-chauth",
-          "date": "2027-10-18",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "diwali",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "diwali",
-          "date": "2027-10-29",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        },
-        {
-          "id": "diwali",
-          "date": "2027-10-29",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.410Z",
-      "festival": "govardhan-puja",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "govardhan-puja",
-          "date": "2027-10-30",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.411Z",
-      "festival": "bhai-dooj",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "bhai-dooj",
-          "date": "2027-10-31",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.411Z",
-      "festival": "chhath-puja",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "chhath-puja",
-          "date": "2027-11-04",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.411Z",
-      "festival": "guru-nanak-jayanti",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "guru-nanak-jayanti",
-          "date": "2027-11-14",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:29:25.411Z",
-      "festival": "ramadan",
-      "year": "2027",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "ramadan",
-          "date": "2027-02-08",
-          "source": "aladhan",
-          "sourceUrl": "https://api.aladhan.com/v1/hToG/01-09-1448",
-          "moonDependent": true
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:19:16.816Z",
-      "action": "source-error",
-      "error": "https://www.timeanddate.com/holidays/india/2026 -> 403",
-      "source": "timeanddate"
-    },
-    {
-      "at": "2026-11-07T16:19:16.817Z",
-      "action": "source-check",
-      "source": "imd-rashtriya-panchanga",
-      "year": 2026,
-      "status": "year-calendar-not-listed"
-    },
-    {
-      "at": "2026-11-07T16:19:16.822Z",
-      "festival": "republic-day",
-      "year": "2026",
-      "action": "updated",
-      "date": "2026-01-26",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:19:16.823Z",
-      "festival": "independence-day",
-      "year": "2026",
-      "action": "updated",
-      "date": "2026-08-15",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:19:16.823Z",
-      "festival": "gandhi-jayanti",
-      "year": "2026",
-      "action": "updated",
-      "date": "2026-10-02",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:19:16.824Z",
-      "festival": "christmas",
-      "year": "2026",
-      "action": "updated",
-      "date": "2026-12-25",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:19:16.825Z",
-      "festival": "new-year",
-      "year": "2026",
-      "action": "updated",
-      "date": "2026-01-01",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:19:16.825Z",
-      "festival": "valentines-day",
-      "year": "2026",
-      "action": "updated",
-      "date": "2026-02-14",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:19:16.826Z",
-      "festival": "easter",
-      "year": "2026",
-      "action": "updated",
-      "date": "2026-04-05",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:19:16.827Z",
-      "festival": "good-friday",
-      "year": "2026",
-      "action": "updated",
-      "date": "2026-04-03",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:19:16.827Z",
-      "festival": "lohri",
-      "year": "2026",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "lohri",
-          "date": "2026-01-13",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:19:16.827Z",
-      "festival": "makar-sankranti",
-      "year": "2026",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "makar-sankranti",
-          "date": "2026-01-14",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
-        },
-        {
-          "id": "makar-sankranti",
-          "date": "2026-01-14",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:19:16.827Z",
-      "festival": "vasant-panchami",
-      "year": "2026",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "vasant-panchami",
-          "date": "2026-01-23",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:19:16.827Z",
-      "festival": "maha-shivratri",
-      "year": "2026",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "maha-shivratri",
-          "date": "2026-02-15",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:19:16.827Z",
-      "festival": "holika-dahan",
-      "year": "2026",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "holika-dahan",
-          "date": "2026-03-03",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
-        },
-        {
-          "id": "holika-dahan",
-          "date": "2026-03-03",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:19:16.827Z",
-      "festival": "holi",
-      "year": "2026",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "holi",
-          "date": "2026-03-04",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:19:16.827Z",
-      "festival": "ugadi-gudi-padwa",
-      "year": "2026",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "ugadi-gudi-padwa",
-          "date": "2026-03-19",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
-        },
-        {
-          "id": "ugadi-gudi-padwa",
-          "date": "2026-03-19",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:19:16.828Z",
-      "festival": "eid-ul-fitr",
-      "year": "2026",
-      "action": "updated",
-      "date": "2026-03-21",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:19:16.828Z",
-      "festival": "ramadan",
-      "year": "2026",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "ramadan",
-          "date": "2026-03-20",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
-        },
-        {
-          "id": "ramadan",
-          "date": "2026-02-18",
-          "source": "aladhan",
-          "sourceUrl": "https://api.aladhan.com/v1/hToG/01-09-1447",
-          "moonDependent": true
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:19:16.828Z",
-      "festival": "ram-navami",
-      "year": "2026",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "ram-navami",
-          "date": "2026-03-26",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
-        },
-        {
-          "id": "ram-navami",
-          "date": "2026-03-27",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:19:16.828Z",
-      "festival": "baisakhi",
-      "year": "2026",
-      "action": "kept-existing",
-      "reason": "no-consensus",
-      "sources": [
-        {
-          "id": "baisakhi",
-          "date": "2026-04-14",
-          "source": "drik-panchang",
-          "sourceUrl": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026"
-        }
-      ]
-    },
-    {
-      "at": "2026-11-07T16:19:16.829Z",
-      "festival": "buddha-purnima",
-      "year": "2026",
-      "action": "updated",
-      "date": "2026-05-01",
-      "status": "verified"
-    },
-    {
-      "at": "2026-11-07T16:19:16.830Z",
-      "festival": "eid-ul-adha",
-      "year": "2026",
-      "action": "updated",
-      "date": "2026-05-27",
-      "status": "verified"
     }
   ],
-  "lastRunAt": "2026-11-12T10:02:27.684Z"
+  "lastRunAt": "2026-11-13T09:51:12.525Z"
 }

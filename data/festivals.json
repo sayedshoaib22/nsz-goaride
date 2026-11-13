@@ -2,8 +2,8 @@
   "version": 1,
   "timezone": "Asia/Kolkata",
   "generatedAt": "2026-11-07T00:00:00+05:30",
-  "lastSyncAt": "2026-11-12T10:02:27.683Z",
-  "lastSyncStatus": "partial",
+  "lastSyncAt": "2026-11-13T09:51:12.524Z",
+  "lastSyncStatus": "synced",
   "policy": {
     "neverOverwriteVerifiedWithUnreliable": true,
     "moonSightingRequiresGazettedOrTwoTrustedSources": true,
@@ -238,16 +238,16 @@
             {
               "name": "civil-fixed",
               "url": "https://www.india.gov.in/",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         },
         "2027": {
@@ -258,16 +258,16 @@
             {
               "name": "civil-fixed",
               "url": "https://www.india.gov.in/",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -332,21 +332,21 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         },
         "2027": {
@@ -357,21 +357,21 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -394,21 +394,21 @@
             {
               "name": "goi-fixed",
               "url": "https://www.india.gov.in/",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "india-post-goi",
               "url": "https://www.indiapost.gov.in/holidays-list",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         },
         "2027": {
@@ -419,16 +419,16 @@
             {
               "name": "goi-fixed",
               "url": "https://www.india.gov.in/",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -503,16 +503,16 @@
             {
               "name": "civil-fixed",
               "url": "https://www.timeanddate.com/holidays/india/",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         },
         "2027": {
@@ -523,16 +523,16 @@
             {
               "name": "civil-fixed",
               "url": "https://www.timeanddate.com/holidays/india/",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -555,16 +555,16 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         },
         "2027": {
@@ -575,16 +575,16 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -671,21 +671,21 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -733,16 +733,16 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -817,21 +817,21 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "india-post-goi",
               "url": "https://www.indiapost.gov.in/holidays-list",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "aladhan",
               "url": "https://api.aladhan.com/v1/hToG/01-10-1447",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": "Published on the India Post 2026 gazetted list. Local moon sighting can still move the celebration by a day."
         },
         "2027": {
@@ -869,21 +869,21 @@
             {
               "name": "western-computus",
               "url": "https://en.wikipedia.org/wiki/Date_of_Easter",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "india-post-goi",
               "url": "https://www.indiapost.gov.in/holidays-list",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         },
         "2027": {
@@ -894,16 +894,16 @@
             {
               "name": "western-computus",
               "url": "https://en.wikipedia.org/wiki/Date_of_Easter",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -926,16 +926,16 @@
             {
               "name": "western-computus",
               "url": "https://en.wikipedia.org/wiki/Date_of_Easter",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         },
         "2027": {
@@ -946,16 +946,16 @@
             {
               "name": "western-computus",
               "url": "https://en.wikipedia.org/wiki/Date_of_Easter",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -978,21 +978,21 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": "Smarta date used by Indian civil calendars. ISKCON observance is 27 March 2026."
         },
         "2027": {
@@ -1003,16 +1003,16 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -1035,11 +1035,11 @@
             {
               "name": "india-post-goi",
               "url": "https://www.indiapost.gov.in/holidays-list",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         },
         "2027": {
@@ -1124,16 +1124,16 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "india-post-goi",
               "url": "https://www.indiapost.gov.in/holidays-list",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         },
         "2027": {
@@ -1171,21 +1171,21 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "india-post-goi",
               "url": "https://www.indiapost.gov.in/holidays-list",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "aladhan",
               "url": "https://api.aladhan.com/v1/hToG/10-12-1447",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": "India Post gazetted date is 27 May 2026. Timeanddate lists 28 May; moon sighting can shift the day."
         },
         "2027": {
@@ -1223,26 +1223,26 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "india-post-goi",
               "url": "https://www.indiapost.gov.in/holidays-list",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "aladhan",
               "url": "https://api.aladhan.com/v1/hToG/10-01-1448",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": "Moon-sighting dependent date. Keep the last verified or gazetted value until a stronger source agrees."
         },
         "2027": {
@@ -1374,21 +1374,21 @@
             {
               "name": "goi-fixed",
               "url": "https://www.india.gov.in/",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "india-post-goi",
               "url": "https://www.indiapost.gov.in/holidays-list",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         },
         "2027": {
@@ -1399,16 +1399,16 @@
             {
               "name": "goi-fixed",
               "url": "https://www.india.gov.in/",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -1431,21 +1431,21 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "india-post-goi",
               "url": "https://www.indiapost.gov.in/holidays-list",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "aladhan",
               "url": "https://api.aladhan.com/v1/hToG/12-03-1448",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": "Moon-sighting dependent date. Keep the last verified or gazetted value until a stronger source agrees."
         },
         "2027": {
@@ -1530,21 +1530,21 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         },
         "2027": {
@@ -1555,21 +1555,21 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -1592,16 +1592,16 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         },
         "2027": {
@@ -1669,16 +1669,16 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -1701,21 +1701,21 @@
             {
               "name": "goi-fixed",
               "url": "https://www.india.gov.in/",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "india-post-goi",
               "url": "https://www.indiapost.gov.in/holidays-list",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         },
         "2027": {
@@ -1726,16 +1726,16 @@
             {
               "name": "goi-fixed",
               "url": "https://www.india.gov.in/",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -1856,21 +1856,21 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "india-post-goi",
               "url": "https://www.indiapost.gov.in/holidays-list",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         },
         "2027": {
@@ -1881,16 +1881,16 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -1913,16 +1913,16 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         },
         "2027": {
@@ -1933,16 +1933,16 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -2016,36 +2016,36 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "india-post-goi",
               "url": "https://www.indiapost.gov.in/holidays-list",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": "Lakshmi Puja on 8 November 2026. Site theme window is 7–12 November 2026 IST; normal NSZ theme resumes on 13 November 2026."
         },
         "2027": {
@@ -2058,21 +2058,21 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -2095,16 +2095,16 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": "Drik Panchang lists 10 November 2026. Some civil calendars list 9 November; the verified panchang date is retained."
         },
         "2027": {
@@ -2115,16 +2115,16 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -2147,16 +2147,16 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         },
         "2027": {
@@ -2167,16 +2167,16 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -2199,16 +2199,16 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": "Main evening arghya on 15 November 2026. Theme window starts 14 November so the Diwali special can restore the NSZ theme on 13 November."
         },
         "2027": {
@@ -2219,16 +2219,16 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "tirth-panchang",
               "url": "https://www.tirth.com/astro/festivals/2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
@@ -2251,16 +2251,16 @@
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "india-post-goi",
               "url": "https://www.indiapost.gov.in/holidays-list",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         },
         "2027": {
@@ -2298,21 +2298,21 @@
             {
               "name": "goi-fixed",
               "url": "https://www.india.gov.in/",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2026",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "india-post-goi",
               "url": "https://www.indiapost.gov.in/holidays-list",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         },
         "2027": {
@@ -2323,16 +2323,16 @@
             {
               "name": "goi-fixed",
               "url": "https://www.india.gov.in/",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             },
             {
               "name": "drik-panchang",
               "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
-              "retrievedAt": "2026-11-12"
+              "retrievedAt": "2026-11-13"
             }
           ],
-          "verifiedAt": "2026-11-12",
-          "lastCheckedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "lastCheckedAt": "2026-11-13",
           "notes": ""
         }
       }
